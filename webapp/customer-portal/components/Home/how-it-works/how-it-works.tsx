@@ -38,8 +38,8 @@ const steps: Step[] = [
         description:
             'When the platform opens, no international card will be required. Pay through D17 or Flouci and access your purchase without leaving the platform.',
         card: <Payment />,
-        encryption: ' 128-bit Encrypted ',
-        charging: ' 0% Currency Surcharge ',
+        encryption: '128-bit Encrypted',
+        charging: '0% Currency Surcharge',
     },
     {
         number: '03',
@@ -47,7 +47,7 @@ const steps: Step[] = [
         description:
             'At launch, work through lessons, templates, exercises, and community spaces built to help you finish real projects and keep improving.',
         card: <Features />,
-        tags: [' Instant asset download ', ' Discord / Telegram'],
+        tags: ['Instant asset download', 'Discord / Telegram'],
     },
     {
         number: '04',
@@ -55,7 +55,7 @@ const steps: Step[] = [
         description:
             'Creators will be able to publish a course, guide, or resource for their audience, keep 88% of each sale, and choose clear local payout options.',
         card: <CashOut />,
-        tags: [' Same-Week Payouts ', ' Auto Tax Invoice PDF '],
+        tags: ['Same-Week Payouts', 'Auto Tax Invoice PDF'],
     },
 ]
 
@@ -69,22 +69,22 @@ const tags = [
 const stage = [
     {
         id: '1',
-        stage: ' Vetted Micro-Skills ',
+        stage: 'Vetted Micro-Skills',
         icon: <CompassIcon size={15} />,
     },
     {
         id: '2',
-        stage: ' Zero Foreign Cards Needed ',
+        stage: 'No foreign card needed',
         icon: <CreditCard size={15} />,
     },
     {
         id: '3',
-        stage: ' Hands-on Cohorts & Assets ',
+        stage: 'Hands-on Cohorts & Assets',
         icon: <UsersRoundIcon size={15} />,
     },
     {
         id: '4',
-        stage: ' Fair & Transparent Earnings ',
+        stage: 'Fair & Transparent Earnings',
         icon: <Landmark size={13} className="hover:animate-bounce" />,
     },
 ]
@@ -171,6 +171,10 @@ export default function HowItWorks() {
                         ))}
                 </motion.p>
             </motion.div>
+
+            <p className="mb-8 text-center text-xs text-muted-foreground">
+                Product preview - illustrative data.
+            </p>
 
             {/* Timeline */}
             <div className="relative">

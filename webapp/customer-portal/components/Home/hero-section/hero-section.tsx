@@ -188,11 +188,12 @@ export default function HeroSection() {
                 transition={{ duration: 0.5, delay: 0.1, ease: 'easeOut' }}
             >
                 Talented is preparing to connect Tunisian learners with
-                practical courses, guides, and creators. Learn, share, and sell{' '}
+                practical courses, guides, and creators. When Talented launches,
+                learn, share, and sell on the platform. Pay through{' '}
                 <span className="font-semibold text-primary">
                     D17 &amp; Flouci
-                </span>{' '}
-                — no foreign card needed.
+                </span>
+                , with no foreign card needed.
             </motion.h1>
 
             {/* Call to action */}

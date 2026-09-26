@@ -1,6 +1,6 @@
 import { clsx, type ClassValue } from 'clsx'
-import { twMerge } from 'tailwind-merge'
 import type { MouseEvent } from 'react'
+import { twMerge } from 'tailwind-merge'
 
 export function cn(...inputs: ClassValue[]) {
     return twMerge(clsx(inputs))
@@ -16,6 +16,5 @@ export function scrollToHash(
     if (!target) return
 
     event.preventDefault()
-    target.scrollIntoView({ behavior: 'smooth', block: 'start' })
-    window.history.pushState(null, '', href)
+    target.scrollIntoView({ behavior: 'smooth' })
 }

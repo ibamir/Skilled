@@ -12,7 +12,7 @@ import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group'
 import { cn } from '@/lib/utils'
-import { saveToNotion } from '@/app/actions/notion/route'
+import { saveToNotion } from '@/app/actions/notion/action'
 
 const questions = [
     {

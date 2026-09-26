@@ -2,6 +2,9 @@ import type { Metadata } from 'next'
 import { Plus_Jakarta_Sans } from 'next/font/google'
 import './globals.css'
 import { ThemeProvider } from '@/components/theme/theme-provider'
+import { FaviconSwitcher } from '@/components/theme/favicon-switcher'
+import { LanguageProvider } from '@/lib/language-switch/LanguageProvider'
+import { ToasterProvider } from '@/components/theme/toster-provider'
 
 const PlusJakartaSans = Plus_Jakarta_Sans({
     variable: '--font-plus-jakarta',
@@ -28,7 +31,9 @@ export default function RootLayout({ children }: LayoutProps<'/'>) {
                     enableSystem
                     disableTransitionOnChange
                 >
-                    {children}
+                    <ToasterProvider />
+                    <FaviconSwitcher />
+                    <LanguageProvider>{children}</LanguageProvider>
                 </ThemeProvider>
             </body>
         </html>

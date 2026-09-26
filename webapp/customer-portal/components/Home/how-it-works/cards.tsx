@@ -115,7 +115,7 @@ export function Payment() {
                                 width={35}
                                 height={35}
                                 src="/flouci.png"
-                                alt="D17"
+                                alt="Flouci"
                                 className="object-cover rounded-xl overflow-hidden"
                             />
                             <span className="flex flex-col justify-center">
@@ -244,7 +244,7 @@ export function CashOut() {
                             <span className="flex items-center justify-between w-full">
                                 <p className="">Creator Revenue Share :</p>
                                 <p className="font-bold text-green-600">
-                                    88.0% Guaranteed
+                                    88.0%
                                 </p>
                             </span>
                             <Progress

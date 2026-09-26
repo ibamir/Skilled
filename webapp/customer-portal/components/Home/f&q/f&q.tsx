@@ -14,17 +14,17 @@ const faqs = [
     {
         icon: GraduationCap,
         question: 'What exactly is Talented?',
-        answer: 'Talented is a learning platform where people discover useful skills, learn from creators, and share what they know.',
+        answer: 'Talented is being built as a learning platform where people will be able to discover useful skills, learn from creators, and share what they know.',
     },
     {
         icon: Users,
         question: 'Who can use Talented?',
-        answer: 'Anyone. Students can find study resources, learners can develop practical digital skills, and creators or top students can turn their knowledge into an income.',
+        answer: 'When Talented launches, students will be able to find study resources and develop practical digital skills, while creators and top students will be able to turn their knowledge into income.',
     },
     {
         icon: CreditCard,
         question: 'How do I pay without an international card?',
-        answer: 'No more asking a friend abroad to pay or facing a declined foreign card. When Talented launches, you will be able to pay in TND through local options such as D17 and Flouci.',
+        answer: 'When Talented launches, you will be able to pay in TND through D17 and Flouci, with no foreign card needed.',
     },
     {
         icon: WalletCards,
@@ -34,12 +34,12 @@ const faqs = [
     {
         icon: ShieldCheck,
         question: 'How do you protect my content?',
-        answer: 'Premium content is protected with secure streaming, restricted copying and printing, and unique watermarks designed to discourage unauthorized sharing.',
+        answer: 'When Talented launches, premium content will be protected with secure streaming, restricted copying and printing, and unique watermarks designed to discourage unauthorized sharing.',
     },
     {
         icon: Rocket,
         question: 'When is the official launch?',
-        answer: 'Talented is preparing for launch and onboarding its first creators and tutors. Join the beta to get notified when the platform opens.',
+        answer: 'Talented is preparing for launch and onboarding its first creators and tutors. Take the survey to get notified when the platform opens.',
     },
 ]
 

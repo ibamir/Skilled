@@ -6,6 +6,8 @@ import WordmarkFooter from '@/components/ruixen/wordmark-footer'
 import { motion } from 'motion/react'
 import { scrollToHash } from '@/lib/utils'
 import { useTheme } from 'next-themes'
+import { LanguageSwitcher } from '@/lib/language-switch/language-switcher'
+
 
 export default function Footer() {
     const { theme } = useTheme()
@@ -35,7 +37,7 @@ export default function Footer() {
                     </a>
                     <p className="text-muted-foreground max-w-70">
                         Tunisia&apos;s talent & micro-skill platform. Powered by
-                        D17 & Flouci local settlements.
+                        local payments through D17 &amp; Flouci.
                     </p>
                 </div>
                 <div className="flex md:flex-row flex-wrap justify-center items-center gap-4 md:min-w-fit">
@@ -51,6 +53,7 @@ export default function Footer() {
                         </a>
                     ))}
                 </div>
+                <LanguageSwitcher />
             </div>
             <Separator className="w-full h-px bg-border" />
             <p className="text-center">

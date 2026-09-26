@@ -45,8 +45,9 @@ export default function Features() {
                     Skills for real life and work
                 </h2>
                 <p className="text-muted-foreground text-sm leading-relaxed md:text-base">
-                    Learn practical skills, access useful resources, and sell
-                    what you know through a platform built for Tunisia.
+                    When Talented launches, learners will be able to build
+                    practical skills, access useful resources, and sell what
+                    they know through a platform built for Tunisia.
                 </p>
             </motion.div>
 
@@ -122,23 +123,24 @@ const features: FeatureType[] = [
         title: 'Learn practical skills',
         icon: <RocketIcon />,
         description:
-            'Short courses and guides focused on skills you can use immediately.',
+            'At launch, learners will be able to explore short courses and guides focused on practical skills.',
     },
     {
         title: 'Access useful resources',
         icon: <KeyCircleIcon />,
         description:
-            'Templates, study guides, and community access in one place.',
+            'At launch, learners will be able to access templates, study guides, and community in one place.',
     },
     {
         title: 'Pay with local methods',
         icon: <ShieldCheckIcon />,
-        description: 'Pay in TND through familiar options like D17 and Flouci.',
+        description:
+            'At launch, learners will be able to pay in TND through D17 and Flouci, with no foreign card needed.',
     },
     {
         title: 'Earn from what you know',
         icon: <CreditCard />,
         description:
-            'Sell your work with clear pricing and an 88% creator share.',
+            'At launch, creators will be able to sell their work with clear pricing and an 88% share.',
     },
 ]

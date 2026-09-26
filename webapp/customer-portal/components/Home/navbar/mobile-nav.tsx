@@ -9,6 +9,8 @@ import { links } from '@/components/Home/navbar/header'
 import { XIcon, MenuIcon } from 'lucide-react'
 import { ThemeToggle } from '@/components/theme/theme-toggle'
 import { AnimatePresence, motion } from 'motion/react'
+import { LanguageSwitcher } from '@/lib/language-switch/language-switcher'
+import { Separator } from '@/components/ui/separator' 
 
 export function MobileNav() {
     const [open, setOpen] = React.useState(false)
@@ -83,24 +85,32 @@ export function MobileNav() {
                                         </a>
                                     </motion.div>
                                 ))}
-                                <ThemeToggle />
+                                <div className='flex items-center justify-center gap-2 px-2.5'>
+                                    <span className="flex items-center justify-between w-full flex-1">
+                                        <p className="text-primary">Theme : </p>
+                                        <ThemeToggle />
+                                    </span>
+                                    <Separator orientation='vertical' className='h-full  bg-border! wpx'/>
+                                    <span className="flex items-center justify-between w-full flex-1">
+                                        <p className="text-primary">Language : </p>
+                                        <LanguageSwitcher />
+                                    </span>
+                                </div>
+                                
                             </motion.div>
                             <div className="mt-12 flex flex-col gap-2">
                                 <a
-                                    href="#want-to-know-more"
+                                    href="#help-us"
                                     onClick={(event) => {
                                         setOpen(false)
-                                        scrollToHash(
-                                            event,
-                                            '#want-to-know-more',
-                                        )
+                                        scrollToHash(event, '#help-us')
                                     }}
                                     className={cn(
                                         buttonVariants({ variant: 'default' }),
                                         'min-w-fit h-10 text-accent',
                                     )}
                                 >
-                                    Get Started
+                                    Take the survey
                                 </a>
                             </div>
                         </motion.div>

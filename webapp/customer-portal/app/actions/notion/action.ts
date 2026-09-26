@@ -22,12 +22,10 @@ export async function saveToNotion(answers: Record<string, string>) {
                 type: 'data_source_id',
                 data_source_id: dataSourceId,
             },
-
             template: {
                 type: 'template_id',
                 template_id: templateId,
             },
-
             properties: {
                 Email: {
                     title: [
@@ -38,7 +36,6 @@ export async function saveToNotion(answers: Record<string, string>) {
                         },
                     ],
                 },
-
                 Role: {
                     rich_text: [
                         {
@@ -48,7 +45,6 @@ export async function saveToNotion(answers: Record<string, string>) {
                         },
                     ],
                 },
-
                 Interest: {
                     rich_text: [
                         {
@@ -58,7 +54,6 @@ export async function saveToNotion(answers: Record<string, string>) {
                         },
                     ],
                 },
-
                 Content: {
                     rich_text: [
                         {
@@ -68,7 +63,6 @@ export async function saveToNotion(answers: Record<string, string>) {
                         },
                     ],
                 },
-
                 'Other Content': {
                     rich_text: [
                         {
@@ -78,7 +72,6 @@ export async function saveToNotion(answers: Record<string, string>) {
                         },
                     ],
                 },
-
                 Likelihood: {
                     rich_text: [
                         {

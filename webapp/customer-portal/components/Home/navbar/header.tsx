@@ -9,11 +9,11 @@ import { ThemeToggle } from '@/components/theme/theme-toggle'
 import { motion } from 'motion/react'
 import { useTheme } from 'next-themes'
 
+
 export const links = [
     { label: 'Features', href: '#features' },
     { label: 'How it works', href: '#how-it-works' },
     { label: 'FAQ', href: '#faq' },
-    // { label: 'Updates', href: '#interested' },
     { label: 'Take the survey', href: '#help-us' },
 ]
 
@@ -43,6 +43,7 @@ export function Header() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: 'easeOut' }}
+            dir='ltr'
         >
             <div
                 className={cn(
@@ -105,9 +106,6 @@ export function Header() {
                             </motion.div>
                         ))}
                     </div>
-                    {/* <Button className="min-w-fit h-10 text-accent dark:text-accent">
-                        Get Started
-                    </Button> */}
                     <ThemeToggle />
                 </motion.div>
 
