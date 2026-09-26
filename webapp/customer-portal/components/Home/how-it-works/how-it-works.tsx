@@ -179,15 +179,15 @@ export default function HowItWorks() {
             {/* Timeline */}
             <div className="relative">
                 {/* Background line */}
-                <div className="absolute left-1/2 top-0 hidden h-full w-px -translate-x-1/2 bg-border md:block" />
+                <div className="absolute left-1/2 top-0 hidden h-full w-px -translate-x-1/2 bg-border lg:block" />
 
                 {/* Progress line */}
                 <motion.div
                     style={{ height: lineHeight }}
-                    className="absolute left-1/2 top-0 hidden w-px -translate-x-1/2 bg-foreground md:block"
+                    className="absolute left-1/2 top-0 hidden w-px -translate-x-1/2 bg-foreground lg:block"
                 />
 
-                <div className="space-y-24 md:space-y-32">
+                <div className="space-y-24 lg:space-y-32">
                     {steps.map((step, index) => (
                         <TimelineStep
                             key={step.number}
@@ -258,7 +258,7 @@ function TimelineStep({
     )
 
     return (
-        <div className="relative grid items-center gap-10 md:grid-cols-2 md:gap-20">
+        <div className="relative grid items-center gap-10 lg:grid-cols-2 lg:gap-20">
             {/* Content */}
             <motion.div
                 initial={{
@@ -278,7 +278,7 @@ function TimelineStep({
                     ease: 'easeOut',
                 }}
                 className={`${
-                    index % 2 === 0 ? 'md:pr-12' : 'md:order-2 md:pl-12'
+                    index % 2 === 0 ? 'lg:pr-12' : 'lg:order-2 lg:pl-12'
                 }`}
             >
                 <div className="mb-4 flex items-center gap-3">
@@ -415,13 +415,13 @@ function TimelineStep({
                     delay: 0.1,
                     ease: 'easeOut',
                 }}
-                className={`${index % 2 === 0 ? 'md:order-2' : 'md:order-1'}`}
+                className={`${index % 2 === 0 ? 'lg:order-2' : 'lg:order-1'}`}
             >
                 {step.card}
             </motion.div>
 
             {/* Timeline node */}
-            <div className="absolute left-1/2 top-1/2 hidden -translate-x-1/2 -translate-y-1/2 md:block">
+            <div className="absolute left-1/2 top-1/2 hidden -translate-x-1/2 -translate-y-1/2 lg:block">
                 {/* Pulse ring */}
                 <motion.div
                     style={{
