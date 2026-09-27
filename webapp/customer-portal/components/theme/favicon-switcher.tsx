@@ -33,7 +33,7 @@ export function FaviconSwitcher() {
     useEffect(() => {
         if (!mounted) return
 
-        const src = resolvedTheme === 'dark' ? '/dark.svg' : '/light.svg'
+        const src = resolvedTheme === 'dark' ? '/favicon-dark.svg' : '/favicon-light.svg'
 
         rotateSvgToDataUrl(src, ROTATION_DEG).then((dataUrl) => {
             let favicon =
