@@ -140,7 +140,7 @@ export default function FrequentAskedQuestions() {
                                 }}
                                 className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl border bg-muted/30"
                             >
-                                <Icon className="h-5 w-5" strokeWidth={1.7} />
+                                <Icon className="h-5 w-5 text-primary" strokeWidth={1.7} />
                             </motion.div>
 
                             {/* Question */}

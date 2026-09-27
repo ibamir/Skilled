@@ -7,6 +7,7 @@ import CreditCard from '@/components/ui/credit-card'
 import { KeyCircleIcon } from '@/components/ui/key-circle'
 import { RocketIcon } from '@/components/ui/rocket'
 import { motion, type MotionProps } from 'motion/react'
+import { Card, CardContent } from '@/components/ui/card'
 
 type FeatureType = {
     title: string
@@ -17,7 +18,7 @@ type FeatureType = {
 export default function Features() {
     return (
         <motion.div
-            className="mx-auto flex h-full w-full max-w-5xl flex-col justify-center gap-12 px-8 py-24 md:px-8"
+            className="mx-auto flex h-full w-full max-w-7xl flex-col justify-center gap-12 px-8 py-24 md:px-8"
             id="features"
             initial="hidden"
             whileInView="visible"
@@ -77,10 +78,7 @@ function FeatureCard({
     return (
         <motion.div
             className={cn(
-                'relative flex flex-col justify-between gap-6 bg-background px-6 pt-8 pb-6 shadow-xs',
-                // Gradient inspired by testimonials
-                'dark:bg-[radial-gradient(50%_80%_at_25%_0%,--theme(--color-foreground/.1),transparent)]',
-                className,
+                'w-full'
             )}
             {...props}
             variants={{
@@ -88,32 +86,19 @@ function FeatureCard({
                 visible: { opacity: 1, y: 0, transition: { duration: 0.55 } },
             }}
         >
-            {/* Extended Borders */}
-            <div className="absolute -inset-y-4 -left-px w-px bg-border" />
-            <div className="absolute -inset-y-4 -right-px w-px bg-border" />
-            <div className="absolute -inset-x-4 -top-px h-px bg-border" />
-            <div className="absolute -right-4 -bottom-px -left-4 h-px bg-border" />
-
-            {/* Corner Decor */}
-            <DecorIcon className="size-3.5" position="top-left" />
-
-            <div
-                className={cn(
-                    'relative z-10 flex w-fit items-center justify-center rounded-lg border bg-muted/20 p-3',
-                    '[&_svg]:size-5 [&_svg]:stroke-[1.5] [&_svg]:text-foreground',
-                )}
-            >
-                {feature.icon}
-            </div>
-
-            <div className="relative z-10 space-y-2">
-                <h3 className="min-h-12 font-medium text-base text-foreground">
-                    {feature.title}
-                </h3>
-                <p className="min-h-16 text-muted-foreground text-xs leading-relaxed">
-                    {feature.description}
-                </p>
-            </div>
+            <Card className="bg-background border border-primary w-full rounded-3xl ring-0 transition-all duration-300 hover:shadow-[0_10px_30px_rgba(0,0,0,0.15)] dark:hover:shadow-[0_10px_30px_rgba(0,0,0,0.6)]">
+                <CardContent className="p-6">
+                    <div className="bg-muted dark:bg-muted/10 mb-2 size-fit rounded-lg p-px">
+                        <div className="flex h-10 w-10 p-1 text-primary items-center justify-center rounded-lg bg-background shadow-[inset_0_-2px_0.5px_0px_rgba(0,0,0,0),inset_0px_2px_0_2px_rgba(255,255,255,1),0_0px_6px_0_rgba(0,0,0,0.07),0_2px_4px_0_rgba(0,0,0,0.05)] dark:bg-background dark:shadow-[inset_0_-1px_0px_0px_rgba(0,0,0,0.1),inset_0px_1px_0px_0px_rgba(255,255,255,0.05),0_0px_2px_0_rgba(0,0,0,0.2),0_1px_4px_0_rgba(0,0,0,0.05)]">
+                            {feature.icon}
+                        </div>
+                    </div>
+                    <h3 className="text-lg font-medium">{feature.title}</h3>
+                    <p className="text-muted-foreground mb-3 text-sm">
+                        {feature.description}
+                    </p>
+                </CardContent>
+            </Card>
         </motion.div>
     )
 }

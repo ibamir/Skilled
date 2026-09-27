@@ -183,7 +183,7 @@ export function InterestForm() {
                 animate={{ opacity: 1, scale: 1 }}
                 className="flex flex-col items-center justify-center py-16 text-center"
             >
-                <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-full bg-foreground text-background">
+                <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-full bg-primary text-accent">
                     <CheckIcon size={25} />
                 </div>
 
@@ -324,11 +324,11 @@ export function InterestForm() {
                                                 'flex size-8 shrink-0 items-center justify-center rounded-md',
                                                 isSelected
                                                     ? 'bg-primary/10 text-primary'
-                                                    : 'bg-foreground/10 text-muted-foreground',
+                                                    : 'bg-background border border-border text-muted-foreground',
                                             )}
                                         >
                                             <Icon
-                                                className="size-4"
+                                                className="size-4 text-primary"
                                                 size={14}
                                             />
                                         </motion.span>
