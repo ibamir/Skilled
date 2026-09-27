@@ -69,7 +69,7 @@ const itemVariants: Variants = {
 
 export default function FrequentAskedQuestions() {
     return (
-        <section className="mx-auto w-full max-w-6xl px-8 py-12" id="faq">
+        <section className="mx-auto w-full max-w-6xl px-8 py-24" id="faq">
             {/* Header */}
             <motion.div
                 initial={{ opacity: 0, y: 20 }}

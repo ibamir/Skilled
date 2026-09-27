@@ -166,7 +166,7 @@ export function Cards() {
 
 export default function HeroSection() {
     return (
-        <div className="w-full flex flex-col items-center justify-center gap-8 p-4 pb-12 space-y-10">
+        <div className="w-full flex flex-col items-center justify-center gap-8 pb-24 space-y-10">
             
             {/* Header */}
             <motion.h1
