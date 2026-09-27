@@ -107,7 +107,7 @@ export default function HowItWorks() {
     return (
         <section
             ref={containerRef}
-            className="relative mx-auto max-w-6xl px-8 py-32"
+            className="relative mx-auto max-w-6xl px-8 py-12"
             id="how-it-works"
         >
             {/* Header */}

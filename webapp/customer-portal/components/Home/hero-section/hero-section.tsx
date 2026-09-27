@@ -7,6 +7,7 @@ import { CircleCheckIcon } from '@/components/ui/circle-check'
 import { Progress } from '@/components/ui/progress'
 import { UserIcon } from '@/components/ui/user'
 import { WalletIcon } from '@/components/ui/wallet'
+import Image from 'next/image'
 
 const cardData = [
     {
@@ -46,7 +47,6 @@ const cardData = [
     },
     {
         id: 3,
-        image: '/how-to-use-supabase-with-nextjs.webp',
         rotate: 'md:rotate-5',
         title: (
             <>
@@ -104,33 +104,19 @@ const cardData = [
 export function Cards() {
     return (
         <div className="relative w-full max-w-7xl mx-auto pt-6 px-2 sm:px-6">
-            {/*
-              Deterministic column counts instead of grid-cols-[auto-fit] —
-              auto-fit computes its column count from available width in a
-              way that isn't predictable across the exact widths real
-              tablets report, which is what produced the broken 2-up/1-below
-              layout on iPad. 1 col mobile -> 2 col tablet -> 3 col desktop
-              is simple to reason about and matches at every breakpoint.
-            */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 items-stretch justify-center gap-6 lg:gap-8">
                 {cardData.map((card, i) => (
                     <motion.div
                         key={i}
                         className={`w-full max-w-sm mx-auto ${
-                            card.id === 3
-                                ? // The 3rd card is the odd one out at the 2-column
-                                  // tablet tier: span both columns and center it on
-                                  // its own row there, then revert to a normal
-                                  // single-column slot once we're at 3-up desktop.
-                                  'sm:col-span-2 lg:col-span-1'
-                                : ''
+                            card.id === 3 ? 'sm:col-span-2 lg:col-span-1' : ''
                         }`}
                         initial={{ opacity: 0, y: 40 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: false, amount: 0.2 }}
                         transition={{
-                            duration: 0.4,
-                            delay: i * 0.1,
+                            duration: 0.45,
+                            delay: i * 0.4,
                             ease: 'easeOut',
                         }}
                     >
@@ -138,20 +124,19 @@ export function Cards() {
                             className={`w-full h-full border border-primary rounded-3xl hover:-translate-y-10 hover:duration-200 shadow-md ${card.rotate}`}
                         >
                             <CardContent className="flex flex-col gap-4 h-full">
-                                {card.id === 3 ? (
-                                    <span className="mb-auto">{card.card}</span>
-                                ) : (
-                                    <div className="relative h-48 w-full overflow-hidden rounded-xl mb-auto">
-                                        <img
+                                <div className="relative h-48 w-full overflow-hidden rounded-xl flex items-center justify-center">
+                                    {card.card ? (
+                                        card.card
+                                    ) : (
+                                        <Image
                                             src={card.image}
-                                            alt="16:9"
-                                            width={1000}
-                                            height={800}
-                                            className="h-full w-full object-cover"
+                                            alt="course preview"
+                                            fill
+                                            sizes="(max-width: 768px) 100vw, 33vw"
+                                            className="object-cover"
                                         />
-                                    </div>
-                                )}
-
+                                    )}
+                                </div>
                                 <CardHeader
                                     className={`text-xl font-bold p-0 ${
                                         card.titleCentered
@@ -181,8 +166,8 @@ export function Cards() {
 
 export default function HeroSection() {
     return (
-        <div className="w-full flex flex-col items-center justify-center gap-8 p-4 pb-32">
-            <div className="min-h-20" />
+        <div className="w-full flex flex-col items-center justify-center gap-8 p-4 pb-12 space-y-10">
+            
             {/* Header */}
             <motion.h1
                 className="text-7xl md:text-9xl font-black tracking-tighter text-primary max-w-7xl leading-[0.9] mb-10 text-center capitalize"
@@ -191,24 +176,20 @@ export default function HeroSection() {
                 viewport={{ once: false, amount: 0.6 }}
                 transition={{ duration: 0.5, ease: 'easeOut' }}
             >
-                Skills that pay.
+                Get paid for what you know.
             </motion.h1>
 
             {/* Sub text */}
-            <motion.h1
+            <motion.h2
                 className="text-center text-xl md:text-2xl text-muted-foreground font-bold max-w-3xl mb-12"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: false, amount: 0.6 }}
                 transition={{ duration: 0.5, delay: 0.1, ease: 'easeOut' }}
             >
-                Talented is coming soon — practical courses, guides, and
-                creators for Tunisian learners. Pay with {' '}
-                <span className="font-semibold text-primary">
-                    D17 &amp; Flouci
-                </span>
-                , no foreign card needed.
-            </motion.h1>
+                Talented is coming soon — a place to learn practical skills,
+                share what you know, and get paid for it.
+            </motion.h2>
 
             {/* Call to action */}
             <motion.div
@@ -233,7 +214,6 @@ export default function HeroSection() {
             </motion.div>
 
             {/* Hover cards */}
-            <div className="md:min-h-10" />
             <Cards />
         </div>
     )

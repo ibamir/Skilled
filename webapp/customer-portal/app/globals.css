@@ -225,12 +225,6 @@
     }
 }
 
-@media (prefers-reduced-motion: reduce) {
-    html {
-        scroll-behavior: auto;
-    }
-}
-
 html[dir="rtl"] {
     --font-sans: var(--font-arabic);
     --font-heading: var(--font-arabic);
