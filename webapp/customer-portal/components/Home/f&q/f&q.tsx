@@ -99,7 +99,7 @@ export default function FrequentAskedQuestions() {
                     transition={{ duration: 0.6, delay: 0.1 }}
                     className="text-4xl font-bold tracking-tight sm:text-5xl text-center"
                 >
-                    {t('frequentAnswers')}
+                    {t('frequentAsked')}
                 </motion.h2>
 
                 <motion.p
