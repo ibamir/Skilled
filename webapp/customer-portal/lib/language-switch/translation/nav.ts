@@ -6,9 +6,9 @@ export const nav = {
         features: 'Features',
     },
     ar: {
-        faq: '',
-        takeTheSurvey: '',
-        howItWorks: '',
-        features: '',
+        faq: 'الأسئلة الشائعة',
+        takeTheSurvey: 'شارك في الاستبيان',
+        howItWorks: 'كيف تعمل المنصة',
+        features: 'المزايا',
     },
 }

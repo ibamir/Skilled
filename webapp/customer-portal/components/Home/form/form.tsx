@@ -363,15 +363,16 @@ export function InterestForm() {
             </motion.div>
 
             {/* Navigation */}
-            <div className="mt-8 flex items-center justify-between">
+            <div className="mt-8 flex items-center justify-between" dir='ltr'>
                 <Button
                     onClick={back}
                     disabled={currentQuestion === 0}
                     className="h-10! rounded-xl p-2"
                     variant="secondary"
+                    dir='ltr'
                 >
                     <ArrowLeftIcon size={17} />
-                    Back
+                    {t('back')}
                 </Button>
 
                 <motion.button
@@ -380,9 +381,10 @@ export function InterestForm() {
                     disabled={!selectedAnswer}
                     whileTap={{ scale: 0.97 }}
                     className="h-10! bg-primary text-primary-foreground hover:bg-primary/80 rounded-xl flex items-center justify-center gap-2 p-2"
+                    dir='ltr'
                 >
                     {currentQuestion === questions.length - 1
-                        ? t('find')
+                        ? t('back')
                         : t('continue')}
 
                     <ArrowRightIcon size={17} />

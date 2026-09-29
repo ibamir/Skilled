@@ -5,7 +5,8 @@ export const footer = {
         copyright: '&copy; 2026 Talented Inc. All rights reserved.',
     },
     ar: {
-        footerDescription: '',
-        copyright: '',
+        footerDescription:
+            'منصة المواهب والمهارات المصغّرة في تونس. ادفع محليًا عبر D17 أو Flouci.',
+        copyright: '&copy; 2026 شركة Talented. جميع الحقوق محفوظة.',
     },
 }
