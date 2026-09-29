@@ -337,7 +337,7 @@ export function InterestForm() {
                                         </motion.span>
                                     )}
 
-                                    <span className="flex-1 text-sm font-medium">
+                                    <span className="text-sm font-medium">
                                         {option.label}
                                     </span>
                                 </Label>
