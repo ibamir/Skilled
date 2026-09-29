@@ -76,7 +76,7 @@ export default function HowItWorks() {
     return (
         <section
             ref={containerRef}
-            className="relative mx-auto max-w-6xl px-8 py-24"
+            className="relative mx-auto max-w-6xl w-full  px-8 py-24"
             id="how-it-works"
         >
             {/* Header */}
@@ -116,12 +116,12 @@ export default function HowItWorks() {
                 >
                     {t('HSubtext')}
                 </motion.p>
-                <motion.p
+                <motion.span
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: false }}
                     transition={{ duration: 0.6, delay: 0.2 }}
-                    className="mt-5 text-lg text-muted-foreground"
+                    className="mt-5 grid md:grid-cols-4 grid-cols-2 gap-2 text-lg text-muted-foreground"
                 >
                     {tags
                         .toString()
@@ -131,13 +131,13 @@ export default function HowItWorks() {
                                 <Badge
                                     variant="primary-light"
                                     key={t}
-                                    className="rounded-xl p-3"
+                                    className="rounded-xl p-1"
                                 >
                                     {t}
                                 </Badge>
                             </span>
                         ))}
-                </motion.p>
+                </motion.span>
             </motion.div>
 
             <p className="mb-8 text-center text-xs text-muted-foreground">
@@ -310,7 +310,7 @@ function TimelineStep({
                             .split(',')
                             .map((t) => (
                                 <Badge
-                                    className="p-3 rounded-xl"
+                                    className="p-1 rounded-xl"
                                     variant="primary-light"
                                     key={t}
                                 >
@@ -370,7 +370,7 @@ function TimelineStep({
 
                                 return (
                                     <Badge
-                                        className="p-3 rounded-xl [&_svg:not([class*=size-])]:size-4!"
+                                        className="p-1 rounded-xl [&_svg:not([class*=size-])]:size-4!"
                                         variant="primary-light"
                                         key={t}
                                     >

@@ -178,9 +178,9 @@ export function Features() {
                                     </p>
                                 </span>
                             </div>
-                            <DownloadIcon size={22} />
+                            <DownloadIcon size={22} className='md:block hidden'/>
                         </div>
-                        <div className="flex items-center justify-between p-2 bg-card rounded-2xl border border-border px-4">
+                        <div className="flex md:flex-row flex-col items-center justify-between p-2 bg-card rounded-2xl border border-border px-4 md:gap-0 gap-2">
                             <div className="flex items-center justify-center gap-4">
                                 <MessageSquareIcon size={22} />
                                 <span className="flex flex-col justify-center">
@@ -192,7 +192,7 @@ export function Features() {
                                     </p>
                                 </span>
                             </div>
-                            <Button className="rounded-xl" variant="secondary">
+                            <Button className="rounded-xl md:w-fit w-full" variant="secondary">
                                 {t('join')}
                             </Button>
                         </div>
