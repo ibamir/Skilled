@@ -92,18 +92,14 @@ export function MobileNav() {
                                         </a>
                                     </motion.div>
                                 ))}
-                                <div className='flex items-center justify-center gap-2 px-2.5'>
-                                    <span className="flex items-center justify-between w-full flex-1">
-                                        <p className="text-primary">Theme : </p>
-                                        <ThemeToggle />
-                                    </span>
-                                    <Separator orientation='vertical' className='h-full  bg-border! wpx'/>
-                                    <span className="flex items-center justify-between w-full flex-1">
-                                        <p className="text-primary">Language : </p>
-                                        <LanguageSwitcher />
-                                    </span>
-                                </div>
-                                
+                                <span className="flex items-center justify-between w-full flex-1 px-2.5">
+                                    <p className="text-primary">{t('theme')} </p>
+                                    <ThemeToggle />
+                                </span>
+                                <span className="flex items-center justify-between w-full flex-1 px-2.5">
+                                    <p className="text-primary">{t('language')}</p>
+                                    <LanguageSwitcher />
+                                </span>
                             </motion.div>
                             <div className="mt-12 flex flex-col gap-2">
                                 <a

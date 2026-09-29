@@ -44,7 +44,7 @@ export default function Features() {
 
     return (
         <motion.div
-            className="mx-auto flex h-full w-full max-w-7xl flex-col justify-center gap-12 px-8 py-24 md:px-8"
+            className="mx-auto flex h-full w-full max-w-7xl flex-col justify-center gap-12 px-2 py-24 md:px-4"
             id="features"
             initial="hidden"
             whileInView="visible"
