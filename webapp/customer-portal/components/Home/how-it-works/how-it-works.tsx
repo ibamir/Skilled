@@ -325,11 +325,16 @@ function TimelineStep({
                         {step.tags
                             ?.toString()
                             .split(',')
-                            .map((t) =>
-                                t
-                                    .trim()
-                                    .toLowerCase()
-                                    .includes('0% currency surcharge') ? (
+                            .map((t) => {
+                                const cleanedTag = t.trim().toLowerCase()
+                                // Check for either string explicitly
+                                const hasNoSurcharge =
+                                    cleanedTag.includes(
+                                        '0% currency surcharge',
+                                    ) ||
+                                    cleanedTag.includes('رسوم تحويل عملة 0٪')
+
+                                return hasNoSurcharge ? (
                                     <span
                                         className="flex items-center justify-center gap-2 text-green-600"
                                         key={t}
@@ -345,8 +350,8 @@ function TimelineStep({
                                         <LockKeyholeIcon size={17} />
                                         <p>{t}</p>
                                     </span>
-                                ),
-                            )}
+                                )
+                            })}
                     </div>
                 )}
                 {step.number === '03' && (
@@ -354,28 +359,35 @@ function TimelineStep({
                         {step.tags
                             ?.toString()
                             .split(',')
-                            .map((t) => (
-                                <Badge
-                                    className="p-3 rounded-xl [&_svg:not([class*=size-])]:size-4!"
-                                    variant="primary-light"
-                                    key={t}
-                                >
-                                    {t
-                                        .trim()
-                                        .toLowerCase()
-                                        .includes('instant asset download') ? (
-                                        <span className="flex items-center justify-center gap-2 h-full">
-                                            <CircleCheckIcon size={25} />
-                                            {t}
-                                        </span>
-                                    ) : (
-                                        <span className="flex items-center justify-center gap-2">
-                                            <MessageSquareIcon size={25} />
-                                            {t}
-                                        </span>
-                                    )}
-                                </Badge>
-                            ))}
+                            .map((t) => {
+                                const cleanedTag = t.trim().toLowerCase()
+                                // Check both English and Arabic strings explicitly
+                                const isInstantDownload =
+                                    cleanedTag.includes(
+                                        'instant asset download',
+                                    ) ||
+                                    cleanedTag.includes('تنزيل فوري للموارد')
+
+                                return (
+                                    <Badge
+                                        className="p-3 rounded-xl [&_svg:not([class*=size-])]:size-4!"
+                                        variant="primary-light"
+                                        key={t}
+                                    >
+                                        {isInstantDownload ? (
+                                            <span className="flex items-center justify-center gap-2 h-full">
+                                                <CircleCheckIcon size={25} />
+                                                {t}
+                                            </span>
+                                        ) : (
+                                            <span className="flex items-center justify-center gap-2">
+                                                <MessageSquareIcon size={25} />
+                                                {t}
+                                            </span>
+                                        )}
+                                    </Badge>
+                                )
+                            })}
                     </div>
                 )}
 
@@ -384,24 +396,31 @@ function TimelineStep({
                         {step.tags
                             ?.toString()
                             .split(',')
-                            .map((t) => (
-                                <span key={t}>
-                                    {t
-                                        .trim()
-                                        .toLowerCase()
-                                        .includes('same-week payouts') ? (
-                                        <span className="flex items-center justify-center gap-2 h-full">
-                                            <CreditCard size={17} />
-                                            {t}
-                                        </span>
-                                    ) : (
-                                        <span className="flex items-center justify-center gap-2">
-                                            <ReceiptTextIcon size={17} />
-                                            {t}
-                                        </span>
-                                    )}
-                                </span>
-                            ))}
+                            .map((t) => {
+                                const cleanedTag = t.trim().toLowerCase()
+                                // Check both English and Arabic variants separately
+                                const isSameWeekPayout =
+                                    cleanedTag.includes('same-week payouts') ||
+                                    cleanedTag.includes(
+                                        'تحويل الأرباح خلال الأسبوع نفسه',
+                                    )
+
+                                return (
+                                    <span key={t}>
+                                        {isSameWeekPayout ? (
+                                            <span className="flex items-center justify-center gap-2 h-full">
+                                                <CreditCard size={17} />
+                                                {t}
+                                            </span>
+                                        ) : (
+                                            <span className="flex items-center justify-center gap-2">
+                                                <ReceiptTextIcon size={17} />
+                                                {t}
+                                            </span>
+                                        )}
+                                    </span>
+                                )
+                            })}
                     </div>
                 )}
             </motion.div>
