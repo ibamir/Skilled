@@ -70,7 +70,9 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
         key: keyof typeof translations.en,
         vars?: Record<string, string | number>,
     ) => {
-        let text: string = translations[language][key]
+        let text =
+            (translations[language][key] as string) ||
+            (translations.en[key] as string)
         if (vars) {
             for (const [k, v] of Object.entries(vars)) {
                 text = text.replace(`{${k}}`, String(v))

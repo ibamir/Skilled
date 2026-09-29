@@ -12,6 +12,7 @@ import CreditCard from '@/components/ui/credit-card'
 import { CompassIcon } from '@/components/ui/compass'
 import { UsersRoundIcon } from '@/components/ui/users-round'
 import { Landmark } from 'lucide-react'
+import { useLanguage } from '@/lib/language-switch/LanguageProvider'
 
 type Step = {
     number: string
@@ -19,75 +20,40 @@ type Step = {
     description: string
     card: React.ReactNode
     tags?: string[]
-    encryption?: string
-    charging?: string
 }
-
-const steps: Step[] = [
-    {
-        number: '01',
-        title: 'Find the right skill to learn',
-        description:
-            'When Talented launches, explore practical courses, guides, and live cohorts in Darija, French, and English. Choose resources that match your goals and your level.',
-        card: <FigmaWebFlow />,
-        tags: ['Freelance Contracts', 'Figma & Webflow', 'Next.js & SaaS'],
-    },
-    {
-        number: '02',
-        title: 'Pay in Tunisian dinars',
-        description:
-            'When the platform opens, no international card will be required. Pay through D17 or Flouci and access your purchase without leaving the platform.',
-        card: <Payment />,
-        encryption: '128-bit Encrypted',
-        charging: '0% Currency Surcharge',
-    },
-    {
-        number: '03',
-        title: 'Learn with practical resources',
-        description:
-            'At launch, work through lessons, templates, exercises, and community spaces built to help you finish real projects and keep improving.',
-        card: <Features />,
-        tags: ['Instant asset download', 'Discord / Telegram'],
-    },
-    {
-        number: '04',
-        title: 'Share your knowledge and earn',
-        description:
-            'Creators will be able to publish a course, guide, or resource for their audience, keep 88% of each sale, and choose clear local payout options.',
-        card: <CashOut />,
-        tags: ['Same-Week Payouts', 'Auto Tax Invoice PDF'],
-    },
-]
-
-const tags = [
-    '01 Discovery',
-    '02 Local Checkout',
-    '03 Cohort & Drills',
-    '04 Creator Cashout',
-]
-
-const stage = [
-    {
-        id: '1',
-        stage: 'Vetted Micro-Skills',
-        icon: <CompassIcon size={15} />,
-    },
-    {
-        id: '2',
-        stage: 'No foreign card needed',
-        icon: <CreditCard size={15} />,
-    },
-    {
-        id: '3',
-        stage: 'Hands-on Cohorts & Assets',
-        icon: <UsersRoundIcon size={15} />,
-    },
-    {
-        id: '4',
-        stage: 'Fair & Transparent Earnings',
-        icon: <Landmark size={13} className="hover:animate-bounce" />,
-    },
-]
+function useSteps(): Step[] {
+    const { t, language } = useLanguage()
+    return [
+        {
+            number: '01',
+            title: t('title01'),
+            description: t('description01'),
+            card: <FigmaWebFlow />,
+            tags: [t('tags01')],
+        },
+        {
+            number: '02',
+            title: t('title02'),
+            description: t('description02'),
+            card: <Payment />,
+            tags: [t('tags02')],
+        },
+        {
+            number: '03',
+            title: t('title03'),
+            description: t('description03'),
+            card: <Features />,
+            tags: [t('tags03')],
+        },
+        {
+            number: '04',
+            title: t('title04'),
+            description: t('description04'),
+            card: <CashOut />,
+            tags: [t('tags04')],
+        },
+    ]
+}
 
 export default function HowItWorks() {
     const containerRef = useRef<HTMLDivElement>(null)
@@ -103,6 +69,9 @@ export default function HowItWorks() {
     })
 
     const lineHeight = useTransform(smoothProgress, [0, 1], ['0%', '100%'])
+    const { t } = useLanguage()
+    const steps = useSteps()
+    const tags = [t('tags')]
 
     return (
         <section
@@ -125,7 +94,7 @@ export default function HowItWorks() {
                     transition={{ duration: 0.5 }}
                     className="mb-4 inline-block text-sm font-medium uppercase tracking-widest text-muted-foreground"
                 >
-                    How it works
+                    {t('howItWorks')}
                 </motion.span>
 
                 <motion.h2
@@ -135,7 +104,7 @@ export default function HowItWorks() {
                     transition={{ duration: 0.6, delay: 0.1 }}
                     className="text-4xl font-bold tracking-tight sm:text-5xl"
                 >
-                    From learning goal to useful result.
+                    {t('HHeader')}
                 </motion.h2>
 
                 <motion.p
@@ -145,8 +114,7 @@ export default function HowItWorks() {
                     transition={{ duration: 0.6, delay: 0.2 }}
                     className="mt-5 text-lg text-muted-foreground"
                 >
-                    Discover a skill, pay locally, learn by doing, and share
-                    what you know with the next learner.
+                    {t('HSubtext')}
                 </motion.p>
                 <motion.p
                     initial={{ opacity: 0, y: 20 }}
@@ -173,7 +141,7 @@ export default function HowItWorks() {
             </motion.div>
 
             <p className="mb-8 text-center text-xs text-muted-foreground">
-                Product preview - illustrative data.
+                {t('productPreview')}
             </p>
 
             {/* Timeline */}
@@ -257,6 +225,32 @@ function TimelineStep({
         [0.96, 1.02, 1],
     )
 
+    const steps = useSteps()
+    const { t } = useLanguage()
+    const stage = [
+        {
+            id: '1',
+            stage: t('stage01'),
+            icon: <CompassIcon size={15} />,
+        },
+        {
+            id: '2',
+            stage: t('stage02'),
+            icon: <CreditCard size={15} />,
+        },
+        {
+            id: '3',
+            stage: t('stage03'),
+            icon: <UsersRoundIcon size={15} />,
+        },
+        {
+            id: '4',
+            stage: t('stage04'),
+            icon: <Landmark size={13} className="hover:animate-bounce" />,
+        },
+    ]
+
+
     return (
         <div className="relative grid items-center gap-10 lg:grid-cols-2 lg:gap-20">
             {/* Content */}
@@ -328,14 +322,31 @@ function TimelineStep({
 
                 {step.number === '02' && (
                     <div className="flex items-center gap-4 mt-4 flex-wrap">
-                        <span className="flex items-center justify-center gap-2 text-green-600">
-                            <CircleCheckIcon size={17} />
-                            <p>{step.charging}</p>
-                        </span>
-                        <span className="flex items-center justify-center gap-2">
-                            <LockKeyholeIcon size={17} />
-                            <p>{step.encryption}</p>
-                        </span>
+                        {step.tags
+                            ?.toString()
+                            .split(',')
+                            .map((t) =>
+                                t
+                                    .trim()
+                                    .toLowerCase()
+                                    .includes('0% currency surcharge') ? (
+                                    <span
+                                        className="flex items-center justify-center gap-2 text-green-600"
+                                        key={t}
+                                    >
+                                        <CircleCheckIcon size={17} />
+                                        <p>{t}</p>
+                                    </span>
+                                ) : (
+                                    <span
+                                        className="flex items-center justify-center gap-2"
+                                        key={t}
+                                    >
+                                        <LockKeyholeIcon size={17} />
+                                        <p>{t}</p>
+                                    </span>
+                                ),
+                            )}
                     </div>
                 )}
                 {step.number === '03' && (

@@ -1,16 +1,24 @@
 'use client'
 
-import { links } from '@/components/Home/navbar/header'
 import { Separator } from '@base-ui/react'
 import WordmarkFooter from '@/components/ruixen/wordmark-footer'
 import { motion } from 'motion/react'
 import { scrollToHash } from '@/lib/utils'
 import { useTheme } from 'next-themes'
 import { LanguageSwitcher } from '@/lib/language-switch/language-switcher'
+import { useLanguage } from '@/lib/language-switch/LanguageProvider'
 
 
 export default function Footer() {
     const { theme } = useTheme()
+    const { t } = useLanguage()
+
+    const links = [
+        { label: t('features'), href: '#features' },
+        { label: t('howItWorks'), href: '#how-it-works' },
+        { label: t('faq'), href: '#faq' },
+        { label: t('takeTheSurvey'), href: '#help-us' },
+    ]
 
     return (
         <motion.div
@@ -36,8 +44,7 @@ export default function Footer() {
                         </span>
                     </a>
                     <p className="text-muted-foreground max-w-70">
-                        Tunisia&apos;s talent & micro-skill platform. Powered by
-                        local payments through D17 &amp; Flouci.
+                        {t('footerDescription')}
                     </p>
                 </div>
                 <div className="flex md:flex-row flex-wrap justify-center items-center gap-4 md:min-w-fit">
@@ -57,7 +64,7 @@ export default function Footer() {
             </div>
             <Separator className="w-full h-px bg-border" />
             <p className="text-center">
-                &copy; 2026 Talented Inc. All rights reserved.
+                {t('copyright')}
             </p>
             <WordmarkFooter brandName="TALENTED" />
         </motion.div>

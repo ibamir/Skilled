@@ -5,15 +5,22 @@ import { scrollToHash } from '@/lib/utils'
 import React from 'react'
 import { Button, buttonVariants } from '@/components/ui/button'
 import { Portal, PortalBackdrop } from '@/components/ui/portal'
-import { links } from '@/components/Home/navbar/header'
 import { XIcon, MenuIcon } from 'lucide-react'
 import { ThemeToggle } from '@/components/theme/theme-toggle'
 import { AnimatePresence, motion } from 'motion/react'
 import { LanguageSwitcher } from '@/lib/language-switch/language-switcher'
 import { Separator } from '@/components/ui/separator' 
+import { useLanguage } from '@/lib/language-switch/LanguageProvider'
 
 export function MobileNav() {
     const [open, setOpen] = React.useState(false)
+    const { t } = useLanguage()
+    const links = [
+        { label: t('features'), href: '#features' },
+        { label: t('howItWorks'), href: '#how-it-works' },
+        { label: t('faq'), href: '#faq' },
+        { label: t('takeTheSurvey'), href: '#help-us' },
+    ]
 
     return (
         <div className="md:hidden">

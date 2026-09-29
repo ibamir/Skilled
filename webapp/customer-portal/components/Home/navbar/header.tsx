@@ -8,18 +8,19 @@ import { MobileNav } from './mobile-nav'
 import { ThemeToggle } from '@/components/theme/theme-toggle'
 import { motion } from 'motion/react'
 import { useTheme } from 'next-themes'
-
-
-export const links = [
-    { label: 'Features', href: '#features' },
-    { label: 'How it works', href: '#how-it-works' },
-    { label: 'FAQ', href: '#faq' },
-    { label: 'Take the survey', href: '#help-us' },
-]
+import { useLanguage } from '@/lib/language-switch/LanguageProvider'
 
 export function Header() {
+    const { t } = useLanguage()
     const scrolled = useScroll(10)
     const { theme } = useTheme()
+
+    const links = [
+        { label: t('features'), href: '#features' },
+        { label: t('howItWorks'), href: '#how-it-works' },
+        { label: t('faq'), href: '#faq' },
+        { label: t('takeTheSurvey'), href: '#help-us' },
+    ]
 
     useEffect(() => {
         const previousRestoration = window.history.scrollRestoration

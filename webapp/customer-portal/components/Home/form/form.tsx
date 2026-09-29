@@ -13,102 +13,9 @@ import { Label } from '@/components/ui/label'
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group'
 import { cn } from '@/lib/utils'
 import { saveToNotion } from '@/app/actions/notion/action'
+import { useLanguage } from '@/lib/language-switch/LanguageProvider'
 
-const questions = [
-    {
-        id: 'role',
-        question: 'What best describes you?',
-        options: [
-            {
-                value: 'student',
-                label: 'Student',
-                icon: GraduationCapIcon,
-            },
-            {
-                value: 'professional',
-                label: 'Working professional / freelancer',
-                icon: BriefcaseBusinessIcon,
-            },
-            {
-                value: 'creator',
-                label: 'Creator / Knowledge seller',
-                icon: BriefcaseBusinessIcon,
-            },
-        ],
-    },
-    {
-        id: 'interest',
-        question: 'What would you use Talented for?',
-        options: [
-            {
-                value: 'learn',
-                label: 'Learn something new',
-            },
-            {
-                value: 'sell',
-                label: 'Sell / share what I know',
-            },
-            {
-                value: 'both',
-                label: 'Both',
-            },
-        ],
-    },
-    {
-        id: 'content',
-        question: 'What would you be most interested in?',
-        options: [
-            {
-                value: 'templates',
-                label: 'Templates & cheatsheets',
-            },
-            {
-                value: 'courses',
-                label: 'Mini-courses & videos',
-            },
-            {
-                value: 'cohorts',
-                label: 'Live cohorts / group sessions',
-            },
-            {
-                value: 'skills',
-                label: 'Practical skill tutorials',
-            },
-            {
-                value: 'other',
-                label: 'Other',
-            },
-        ],
-    },
-    {
-        id: 'likelihood',
-        question: 'Would you use Talented if it launched today?',
-        options: [
-            {
-                value: 'definitely',
-                label: 'Definitely',
-            },
-            {
-                value: 'probably',
-                label: 'Probably',
-            },
-            {
-                value: 'maybe',
-                label: 'Maybe, I want to see more',
-            },
-            {
-                value: 'probably-not',
-                label: 'Probably not right now',
-            },
-        ],
-    },
-    {
-        id: 'email',
-        question: 'Where should we send launch updates?',
-        type: 'email',
-        options: [],
-    },
-]
+
 
 export function InterestForm() {
     const id = useId()
@@ -116,6 +23,103 @@ export function InterestForm() {
     const [answers, setAnswers] = useState<Record<string, string>>({})
     const [submitted, setSubmitted] = useState(false)
     const [isSubmitting, setIsSubmitting] = useState(false)
+    const { t } = useLanguage()
+
+    const questions = [
+        {
+            id: 'role',
+            question: t('question1'),
+            options: [
+                {
+                    value: 'student',
+                    label: t('label1a'),
+                    icon: GraduationCapIcon,
+                },
+                {
+                    value: 'professional',
+                    label: t('label1b'),
+                    icon: BriefcaseBusinessIcon,
+                },
+                {
+                    value: 'creator',
+                    label: t('label1c'),
+                    icon: BriefcaseBusinessIcon,
+                },
+            ],
+        },
+        {
+            id: 'interest',
+            question: t('question2'),
+            options: [
+                {
+                    value: 'learn',
+                    label: t('label2a'),
+                },
+                {
+                    value: 'sell',
+                    label: t('label2b'),
+                },
+                {
+                    value: 'both',
+                    label: t('label2c'),
+                },
+            ],
+        },
+        {
+            id: 'content',
+            question: t('question3'),
+            options: [
+                {
+                    value: 'templates',
+                    label: t('label3a'),
+                },
+                {
+                    value: 'courses',
+                    label: t('label3b'),
+                },
+                {
+                    value: 'cohorts',
+                    label: t('label3c'),
+                },
+                {
+                    value: 'skills',
+                    label: t('label3d'),
+                },
+                {
+                    value: 'other',
+                    label: t('label3e'),
+                },
+            ],
+        },
+        {
+            id: 'likelihood',
+            question: t('question4'),
+            options: [
+                {
+                    value: 'definitely',
+                    label: t('label4a'),
+                },
+                {
+                    value: 'probably',
+                    label: t('label4b'),
+                },
+                {
+                    value: 'maybe',
+                    label: t('label4c'),
+                },
+                {
+                    value: 'probably-not',
+                    label: t('label4d'),
+                },
+            ],
+        },
+        {
+            id: 'email',
+            question: t('question5'),
+            type: 'email',
+            options: [],
+        },
+    ]
 
     const question = questions[currentQuestion]
     const selectedAnswer = answers[question.id]
@@ -188,12 +192,11 @@ export function InterestForm() {
                 </div>
 
                 <h3 className="text-2xl font-semibold tracking-tight">
-                    Thanks for your interest!
+                    {t('thx')}
                 </h3>
 
                 <p className="mt-2 max-w-md text-sm text-muted-foreground">
-                    Your answers help us build the right courses, resources, and
-                    creator tools for the Talented community.
+                    {t('message')}
                 </p>
             </motion.div>
         )
@@ -211,7 +214,7 @@ export function InterestForm() {
             <div className="mb-8">
                 <div className="mb-2 flex items-center justify-between text-xs text-muted-foreground">
                     <span>
-                        Question {currentQuestion + 1} of {questions.length}
+                        {t('question')} {currentQuestion + 1} {t('from')} {questions.length}
                     </span>
 
                     <span>
@@ -256,8 +259,8 @@ export function InterestForm() {
 
                 <p className="mt-2 text-sm text-muted-foreground">
                     {isEmailQuestion
-                        ? 'Enter your email to get notified when we launch.'
-                        : 'Choose the option that fits you best.'}
+                        ? t('enter')
+                        : t('chose')}
                 </p>
 
                 {isEmailQuestion ? (
@@ -265,7 +268,7 @@ export function InterestForm() {
                         type="email"
                         value={selectedAnswer ?? ''}
                         onChange={(event) => selectAnswer(event.target.value)}
-                        placeholder="Enter your email"
+                        placeholder={t('enterEmail')}
                         className="mt-6 h-12 rounded-xl"
                         required
                     />
@@ -350,7 +353,7 @@ export function InterestForm() {
                                             contentOther: event.target.value,
                                         }))
                                     }
-                                    placeholder="Tell us what you would like to learn"
+                                    placeholder={t('tellUs')}
                                     className="h-12 rounded-xl"
                                     required
                                 />
@@ -379,8 +382,8 @@ export function InterestForm() {
                     className="h-10! bg-primary text-primary-foreground hover:bg-primary/80 rounded-xl flex items-center justify-center gap-2 p-2"
                 >
                     {currentQuestion === questions.length - 1
-                        ? 'Finish'
-                        : 'Continue'}
+                        ? t('find')
+                        : t('continue')}
 
                     <ArrowRightIcon size={17} />
                 </motion.button>
@@ -390,6 +393,7 @@ export function InterestForm() {
 }
 
 export function InterestFormSection() {
+    const { t } = useLanguage()
     const sectionRef = useRef<HTMLElement>(null)
     const isInView = useInView(sectionRef, {
         once: false,
@@ -408,14 +412,13 @@ export function InterestFormSection() {
         >
             <div className="mx-auto mb-12 max-w-2xl text-center">
                 <span className="mb-4 inline-block text-sm font-medium uppercase tracking-widest text-muted-foreground">
-                    Quick community survey
+                    {t('quick')}
                 </span>
                 <h2 className="text-4xl font-bold tracking-tight sm:text-5xl">
-                    Help shape Talented.
+                    {t('help')}
                 </h2>
                 <p className="mt-5 text-lg text-muted-foreground">
-                    Answer a few quick questions about what you want to learn,
-                    create, and access, then get notified when we launch.
+                    {t('answer')}
                 </p>
             </div>
             <InterestForm />

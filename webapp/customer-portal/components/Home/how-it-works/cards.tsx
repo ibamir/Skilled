@@ -11,8 +11,11 @@ import ScanBarcodeIcon from '@/components/ui/scan-barcode-icon'
 import { Separator } from '@base-ui/react'
 import Image from 'next/image'
 import { motion } from 'motion/react'
+import { useLanguage } from '@/lib/language-switch/LanguageProvider'
 
 export function FigmaWebFlow() {
+    const {t} = useLanguage()
+
     return (
         <motion.div
             className="h-full w-full"
@@ -34,12 +37,11 @@ export function FigmaWebFlow() {
                     </div>
 
                     <CardHeader className="text-xl font-bold p-0">
-                        Figma to Webflow Mastery
+                        {t('figmaCardHeader')}
                     </CardHeader>
 
                     <p className="text-foreground text-sm">
-                        Direct downloadable components and cohort code reviews
-                        with real Tunisian case studies.
+                        {t('figmaCardDescription')}
                     </p>
                 </CardContent>
             </Card>
@@ -48,6 +50,8 @@ export function FigmaWebFlow() {
 }
 
 export function Payment() {
+    const { t } = useLanguage()
+
     return (
         <motion.div
             className="h-full w-full"
@@ -58,25 +62,25 @@ export function Payment() {
         >
             <Card className="w-full border border-primary shadow-sm rounded-3xl hover:-translate-y-4">
                 <CardContent className="flex flex-col gap-4">
-                    <div className="flex flex-col items-center justify-center gap-4 h-full w-full overflow-hidden rounded-xl">
-                        <div className="flex flex-col items-center justify-center gap-4 h-fit w-full overflow-hidden rounded-xl bg-background shadow-md border-2 border-border p-4">
+                    <div className="flex flex-col items-center justify-center gap-2 h-full w-full overflow-hidden rounded-xl">
+                        <div className="flex flex-col items-center justify-center gap-4 h-fit w-full overflow-hidden rounded-xl p-4">
                             <span className="flex items-center text-primary justify-between w-full font-bold text-md">
                                 <span className="flex items-center justify-center gap-2">
                                     <ScanBarcodeIcon size={20} />
-                                    Express Local Checkout
+                                    {t('expressLocalCheckout')}
                                 </span>
                                 <Badge
                                     variant="success-light"
                                     className="p-3 rounded-xl font-bold "
                                 >
-                                    Instant Rail
+                                    {t('instantRail')}
                                 </Badge>
                             </span>
                             <Separator className="w-full h-px bg-border" />
                             <div className="flex items-center justify-between rounded-2xl w-full">
                                 <span className="flex flex-col justify-center max-h-fit">
                                     <p className="capitalize text-muted-foreground text-sm">
-                                        Cart Total
+                                        {t('cartTotal')}
                                     </p>
                                     <span className="flex justify-center items-baseline gap-2">
                                         <p className="font-bold text-3xl text-primary">
@@ -103,10 +107,10 @@ export function Payment() {
                             />
                             <span className="flex flex-col justify-center">
                                 <p className="text-md font-semibold">
-                                    Poste Tunisienne D17
+                                    {t('poste')}
                                 </p>
                                 <p className="text-xs text-muted-foreground">
-                                    Pay via mobile phone number
+                                    {t('PayViaMobile')}
                                 </p>
                             </span>
                         </div>
@@ -120,10 +124,10 @@ export function Payment() {
                             />
                             <span className="flex flex-col justify-center">
                                 <p className="text-md font-semibold">
-                                    Flouci Digital Wallet
+                                    {t('flouci')}
                                 </p>
                                 <p className="text-xs text-muted-foreground">
-                                    Scan & approve in 3 seconds
+                                    {t('Scan')}
                                 </p>
                             </span>
                         </div>
@@ -135,6 +139,8 @@ export function Payment() {
 }
 
 export function Features() {
+    const { t } = useLanguage()
+
     return (
         <motion.div
             className="h-full w-full"
@@ -145,17 +151,17 @@ export function Features() {
         >
             <Card className="w-full border border-primary shadow-sm rounded-3xl hover:-translate-y-4">
                 <CardContent>
-                    <div className="bg-background shadow-md border-2 border-border p-4 flex flex-col gap-4 rounded-2xl">
+                    <div className="bg-background border border-border p-4 flex flex-col gap-4 rounded-2xl">
                         <CardHeader className="text-md p-0">
                             <span className="flex items-center justify-between gap-2">
                                 <p className="uppercase font-bold text-primary">
-                                    Access Unlocked
+                                    {t('access')}
                                 </p>
                                 <Badge
                                     variant="success-light"
                                     className="p-3 capitalize rounded-xl font-bold"
                                 >
-                                    Active seat
+                                    {t('activeSeat')}
                                 </Badge>
                             </span>
                         </CardHeader>
@@ -165,10 +171,10 @@ export function Features() {
                                 <FolderArchiveIcon size={22} />
                                 <span className="flex flex-col justify-center">
                                     <p className="text-md font-semibold">
-                                        SaaS-Boilerplate-2025.zip
+                                        {t('saas')}
                                     </p>
                                     <p className="text-xs text-muted-foreground font-thin">
-                                        Includes Next js & Supabase auth
+                                        {t('includeNextJs')}
                                     </p>
                                 </span>
                             </div>
@@ -179,15 +185,15 @@ export function Features() {
                                 <MessageSquareIcon size={22} />
                                 <span className="flex flex-col justify-center">
                                     <p className="text-md font-semibold">
-                                        Private Cohort Lounge
+                                        {t('private')}
                                     </p>
                                     <p className="text-xs text-muted-foreground font-thin">
-                                        142 members active now
+                                        {t('members')}
                                     </p>
                                 </span>
                             </div>
                             <Button className="rounded-xl" variant="secondary">
-                                Join room
+                                {t('join')}
                             </Button>
                         </div>
                     </div>
@@ -198,6 +204,8 @@ export function Features() {
 }
 
 export function CashOut() {
+    const { t } = useLanguage()
+
     return (
         <motion.div
             className="h-full w-full"
@@ -209,11 +217,11 @@ export function CashOut() {
             <Card className="w-full border border-primary shadow-sm rounded-3xl hover:-translate-y-4">
                 <CardContent className="flex flex-col gap-4">
                     <div className="flex flex-col items-center justify-center gap-4 h-full w-full overflow-hidden rounded-xl">
-                        <div className="flex flex-col items-center justify-center gap-2 h-fit w-full overflow-hidden rounded-xl bg-background shadow-md border-2 border-border p-4">
+                        <div className="flex flex-col items-center justify-center gap-2 h-fit w-full overflow-hidden p-4">
                             <span className="flex items-center text-primary justify-between w-full font-bold text-md">
                                 <span className="flex items-center justify-center gap-2">
                                     <ScanBarcodeIcon size={20} />
-                                    Automated Payout Engine
+                                    {t('automate')}
                                 </span>
                                 <CircleCheckIcon
                                     size={20}
@@ -231,18 +239,17 @@ export function CashOut() {
                                     </p>
                                 </span>
                                 <p className="capitalize text-muted-foreground text-sm">
-                                    Credited to D17 Postal Account (+216
-                                    98***98)
+                                    {t('creditTo')}
                                 </p>
                             </div>
                         </div>
-                        <div className="flex flex-col items-center w-full bg-background border border-border rounded-xl p-4 gap-1">
+                        <div className="flex flex-col items-center w-full bg-background border border-border rounded-xl p-4 gap-2">
                             <span className="flex items-center justify-between w-full">
-                                <p className="">Total Gross Sales :</p>
+                                <p className="">{t('totalGross')}</p>
                                 <p className="font-bold">954.500 TND</p>
                             </span>
                             <span className="flex items-center justify-between w-full">
-                                <p className="">Creator Revenue Share :</p>
+                                <p className="">{t('creatorRevenue')}</p>
                                 <p className="font-bold text-green-600">
                                     88.0%
                                 </p>

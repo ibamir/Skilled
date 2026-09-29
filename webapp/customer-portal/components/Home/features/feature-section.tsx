@@ -8,6 +8,7 @@ import { KeyCircleIcon } from '@/components/ui/key-circle'
 import { RocketIcon } from '@/components/ui/rocket'
 import { motion, type MotionProps } from 'motion/react'
 import { Card, CardContent } from '@/components/ui/card'
+import { useLanguage } from '@/lib/language-switch/LanguageProvider'
 
 type FeatureType = {
     title: string
@@ -16,6 +17,31 @@ type FeatureType = {
 }
 
 export default function Features() {
+    const { t } = useLanguage()
+
+    const features: FeatureType[] = [
+        {
+            title: t('titleF1'),
+            icon: <RocketIcon />,
+            description: t('descriptionF1'),
+        },
+        {
+            title: t('titleF2'),
+            icon: <KeyCircleIcon />,
+            description: t('descriptionF2'),
+        },
+        {
+            title: t('titleF3'),
+            icon: <ShieldCheckIcon />,
+            description: t('descriptionF3'),
+        },
+        {
+            title: t('titleF4'),
+            icon: <CreditCard />,
+            description: t('descriptionF4'),
+        },
+    ]
+
     return (
         <motion.div
             className="mx-auto flex h-full w-full max-w-7xl flex-col justify-center gap-12 px-8 py-24 md:px-8"
@@ -40,15 +66,13 @@ export default function Features() {
                 }}
             >
                 <span className="mb-4 inline-block text-sm font-medium uppercase tracking-widest text-muted-foreground">
-                    Features
+                    {t('features')}
                 </span>
                 <h2 className="text-4xl font-bold tracking-tight sm:text-5xl">
-                    Skills for real life and work
+                    {t('featureHeader')}
                 </h2>
                 <p className="text-muted-foreground text-sm leading-relaxed md:text-base">
-                    When Talented launches, learners will be able to build
-                    practical skills, access useful resources, and sell what
-                    they know through a platform built for Tunisia.
+                    {t('featureDescription')}
                 </p>
             </motion.div>
 
@@ -75,6 +99,7 @@ function FeatureCard({
     Pick<React.ComponentProps<'div'>, 'className'> & {
         feature: FeatureType
     }) {
+
     return (
         <motion.div
             className={cn(
@@ -102,30 +127,3 @@ function FeatureCard({
         </motion.div>
     )
 }
-
-const features: FeatureType[] = [
-    {
-        title: 'Learn practical skills',
-        icon: <RocketIcon />,
-        description:
-            'At launch, learners will be able to explore short courses and guides focused on practical skills.',
-    },
-    {
-        title: 'Access useful resources',
-        icon: <KeyCircleIcon />,
-        description:
-            'At launch, learners will be able to access templates, study guides, and community in one place.',
-    },
-    {
-        title: 'Pay with local methods',
-        icon: <ShieldCheckIcon />,
-        description:
-            'At launch, learners will be able to pay in TND through D17 and Flouci, with no foreign card needed.',
-    },
-    {
-        title: 'Earn from what you know',
-        icon: <CreditCard />,
-        description:
-            'At launch, creators will be able to sell their work with clear pricing and an 88% share.',
-    },
-]

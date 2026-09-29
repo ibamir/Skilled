@@ -8,100 +8,105 @@ import { Progress } from '@/components/ui/progress'
 import { UserIcon } from '@/components/ui/user'
 import { WalletIcon } from '@/components/ui/wallet'
 import Image from 'next/image'
+import { useLanguage } from '@/lib/language-switch/LanguageProvider'
 
-const cardData = [
-    {
-        id: 1,
-        image: '/course-figma-to-webflowcover.jpeg',
-        rotate: 'md:-rotate-5',
-        title: 'Figma to Webflow for Freelancers',
-        body: 'Build client-ready websites and turn your design skills into paid work.',
-        footer: (
-            <div className="bg-secondary h-10 rounded-xl flex items-center justify-between px-2">
-                <span className="flex items-center justify-center gap-2 group">
-                    <WalletIcon
-                        className="group-hover:-translate-y-0.5"
-                        size={16}
-                    />
-                    Pay locally with D17 or Flouci
-                </span>
-                Instant
-            </div>
-        ),
-    },
-    {
-        id: 2,
-        image: '/how-to-use-supabase-with-nextjs.webp',
-        rotate: '',
-        title: 'Build a SaaS with Next.js',
-        body: 'A practical course for developers building and launching their first real product.',
-        footer: (
-            <div className="bg-secondary h-10 rounded-xl flex items-center justify-between px-2">
-                <span className="flex items-center justify-center gap-2">
-                    <UserIcon size={16} />
-                    120 learners joined
-                </span>
-                65 TND
-            </div>
-        ),
-    },
-    {
-        id: 3,
-        rotate: 'md:rotate-5',
-        title: (
-            <>
-                <CircleCheckIcon size={15} />
-                Keep 88% of every sale
-            </>
-        ),
-        titleCentered: true,
-        body: 'Sell your guides and courses with clear pricing and payouts designed for Tunisia.',
-        footer: (
-            <div className="bg-secondary h-12 rounded-xl flex flex-col justify-center gap-2 px-2">
-                <Progress
-                    value={80}
-                    max={100}
-                    min={0}
-                    className="w-full h-fit"
-                />
-                <span className="flex items-center justify-between gap-2 text-xs">
-                    <h1>Creator Payout: 88%</h1>
-                    <h1>Platform + Gateway: 12%</h1>
-                </span>
-            </div>
-        ),
-        card: (
-            <div className="flex flex-col items-center justify-center gap-2 h-48 w-full overflow-hidden rounded-xl bg-background p-4 border border-border">
-                <span className="flex items-center justify-between w-full font-bold text-sm">
-                    Creator earnings
-                    <WalletIcon className="text-primary" size={17} />
-                </span>
-                <span className="flex flex-col items-center justify-between w-full">
-                    <span className="flex items-center justify-baseline gap-2">
-                        <h1 className="text-3xl font-bold text-primary">
-                            1,480.00
-                        </h1>
-                        <p className="text-sm">TND</p>
-                    </span>
-
-                    <p className="text-xs text-muted-foreground">
-                        Ready for local payout
-                    </p>
-                </span>
-                <span className="flex items-center justify-between w-full bg-secondary rounded-xl p-2">
-                    <p>Flouci App Wallet</p>
-                    <p className="text-green-600 font-bold">Connected</p>
-                </span>
-                <span className="flex items-center justify-between w-full bg-secondary rounded-xl p-2">
-                    <p>D17 App Wallet</p>
-                    <p className="text-green-600 font-bold">Connected</p>
-                </span>
-            </div>
-        ),
-    },
-]
 
 export function Cards() {
+    const { t } = useLanguage()
+
+    
+    const cardData = [
+        {
+            id: 1,
+            image: '/course-figma-to-webflowcover.jpeg',
+            rotate: 'md:-rotate-5',
+            title: t('title1'),
+            body: t('body1'),
+            footer: (
+                <div className="bg-secondary h-10 rounded-xl flex items-center justify-between px-2">
+                    <span className="flex items-center justify-center gap-2 group">
+                        <WalletIcon
+                            className="group-hover:-translate-y-0.5"
+                            size={16}
+                        />
+                        {t('payWith')}
+                    </span>
+                    {t('instant')}
+                </div>
+            ),
+        },
+        {
+            id: 2,
+            image: '/how-to-use-supabase-with-nextjs.webp',
+            rotate: '',
+            title: t('title2'),
+            body: t('body2'),
+            footer: (
+                <div className="bg-secondary h-10 rounded-xl flex items-center justify-between px-2">
+                    <span className="flex items-center justify-center gap-2">
+                        <UserIcon size={16} />
+                        {t('learners')}
+                    </span>
+                    65 TND
+                </div>
+            ),
+        },
+        {
+            id: 3,
+            rotate: 'md:rotate-5',
+            title: (
+                <>
+                    <CircleCheckIcon size={15} />
+                    {t('title3')}
+                </>
+            ),
+            titleCentered: true,
+            body: t('body3'),
+            footer: (
+                <div className="bg-secondary h-12 rounded-xl flex flex-col justify-center gap-2 px-2">
+                    <Progress
+                        value={80}
+                        max={100}
+                        min={0}
+                        className="w-full h-fit"
+                    />
+                    <span className="flex items-center justify-between gap-2 text-xs">
+                        <h1>{t('creatorPay')}</h1>
+                        <h1>{t('platform')}</h1>
+                    </span>
+                </div>
+            ),
+            card: (
+                <div className="flex flex-col items-center justify-center gap-2 h-48 w-full overflow-hidden rounded-xl bg-background p-4 border border-border">
+                    <span className="flex items-center justify-between w-full font-bold text-sm">
+                        {t('CreatorEarn')}
+                        <WalletIcon className="text-primary" size={17} />
+                    </span>
+                    <span className="flex flex-col items-center justify-between w-full">
+                        <span className="flex items-center justify-baseline gap-2">
+                            <h1 className="text-3xl font-bold text-primary">
+                                1,480.00
+                            </h1>
+                            <p className="text-sm">TND</p>
+                        </span>
+
+                        <p className="text-xs text-muted-foreground">
+                            {t('ready')}
+                        </p>
+                    </span>
+                    <span className="flex items-center justify-between w-full bg-secondary rounded-xl p-2">
+                        <p>{t('flouci')}</p>
+                        <p className="text-green-600 font-bold">{t('connected')}</p>
+                    </span>
+                    <span className="flex items-center justify-between w-full bg-secondary rounded-xl p-2">
+                        <p>{t('poste')}</p>
+                        <p className="text-green-600 font-bold">{t('connected')}</p>
+                    </span>
+                </div>
+            ),
+        },
+    ]
+
     return (
         <div className="relative w-full max-w-7xl mx-auto pt-6 px-2 sm:px-6">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 items-stretch justify-center gap-6 lg:gap-8">
@@ -165,9 +170,10 @@ export function Cards() {
 }
 
 export default function HeroSection() {
+    const {t} = useLanguage()
+
     return (
         <div className="w-full flex flex-col items-center justify-center gap-8 pb-24 space-y-10">
-            
             {/* Header */}
             <motion.h1
                 className="text-7xl md:text-9xl font-black tracking-tighter text-primary max-w-7xl leading-[0.9] mb-10 text-center capitalize"
@@ -176,7 +182,7 @@ export default function HeroSection() {
                 viewport={{ once: false, amount: 0.6 }}
                 transition={{ duration: 0.5, ease: 'easeOut' }}
             >
-                Get paid for what you know.
+                {t('headline')}
             </motion.h1>
 
             {/* Sub text */}
@@ -187,8 +193,7 @@ export default function HeroSection() {
                 viewport={{ once: false, amount: 0.6 }}
                 transition={{ duration: 0.5, delay: 0.1, ease: 'easeOut' }}
             >
-                Talented is coming soon — a place to learn practical skills,
-                share what you know, and get paid for it.
+                {t('heroSubtext')}
             </motion.h2>
 
             {/* Call to action */}
@@ -209,7 +214,7 @@ export default function HeroSection() {
                             ?.scrollIntoView({ behavior: 'smooth' })
                     }
                 >
-                    Take the survey
+                    {t('cta')}
                 </ExpandingArrowButton>
             </motion.div>
 
