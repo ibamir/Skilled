@@ -121,7 +121,7 @@ export default function HowItWorks() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: false }}
                     transition={{ duration: 0.6, delay: 0.2 }}
-                    className="mt-5 grid md:grid-cols-4 grid-cols-2 gap-2 text-lg text-muted-foreground"
+                    className="mt-5 flex flex-wrap items-center justify-center gap-2 text-lg text-muted-foreground"
                 >
                     {tags
                         .toString()
@@ -131,7 +131,7 @@ export default function HowItWorks() {
                                 <Badge
                                     variant="primary-light"
                                     key={t}
-                                    className="rounded-xl p-1"
+                                    className="rounded-xl p-2"
                                 >
                                     {t}
                                 </Badge>
@@ -310,7 +310,7 @@ function TimelineStep({
                             .split(',')
                             .map((t) => (
                                 <Badge
-                                    className="p-1 rounded-xl"
+                                    className="p-2 rounded-xl"
                                     variant="primary-light"
                                     key={t}
                                 >
@@ -370,7 +370,7 @@ function TimelineStep({
 
                                 return (
                                     <Badge
-                                        className="p-1 rounded-xl [&_svg:not([class*=size-])]:size-4!"
+                                        className="p-2 rounded-xl [&_svg:not([class*=size-])]:size-4!"
                                         variant="primary-light"
                                         key={t}
                                     >
