@@ -6,6 +6,7 @@ import HowItWorks from '@/components/Home/how-it-works/how-it-works'
 import { Header } from '@/components/Home/navbar/header'
 import { InterestFormSection } from '@/components/Home/form/form'
 import Newsletter from '@/components/Home/newsletter'
+import PrelaunchBanner from '@/components/Home/prelaunch-banner'
 
 export default function Home() {
     return (
@@ -14,6 +15,7 @@ export default function Home() {
             id="home"
         >
             <Header />
+            <PrelaunchBanner />
             <HeroSection />
             <Features />
             <HowItWorks />

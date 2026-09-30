@@ -22,35 +22,35 @@ type Step = {
     tags?: string[]
 }
 function useSteps(): Step[] {
-    const { t, language } = useLanguage()
+    const { t } = useLanguage()
     return [
         {
             number: '01',
             title: t('title01'),
             description: t('description01'),
             card: <FigmaWebFlow />,
-            tags: [t('tags01')],
+            tags: t('tags01') as unknown as string[],
         },
         {
             number: '02',
             title: t('title02'),
             description: t('description02'),
             card: <Payment />,
-            tags: [t('tags02')],
+            tags: t('tags02') as unknown as string[],
         },
         {
             number: '03',
             title: t('title03'),
             description: t('description03'),
             card: <Features />,
-            tags: [t('tags03')],
+            tags: t('tags03') as unknown as string[],
         },
         {
             number: '04',
             title: t('title04'),
             description: t('description04'),
             card: <CashOut />,
-            tags: [t('tags04')],
+            tags: t('tags04') as unknown as string[],
         },
     ]
 }
@@ -71,7 +71,7 @@ export default function HowItWorks() {
     const lineHeight = useTransform(smoothProgress, [0, 1], ['0%', '100%'])
     const { t } = useLanguage()
     const steps = useSteps()
-    const tags = [t('tags')]
+    const tags = t('tags') as unknown as string[]
 
     return (
         <section
@@ -123,20 +123,15 @@ export default function HowItWorks() {
                     transition={{ duration: 0.6, delay: 0.2 }}
                     className="mt-5 flex flex-wrap items-center justify-center gap-2 text-lg text-muted-foreground"
                 >
-                    {tags
-                        .toString()
-                        .split(',')
-                        .map((t) => (
-                            <span className="px-2" key={t}>
-                                <Badge
-                                    variant="primary-light"
-                                    key={t}
-                                    className="rounded-xl p-2"
-                                >
-                                    {t}
-                                </Badge>
-                            </span>
-                        ))}
+                    {tags.map((tag) => (
+                        <Badge
+                            variant="primary-light"
+                            key={tag}
+                            className="rounded-xl p-2"
+                        >
+                            {tag}
+                        </Badge>
+                    ))}
                 </motion.span>
             </motion.div>
 
@@ -225,7 +220,6 @@ function TimelineStep({
         [0.96, 1.02, 1],
     )
 
-    const steps = useSteps()
     const { t } = useLanguage()
     const stage = [
         {
@@ -249,7 +243,6 @@ function TimelineStep({
             icon: <Landmark size={13} className="hover:animate-bounce" />,
         },
     ]
-
 
     return (
         <div className="relative grid items-center gap-10 lg:grid-cols-2 lg:gap-20">
@@ -305,122 +298,106 @@ function TimelineStep({
                 </p>
                 {step.number === '01' && (
                     <span className="flex items-center gap-4 mt-4 flex-wrap">
-                        {step.tags
-                            ?.toString()
-                            .split(',')
-                            .map((t) => (
-                                <Badge
-                                    className="p-2 rounded-xl"
-                                    variant="primary-light"
-                                    key={t}
-                                >
-                                    {t}
-                                </Badge>
-                            ))}
+                        {step.tags?.map((tag) => (
+                            <Badge
+                                className="p-2 rounded-xl"
+                                variant="primary-light"
+                                key={tag}
+                            >
+                                {tag}
+                            </Badge>
+                        ))}
                     </span>
                 )}
 
                 {step.number === '02' && (
                     <div className="flex items-center gap-4 mt-4 flex-wrap">
-                        {step.tags
-                            ?.toString()
-                            .split(',')
-                            .map((t) => {
-                                const cleanedTag = t.trim().toLowerCase()
-                                // Check for either string explicitly
-                                const hasNoSurcharge =
-                                    cleanedTag.includes(
-                                        '0% currency surcharge',
-                                    ) ||
-                                    cleanedTag.includes('رسوم تحويل عملة 0٪')
+                        {step.tags?.map((tag) => {
+                            const cleanedTag = tag.trim().toLowerCase()
+                            // Check for either string explicitly
+                            const hasNoSurcharge =
+                                cleanedTag.includes('0% currency surcharge') ||
+                                cleanedTag.includes('رسوم تحويل عملة 0٪')
 
-                                return hasNoSurcharge ? (
-                                    <span
-                                        className="flex items-center justify-center gap-2 text-green-600"
-                                        key={t}
-                                    >
-                                        <CircleCheckIcon size={17} />
-                                        <p>{t}</p>
-                                    </span>
-                                ) : (
-                                    <span
-                                        className="flex items-center justify-center gap-2"
-                                        key={t}
-                                    >
-                                        <LockKeyholeIcon size={17} />
-                                        <p>{t}</p>
-                                    </span>
-                                )
-                            })}
+                            return hasNoSurcharge ? (
+                                <span
+                                    className="flex items-center justify-center gap-2 text-green-600"
+                                    key={tag}
+                                >
+                                    <CircleCheckIcon size={17} />
+                                    <p>{tag}</p>
+                                </span>
+                            ) : (
+                                <span
+                                    className="flex items-center justify-center gap-2"
+                                    key={tag}
+                                >
+                                    <LockKeyholeIcon size={17} />
+                                    <p>{tag}</p>
+                                </span>
+                            )
+                        })}
                     </div>
                 )}
                 {step.number === '03' && (
                     <div className="flex items-center flex-wrap gap-4 mt-4">
-                        {step.tags
-                            ?.toString()
-                            .split(',')
-                            .map((t) => {
-                                const cleanedTag = t.trim().toLowerCase()
-                                // Check both English and Arabic strings explicitly
-                                const isInstantDownload =
-                                    cleanedTag.includes(
-                                        'instant asset download',
-                                    ) ||
-                                    cleanedTag.includes('تنزيل فوري للموارد')
+                        {step.tags?.map((tag) => {
+                            const cleanedTag = tag.trim().toLowerCase()
+                            // Check both English and Arabic strings explicitly
+                            const isInstantDownload =
+                                cleanedTag.includes('instant asset download') ||
+                                cleanedTag.includes('تنزيل فوري للموارد')
 
-                                return (
-                                    <Badge
-                                        className="p-2 rounded-xl [&_svg:not([class*=size-])]:size-4!"
-                                        variant="primary-light"
-                                        key={t}
-                                    >
-                                        {isInstantDownload ? (
-                                            <span className="flex items-center justify-center gap-2 h-full">
-                                                <CircleCheckIcon size={25} />
-                                                {t}
-                                            </span>
-                                        ) : (
-                                            <span className="flex items-center justify-center gap-2">
-                                                <MessageSquareIcon size={25} />
-                                                {t}
-                                            </span>
-                                        )}
-                                    </Badge>
-                                )
-                            })}
+                            return (
+                                <Badge
+                                    className="p-2 rounded-xl [&_svg:not([class*=size-])]:size-4!"
+                                    variant="primary-light"
+                                    key={tag}
+                                >
+                                    {isInstantDownload ? (
+                                        <span className="flex items-center justify-center gap-2 h-full">
+                                            <CircleCheckIcon size={25} />
+                                            {tag}
+                                        </span>
+                                    ) : (
+                                        <span className="flex items-center justify-center gap-2">
+                                            <MessageSquareIcon size={25} />
+                                            {tag}
+                                        </span>
+                                    )}
+                                </Badge>
+                            )
+                        })}
                     </div>
                 )}
 
                 {step.number === '04' && (
                     <div className="flex items-center gap-4 mt-4 flex-wrap">
-                        {step.tags
-                            ?.toString()
-                            .split(',')
-                            .map((t) => {
-                                const cleanedTag = t.trim().toLowerCase()
-                                // Check both English and Arabic variants separately
-                                const isSameWeekPayout =
-                                    cleanedTag.includes('same-week payouts') ||
-                                    cleanedTag.includes(
-                                        'تحويل الأرباح خلال الأسبوع نفسه',
-                                    )
-
-                                return (
-                                    <span key={t}>
-                                        {isSameWeekPayout ? (
-                                            <span className="flex items-center justify-center gap-2 h-full">
-                                                <CreditCard size={17} />
-                                                {t}
-                                            </span>
-                                        ) : (
-                                            <span className="flex items-center justify-center gap-2">
-                                                <ReceiptTextIcon size={17} />
-                                                {t}
-                                            </span>
-                                        )}
-                                    </span>
+                        {step.tags?.map((tag) => {
+                            const cleanedTag = tag.trim().toLowerCase()
+                            // Check both English and Arabic variants separately
+                            const isSameWeekPayout =
+                                cleanedTag.includes('same-week payouts') ||
+                                cleanedTag.includes(
+                                    'تحويل الأرباح خلال الأسبوع نفسه',
                                 )
-                            })}
+
+                            return (
+                                <span key={tag}>
+                                    {isSameWeekPayout ? (
+                                        <span className="flex items-center justify-center gap-2 h-full">
+                                            <CreditCard size={17} />
+                                            {tag}
+                                        </span>
+                                    ) : (
+                                        <span className="flex items-center justify-center gap-2">
+                                            <ReceiptTextIcon size={17} />
+                                            {tag}
+                                        </span>
+                                    )}
+                                </span>
+                            )
+                        })}
                     </div>
                 )}
             </motion.div>

@@ -2,19 +2,19 @@ export const features = {
     en: {
         featureHeader: 'Skills for real life and work',
         featureDescription:
-            'When Talented launches, you can build practical skills with lessons, templates, and exercises, and sell what you know for payment in Tunisian dinars.',
+            'Build practical skills with lessons, templates, and exercises — then sell what you know, paid in Tunisian dinars.',
         titleF1: 'Learn practical skills',
         descriptionF1:
-            'At launch, you can explore short courses and guides on practical skills.',
+            'Short courses and guides on skills you can use immediately.',
         titleF2: 'Access resources',
         descriptionF2:
-            'At launch, you can get templates, study guides, and community spaces.',
+            'Templates, study guides, and community spaces, included with your courses.',
         titleF3: 'Pay with local methods',
         descriptionF3:
-            'At launch, you can pay in TND through D17 or Flouci without a foreign card.',
+            'Pay in TND through D17 or Flouci — no international card required.',
         titleF4: 'Earn from what you know',
         descriptionF4:
-            'At launch, creators can sell their work and keep 88% of each sale.',
+            'Publish your work and get paid through local payout options.',
         frequentAsked: 'Frequently Asked Questions',
         frequentAnswers:
             'Answers to common questions about learning, sharing, and earning on Talented.',
@@ -23,36 +23,48 @@ export const features = {
             'Talented is being built as a learning platform where you can find practical skills, learn from creators, and share what you know.',
         fq2: 'Who can use Talented?',
         fq2answer:
-            'When Talented launches, students can find study resources and build practical digital skills. Creators and top students can earn from what they know.',
+            'Students can find study resources and build practical digital skills. Creators and top students can earn from what they know.',
         fq3: 'How do I pay without an international card?',
         fq3answer:
-            'When Talented launches, you can pay in TND through D17 or Flouci, without a foreign card.',
+            'You can pay in TND through D17 or Flouci, without a foreign card.',
         fq4: 'Can I really make money on Talented?',
         fq4answer:
-            'When Talented launches, creators and top students can upload content, set their own prices, and earn when others buy it. Earnings can be withdrawn to D17 or Flouci.',
+            'Yes. Creators and top students can upload content, set their own prices, and earn on every sale. Withdraw to D17 or Flouci anytime.',
         fq5: 'How do you protect my content?',
         fq5answer:
-            'When Talented launches, premium content will be protected with secure streaming, restricted copying and printing, and unique watermarks that discourage unauthorized sharing.',
+            'Premium content is streamed securely, with copying and printing restricted and unique watermarks on every page that discourage unauthorized sharing.',
         fq6: 'When is the official launch?',
         fq6answer:
             "We're onboarding our first creators and tutors ahead of launch. Take the survey and we'll notify you when the platform opens.",
+        fq7: 'How much do courses cost?',
+        fq7answer:
+            'Most courses and guides will range from 25 to 250 TND, with live cohorts priced separately. Creators set their own prices — you always see the final price in dinars before you pay, with no hidden fees.',
+        fq8: 'When and how do I get paid as a creator?',
+        fq8answer:
+            'Payouts run weekly. Earnings go straight to your D17 or Flouci wallet, and you can cash out as soon as your balance reaches 50 TND. The 12% platform share covers payment processing and platform costs — nothing is deducted after that.',
+        fq9: "What's the refund policy?",
+        fq9answer:
+            "If a course isn't right for you, you can request a refund within 7 days of purchase. Because content is watermarked and streamed, refunds are reviewed per request — but we'd rather give you your money back than keep an unhappy learner.",
+        fq10: 'How are creators and courses vetted?',
+        fq10answer:
+            "Every creator's portfolio and course outline are reviewed before publishing. Cohort courses include code reviews and real Tunisian case studies built with our team, so nothing goes live half-finished.",
+        fq11: 'What happens after I take the survey?',
+        fq11answer:
+            "You'll be first in line. We'll email you the moment the platform opens, and early respondents get founding-creator pricing.",
     },
     ar: {
         featureHeader: 'مهارات عملية للحياة والعمل',
         featureDescription:
-            'عند إطلاق Talented، ستتمكن من اكتساب مهارات عملية عبر الدروس والقوالب والتمارين، وبيع ما تعرفه مقابل الدفع بالدينار التونسي.',
+            'اكتسب مهارات عملية عبر الدروس والقوالب والتمارين، ثم بع ما تعرفه واحصل على مستحقاتك بالدينار التونسي.',
         titleF1: 'تعلّم مهارات عملية',
-        descriptionF1:
-            'عند الإطلاق، ستتمكن من استكشاف دورات قصيرة وأدلة حول المهارات العملية.',
+        descriptionF1: 'دورات قصيرة وأدلة حول مهارات يمكنك استخدامها فورًا.',
         titleF2: 'استفد من الموارد',
-        descriptionF2:
-            'عند الإطلاق، ستتمكن من الحصول على قوالب وأدلة دراسية ومساحات مجتمعية.',
+        descriptionF2: 'قوالب وأدلة دراسية ومساحات مجتمعية مضمّنة مع دوراتك.',
         titleF3: 'ادفع بوسائل محلية',
         descriptionF3:
-            'عند الإطلاق، يمكنك الدفع بالدينار التونسي عبر D17 أو Flouci دون الحاجة إلى بطاقة أجنبية.',
+            'ادفع بالدينار التونسي عبر D17 أو Flouci، من دون الحاجة إلى بطاقة دولية.',
         titleF4: 'اكسب من خبرتك',
-        descriptionF4:
-            'عند الإطلاق، سيتمكن صنّاع المحتوى من بيع أعمالهم والاحتفاظ بـ 88٪ من قيمة كل عملية بيع.',
+        descriptionF4: 'انشر عملك واحصل على مستحقاتك عبر وسائل دفع محلية.',
         frequentAsked: 'الأسئلة الشائعة',
         frequentAnswers:
             'إجابات عن الأسئلة الشائعة حول التعلّم والمشاركة والكسب على Talented.',
@@ -61,18 +73,33 @@ export const features = {
             'يجري تطوير Talented لتكون منصة تعلّم تساعدك على اكتشاف المهارات العملية والتعلّم من صنّاع المحتوى ومشاركة ما تعرفه.',
         fq2: 'من يمكنه استخدام Talented؟',
         fq2answer:
-            'عند إطلاق Talented، سيتمكن الطلاب من العثور على موارد دراسية واكتساب مهارات رقمية عملية. كما سيتمكن صنّاع المحتوى والطلاب المتفوقون من الكسب من خبراتهم.',
+            'يستطيع الطلاب العثور على موارد دراسية واكتساب مهارات رقمية عملية، كما يستطيع صنّاع المحتوى والطلاب المتفوقون الكسب من خبراتهم.',
         fq3: 'كيف يمكنني الدفع من دون بطاقة دولية؟',
         fq3answer:
-            'عند إطلاق Talented، يمكنك الدفع بالدينار التونسي عبر D17 أو Flouci، دون الحاجة إلى بطاقة أجنبية.',
+            'يمكنك الدفع بالدينار التونسي عبر D17 أو Flouci، دون الحاجة إلى بطاقة أجنبية.',
         fq4: 'هل يمكنني حقًا كسب المال على Talented؟',
         fq4answer:
-            'عند إطلاق Talented، سيتمكن صنّاع المحتوى والطلاب المتفوقون من رفع المحتوى وتحديد أسعارهم والكسب عندما يشتريه الآخرون. ويمكن سحب الأرباح عبر D17 أو Flouci.',
+            'نعم. يستطيع صنّاع المحتوى والطلاب المتفوقون رفع المحتوى وتحديد أسعارهم والكسب من كل عملية بيع، ثم سحب الأرباح عبر D17 أو Flouci في أي وقت.',
         fq5: 'كيف تحمون المحتوى الخاص بي؟',
         fq5answer:
-            'عند إطلاق Talented، ستتم حماية المحتوى المميز عبر بث آمن، وتقييد النسخ والطباعة، وإضافة علامات مائية فريدة للحد من المشاركة غير المصرح بها.',
+            'يُبث المحتوى المميز بأمان، مع تقييد النسخ والطباعة وإضافة علامات مائية فريدة إلى كل صفحة للحد من المشاركة غير المصرح بها.',
         fq6: 'متى سيكون الإطلاق الرسمي؟',
         fq6answer:
             'نعمل على ضم أول مجموعة من صنّاع المحتوى والمدرّسين قبل الإطلاق. أجب عن الاستبيان وسنخطرك عند فتح المنصة.',
+        fq7: 'كم تبلغ تكلفة الدورات؟',
+        fq7answer:
+            'تتراوح أسعار معظم الدورات والأدلة بين 25 و250 دينارًا تونسيًا، بينما تُسعّر المجموعات المباشرة بشكل منفصل. يحدد صنّاع المحتوى أسعارهم، وسترى السعر النهائي بالدينار قبل الدفع من دون رسوم خفية.',
+        fq8: 'متى وكيف أتلقى مستحقاتي كصانع محتوى؟',
+        fq8answer:
+            'تُحوّل المستحقات أسبوعيًا مباشرة إلى محفظة D17 أو Flouci، ويمكنك سحبها عندما يصل رصيدك إلى 50 دينارًا تونسيًا. تغطي حصة المنصة البالغة 12٪ معالجة الدفع وتكاليف المنصة، ولا يُخصم أي مبلغ آخر.',
+        fq9: 'ما سياسة استرداد الأموال؟',
+        fq9answer:
+            'إذا لم تناسبك الدورة، يمكنك طلب استرداد المبلغ خلال 7 أيام من الشراء. وبما أن المحتوى ممهور بعلامة مائية ويُبث عبر المنصة، تُراجع الطلبات كل حالة على حدة، ونفضّل إعادة أموالك على إبقاء متعلم غير راضٍ.',
+        fq10: 'كيف يتم التحقق من صنّاع المحتوى والدورات؟',
+        fq10answer:
+            'نراجع ملف كل صانع محتوى ومخطط دورته قبل النشر. وتتضمن الدورات الجماعية مراجعات للأكواد ودراسات حالة تونسية واقعية نبنيها مع فريقنا، حتى لا يُنشر أي محتوى غير مكتمل.',
+        fq11: 'ماذا يحدث بعد المشاركة في الاستبيان؟',
+        fq11answer:
+            'ستكون في مقدمة القائمة. سنرسل إليك بريدًا إلكترونيًا فور فتح المنصة، وسيحصل المشاركون الأوائل على أسعار خاصة بصنّاع المحتوى المؤسسين.',
     },
 }

@@ -5,7 +5,7 @@ export const form = {
             'Your answers help us decide which courses, resources, and creator tools to build.',
         question: 'Question',
         from: 'of',
-        answer: 'Answer a few questions about what you want to learn, create, and access, and we&apos;ll notify you when Talented launches.',
+        answer: 'Answer a few questions about what you want to learn, create, and access, and help us prioritize what comes next.',
         help: 'Help shape Talented.',
         quick: 'Quick survey',
         finish: 'Finish',
@@ -13,8 +13,8 @@ export const form = {
         tellUs: 'Tell us what you would like to learn',
         enterEmail: 'Enter your email',
         enter: 'Enter your email to get notified when we launch.',
-        chose: 'Enter your email to get notified when we launch.',
-        back : 'back',
+        choose: 'Choose one option to continue.',
+        back: 'Back',
 
         // Questions
         question1: 'What best describes you?',
@@ -44,7 +44,7 @@ export const form = {
             'تساعدنا إجاباتك على تحديد الدورات والموارد وأدوات صنّاع المحتوى التي سنطوّرها.',
         question: 'السؤال',
         from: 'من',
-        answer: 'أجب عن بعض الأسئلة حول ما ترغب في تعلّمه وإنشائه والاستفادة منه، وسنخطرك عند إطلاق Talented.',
+        answer: 'أجب عن بعض الأسئلة حول ما ترغب في تعلّمه وإنشائه والاستفادة منه، وساعدنا على تحديد أولويات المرحلة القادمة.',
         help: 'ساهم في تشكيل Talented.',
         quick: 'استبيان سريع',
         finish: 'إنهاء',
@@ -52,7 +52,7 @@ export const form = {
         tellUs: 'أخبرنا بما ترغب في تعلّمه',
         enterEmail: 'أدخل بريدك الإلكتروني',
         enter: 'أدخل بريدك الإلكتروني لتصلك إشعارات عند الإطلاق.',
-        chose: 'أدخل بريدك الإلكتروني لتصلك إشعارات عند الإطلاق.',
+        choose: 'اختر إجابة واحدة للمتابعة.',
 
         question1: 'ما الوصف الأقرب إليك؟',
         label1a: 'صانع محتوى أو بائع معرفة',
@@ -74,6 +74,6 @@ export const form = {
         label4c: 'ربما، أود معرفة المزيد',
         label4d: 'على الأرجح لا في الوقت الحالي',
         question5: 'إلى أين نرسل إليك أخبار الإطلاق؟',
-        back : 'عودة'
+        back: 'عودة',
     },
 }

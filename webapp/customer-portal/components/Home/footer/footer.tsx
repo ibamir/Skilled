@@ -8,7 +8,6 @@ import { useTheme } from 'next-themes'
 import { LanguageSwitcher } from '@/lib/language-switch/language-switcher'
 import { useLanguage } from '@/lib/language-switch/LanguageProvider'
 
-
 export default function Footer() {
     const { theme } = useTheme()
     const { t } = useLanguage()
@@ -60,12 +59,13 @@ export default function Footer() {
                         </a>
                     ))}
                 </div>
-                <LanguageSwitcher />
+                <div className="flex shrink-0 items-center gap-2 text-sm text-muted-foreground">
+                    <span>{t('language').replace(' : ', '')}</span>
+                    <LanguageSwitcher />
+                </div>
             </div>
             <Separator className="w-full h-px bg-border" />
-            <p className="text-center">
-                {t('copyright')}
-            </p>
+            <p className="text-center">{t('copyright')}</p>
             <WordmarkFooter brandName="TALENTED" />
         </motion.div>
     )

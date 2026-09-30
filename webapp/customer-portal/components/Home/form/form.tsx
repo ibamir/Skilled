@@ -15,8 +15,6 @@ import { cn } from '@/lib/utils'
 import { saveToNotion } from '@/app/actions/notion/action'
 import { useLanguage } from '@/lib/language-switch/LanguageProvider'
 
-
-
 export function InterestForm() {
     const id = useId()
     const [currentQuestion, setCurrentQuestion] = useState(0)
@@ -214,7 +212,8 @@ export function InterestForm() {
             <div className="mb-8">
                 <div className="mb-2 flex items-center justify-between text-xs text-muted-foreground">
                     <span>
-                        {t('question')} {currentQuestion + 1} {t('from')} {questions.length}
+                        {t('question')} {currentQuestion + 1} {t('from')}{' '}
+                        {questions.length}
                     </span>
 
                     <span>
@@ -258,9 +257,7 @@ export function InterestForm() {
                 </h2>
 
                 <p className="mt-2 text-sm text-muted-foreground">
-                    {isEmailQuestion
-                        ? t('enter')
-                        : t('chose')}
+                    {isEmailQuestion ? t('enter') : t('choose')}
                 </p>
 
                 {isEmailQuestion ? (
@@ -363,13 +360,16 @@ export function InterestForm() {
             </motion.div>
 
             {/* Navigation */}
-            <div className="mt-8 flex items-center justify-between" dir='ltr'>
+            <div
+                className="mt-8 flex flex-wrap items-center justify-between gap-3"
+                dir="ltr"
+            >
                 <Button
                     onClick={back}
                     disabled={currentQuestion === 0}
-                    className="h-10! rounded-xl p-2"
+                    className="h-10! rounded-xl p-2 gap-2"
                     variant="secondary"
-                    dir='ltr'
+                    dir="ltr"
                 >
                     <ArrowLeftIcon size={17} />
                     {t('back')}
@@ -381,10 +381,10 @@ export function InterestForm() {
                     disabled={!selectedAnswer}
                     whileTap={{ scale: 0.97 }}
                     className="h-10! bg-primary text-primary-foreground hover:bg-primary/80 rounded-xl flex items-center justify-center gap-2 p-2"
-                    dir='ltr'
+                    dir="ltr"
                 >
                     {currentQuestion === questions.length - 1
-                        ? t('back')
+                        ? t('finish')
                         : t('continue')}
 
                     <ArrowRightIcon size={17} />

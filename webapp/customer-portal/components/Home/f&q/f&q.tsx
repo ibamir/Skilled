@@ -8,6 +8,11 @@ import {
     WalletCards,
     ShieldCheck,
     Rocket,
+    BookOpen,
+    Banknote,
+    RotateCcw,
+    BadgeCheck,
+    MailCheck,
 } from 'lucide-react'
 import { useLanguage } from '@/lib/language-switch/LanguageProvider'
 
@@ -37,7 +42,7 @@ const itemVariants: Variants = {
 
 export default function FrequentAskedQuestions() {
     const { t } = useLanguage()
-    
+
     const faqs = [
         {
             icon: GraduationCap,
@@ -69,8 +74,32 @@ export default function FrequentAskedQuestions() {
             question: t('fq6'),
             answer: t('fq6answer'),
         },
+        {
+            icon: BookOpen,
+            question: t('fq7'),
+            answer: t('fq7answer'),
+        },
+        {
+            icon: Banknote,
+            question: t('fq8'),
+            answer: t('fq8answer'),
+        },
+        {
+            icon: RotateCcw,
+            question: t('fq9'),
+            answer: t('fq9answer'),
+        },
+        {
+            icon: BadgeCheck,
+            question: t('fq10'),
+            answer: t('fq10answer'),
+        },
+        {
+            icon: MailCheck,
+            question: t('fq11'),
+            answer: t('fq11answer'),
+        },
     ]
-
 
     return (
         <section className="mx-auto w-full max-w-6xl px-4 py-24" id="faq">

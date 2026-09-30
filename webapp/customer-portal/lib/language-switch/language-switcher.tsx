@@ -35,7 +35,7 @@ export function LanguageSwitcher() {
                     value="ar"
                     className="cursor-pointer h-9! hover:bg-primary/20! hover:text-primary hover:font-bold text-md"
                 >
-                    Arabic
+                    العربية
                 </MorphSelectItem>
             </MorphSelectContent>
         </MorphSelect>

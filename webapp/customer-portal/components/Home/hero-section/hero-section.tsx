@@ -10,11 +10,9 @@ import { WalletIcon } from '@/components/ui/wallet'
 import Image from 'next/image'
 import { useLanguage } from '@/lib/language-switch/LanguageProvider'
 
-
 export function Cards() {
     const { t } = useLanguage()
 
-    
     const cardData = [
         {
             id: 1,
@@ -23,7 +21,7 @@ export function Cards() {
             title: t('title1'),
             body: t('body1'),
             footer: (
-                <div className="bg-secondary h-10 rounded-xl flex items-center justify-between px-2">
+                <div className="bg-secondary h-auto min-h-10 rounded-xl flex flex-wrap items-center justify-between gap-2 px-2 py-2">
                     <span className="flex items-center justify-center gap-2 group">
                         <WalletIcon
                             className="group-hover:-translate-y-0.5"
@@ -42,12 +40,12 @@ export function Cards() {
             title: t('title2'),
             body: t('body2'),
             footer: (
-                <div className="bg-secondary h-10 rounded-xl flex items-center justify-between px-2">
+                <div className="bg-secondary h-auto min-h-10 rounded-xl flex flex-wrap items-center justify-between gap-2 px-2 py-2">
                     <span className="flex items-center justify-center gap-2">
                         <UserIcon size={16} />
                         {t('learners')}
                     </span>
-                    65 TND
+                    <span className="shrink-0">65 TND</span>
                 </div>
             ),
         },
@@ -96,11 +94,15 @@ export function Cards() {
                     </span>
                     <span className="flex items-center justify-between w-full bg-secondary rounded-xl p-2">
                         <p>{t('flouci')}</p>
-                        <p className="text-green-600 font-bold">{t('connected')}</p>
+                        <p className="text-green-600 font-bold">
+                            {t('connected')}
+                        </p>
                     </span>
                     <span className="flex items-center justify-between w-full bg-secondary rounded-xl p-2">
                         <p>{t('poste')}</p>
-                        <p className="text-green-600 font-bold">{t('connected')}</p>
+                        <p className="text-green-600 font-bold">
+                            {t('connected')}
+                        </p>
                     </span>
                 </div>
             ),
@@ -170,7 +172,7 @@ export function Cards() {
 }
 
 export default function HeroSection() {
-    const {t} = useLanguage()
+    const { t } = useLanguage()
 
     return (
         <div className="w-full flex flex-col items-center justify-center gap-8 pb-24 space-y-10">

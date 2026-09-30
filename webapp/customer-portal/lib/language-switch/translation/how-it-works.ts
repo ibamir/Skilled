@@ -19,23 +19,23 @@ export const howItWorks = {
         members: '142 members active now',
         join: 'Join room',
         automate: ' Automated Payout Engine',
-        creditTo: 'Credited to D17 Postal Account (+21698***98)',
+        creditTo: 'Credited to your D17 wallet (+216 98 ··· ·98)',
         totalGross: 'Total Gross Sales :',
         creatorRevenue: 'Creator Revenue Share :',
 
         // Page
         title01: 'Find the right skill to learn',
         description01:
-            'When Talented launches, you can browse practical courses, guides, and live cohorts in Darija, French, and English, and pick the ones that fit your goals and level.',
+            'Browse courses, guides, and live cohorts in Darija, French, and English, and pick the ones that fit your goals and level.',
         title02: 'Pay in Tunisian dinars',
         description02:
-            "When the platform opens, you won't need an international card. Pay through D17 or Flouci and open your purchase without leaving the platform.",
+            'No international card needed. Pay through D17 or Flouci and unlock your purchase without leaving the platform.',
         title03: 'Learn with practical resources',
         description03:
             'Work through lessons, templates, exercises, and community spaces designed to help you finish real projects.',
         title04: 'Share your knowledge and earn',
         description04:
-            'Creators will be able to publish a course, guide, or resource, keep 88% of each sale, and choose from local payout options.',
+            'Publish a course, guide, or resource and cash out weekly to D17 or Flouci.',
         tags: [
             '01 Discovery',
             '02 Local Checkout',
@@ -77,22 +77,22 @@ export const howItWorks = {
         members: '142 عضوًا نشطًا الآن',
         join: 'انضم إلى الغرفة',
         automate: 'نظام آلي لتحويل الأرباح',
-        creditTo: 'تمت الإضافة إلى حساب البريد التونسي (‎+21698***98)',
+        creditTo: 'تمت الإضافة إلى محفظة D17 الخاصة بك (‎+216 98 ··· ·98)',
         totalGross: 'إجمالي المبيعات:',
         creatorRevenue: 'حصة صانع المحتوى من الإيرادات:',
 
         title01: 'اعثر على المهارة المناسبة لتعلّمها',
         description01:
-            'عند إطلاق Talented، ستتمكن من تصفح الدورات العملية والأدلة والمجموعات التعليمية المباشرة بالدارجة والفرنسية والإنجليزية، واختيار ما يناسب أهدافك ومستواك.',
+            'تصفح الدورات والأدلة والمجموعات التعليمية المباشرة بالدارجة والفرنسية والإنجليزية، واختر ما يناسب أهدافك ومستواك.',
         title02: 'ادفع بالدينار التونسي',
         description02:
-            'عند إطلاق المنصة، لن تحتاج إلى بطاقة دولية. ادفع عبر D17 أو Flouci وافتح ما اشتريته دون مغادرة المنصة.',
+            'لا حاجة إلى بطاقة دولية. ادفع عبر D17 أو Flouci وافتح ما اشتريته دون مغادرة المنصة.',
         title03: 'تعلّم باستخدام موارد عملية',
         description03:
             'استفد من الدروس والقوالب والتمارين والمساحات المجتمعية المصممة لمساعدتك على إنجاز مشاريع حقيقية.',
         title04: 'شارك معرفتك واكسب منها',
         description04:
-            'سيتمكن صنّاع المحتوى من نشر دورة أو دليل أو مورد، والاحتفاظ بـ 88٪ من قيمة كل عملية بيع، واختيار وسيلة محلية لاستلام الأرباح.',
+            'انشر دورة أو دليلًا أو موردًا واسحب أرباحك أسبوعيًا إلى D17 أو Flouci.',
         tags: [
             '01 اكتشاف',
             '02 دفع محلي',
