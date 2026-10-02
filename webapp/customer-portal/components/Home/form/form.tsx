@@ -76,7 +76,7 @@ export function InterestForm() {
                     label: t('label3b'),
                 },
                 {
-                    value: 'cohorts',
+                    value: 'resources',
                     label: t('label3c'),
                 },
                 {

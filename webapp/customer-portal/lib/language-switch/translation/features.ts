@@ -2,13 +2,13 @@ export const features = {
     en: {
         featureHeader: 'Skills for real life and work',
         featureDescription:
-            'Build practical skills with lessons, templates, and exercises — then sell what you know, paid in Tunisian dinars.',
+            'Learn practical skills through video courses with templates and resources — then sell what you know, paid in Tunisian dinars.',
         titleF1: 'Learn practical skills',
         descriptionF1:
-            'Short courses and guides on skills you can use immediately.',
-        titleF2: 'Access resources',
+            'Video courses with templates and resources you can use immediately.',
+        titleF2: 'Access creator resources',
         descriptionF2:
-            'Templates, study guides, and community spaces, included with your courses.',
+            'Templates, study guides, and practical exercises included with your courses.',
         titleF3: 'Pay with local methods',
         descriptionF3:
             'Pay in TND through D17 or Flouci — no international card required.',
@@ -38,7 +38,7 @@ export const features = {
             "We're onboarding our first creators and tutors ahead of launch. Take the survey and we'll notify you when the platform opens.",
         fq7: 'How much do courses cost?',
         fq7answer:
-            'Most courses and guides will range from 25 to 250 TND, with live cohorts priced separately. Creators set their own prices — you always see the final price in dinars before you pay, with no hidden fees.',
+            'Most courses and guides will range from 25 to 250 TND. Creators set their own prices — you always see the final price in dinars before you pay, with no hidden fees.',
         fq8: 'When and how do I get paid as a creator?',
         fq8answer:
             'Payouts run weekly. Earnings go straight to your D17 or Flouci wallet, and you can cash out as soon as your balance reaches 50 TND. The 12% platform share covers payment processing and platform costs — nothing is deducted after that.',
@@ -47,7 +47,7 @@ export const features = {
             "If a course isn't right for you, you can request a refund within 7 days of purchase. Because content is watermarked and streamed, refunds are reviewed per request — but we'd rather give you your money back than keep an unhappy learner.",
         fq10: 'How are creators and courses vetted?',
         fq10answer:
-            "Every creator's portfolio and course outline are reviewed before publishing. Cohort courses include code reviews and real Tunisian case studies built with our team, so nothing goes live half-finished.",
+            "Every creator's portfolio and course outline are reviewed before publishing. All courses include practical resources and templates, with real Tunisian case studies where applicable, so nothing goes live half-finished.",
         fq11: 'What happens after I take the survey?',
         fq11answer:
             "You'll be first in line. We'll email you the moment the platform opens, and early respondents get founding-creator pricing.",
@@ -57,9 +57,9 @@ export const features = {
         featureDescription:
             'اكتسب مهارات عملية عبر الدروس والقوالب والتمارين، ثم بع ما تعرفه واحصل على مستحقاتك بالدينار التونسي.',
         titleF1: 'تعلّم مهارات عملية',
-        descriptionF1: 'دورات قصيرة وأدلة حول مهارات يمكنك استخدامها فورًا.',
-        titleF2: 'استفد من الموارد',
-        descriptionF2: 'قوالب وأدلة دراسية ومساحات مجتمعية مضمّنة مع دوراتك.',
+        descriptionF1: 'دورات فيديو مع قوالب وموارد يمكنك استخدامها فورًا.',
+        titleF2: 'استفد من موارد المبدع',
+        descriptionF2: 'قوالب، أدلة دراسية، وتمارين عملية مضمّنة مع دوراتك.',
         titleF3: 'ادفع بوسائل محلية',
         descriptionF3:
             'ادفع بالدينار التونسي عبر D17 أو Flouci، من دون الحاجة إلى بطاقة دولية.',
@@ -88,7 +88,7 @@ export const features = {
             'نعمل على ضم أول مجموعة من صنّاع المحتوى والمدرّسين قبل الإطلاق. أجب عن الاستبيان وسنخطرك عند فتح المنصة.',
         fq7: 'كم تبلغ تكلفة الدورات؟',
         fq7answer:
-            'تتراوح أسعار معظم الدورات والأدلة بين 25 و250 دينارًا تونسيًا، بينما تُسعّر المجموعات المباشرة بشكل منفصل. يحدد صنّاع المحتوى أسعارهم، وسترى السعر النهائي بالدينار قبل الدفع من دون رسوم خفية.',
+            'تتراوح أسعار معظم الدورات والأدلة بين 25 و250 دينارًا تونسيًا. يحدد صنّاع المحتوى أسعارهم، وسترى السعر النهائي بالدينار قبل الدفع من دون رسوم خفية.',
         fq8: 'متى وكيف أتلقى مستحقاتي كصانع محتوى؟',
         fq8answer:
             'تُحوّل المستحقات أسبوعيًا مباشرة إلى محفظة D17 أو Flouci، ويمكنك سحبها عندما يصل رصيدك إلى 50 دينارًا تونسيًا. تغطي حصة المنصة البالغة 12٪ معالجة الدفع وتكاليف المنصة، ولا يُخصم أي مبلغ آخر.',
@@ -97,7 +97,7 @@ export const features = {
             'إذا لم تناسبك الدورة، يمكنك طلب استرداد المبلغ خلال 7 أيام من الشراء. وبما أن المحتوى ممهور بعلامة مائية ويُبث عبر المنصة، تُراجع الطلبات كل حالة على حدة، ونفضّل إعادة أموالك على إبقاء متعلم غير راضٍ.',
         fq10: 'كيف يتم التحقق من صنّاع المحتوى والدورات؟',
         fq10answer:
-            'نراجع ملف كل صانع محتوى ومخطط دورته قبل النشر. وتتضمن الدورات الجماعية مراجعات للأكواد ودراسات حالة تونسية واقعية نبنيها مع فريقنا، حتى لا يُنشر أي محتوى غير مكتمل.',
+            'نراجع ملف كل صانع محتوى ومخطط دورته قبل النشر. وتضمن جميع الدورات موارد عملية وقوالب، مع دراسات حالة تونسية واقعية حيثما كان ذلك مناسبًا، حتى لا يُنشر أي محتوى غير مكتمل.',
         fq11: 'ماذا يحدث بعد المشاركة في الاستبيان؟',
         fq11answer:
             'ستكون في مقدمة القائمة. سنرسل إليك بريدًا إلكترونيًا فور فتح المنصة، وسيحصل المشاركون الأوائل على أسعار خاصة بصنّاع المحتوى المؤسسين.',
