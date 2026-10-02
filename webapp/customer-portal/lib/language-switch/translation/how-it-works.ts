@@ -3,7 +3,7 @@ export const howItWorks = {
         // Cards
         figmaCardHeader: 'Figma to Webflow Mastery',
         figmaCardDescription:
-            'Downloadable components, code templates, and real Tunisian case studies.',
+            'Downloadable components, code templates, and real case studies.',
         expressLocalCheckout: 'Express local checkout',
         instantRail: 'Instant Rail',
         cartTotal: 'Cart total',
@@ -61,7 +61,7 @@ export const howItWorks = {
     ar: {
         figmaCardHeader: 'إتقان الانتقال من Figma إلى Webflow',
         figmaCardDescription:
-            'مكوّنات قابلة للتنزيل، وقوالب أكواد، ودراسات حالة تونسية واقعية.',
+            'مكوّنات قابلة للتنزيل، وقوالب أكواد، ودراسات حالة واقعية.',
         expressLocalCheckout: 'دفع محلي سريع',
         instantRail: 'تحويل فوري',
         cartTotal: 'إجمالي السلة',
