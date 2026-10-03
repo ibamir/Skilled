@@ -1,7 +1,7 @@
 export const hero = {
     en: {
         heroSubtext:
-            'Talented is coming soon. Learn practical skills, share what you know, and get paid for it.',
+            'Talented is coming soon: practical video classes in Darija, French, and English.',
         headline: 'Get paid for what you know.',
         cta: 'Take the survey',
 
@@ -15,15 +15,15 @@ export const hero = {
         learners: '120 learners joined',
         title3: 'Keep 88% of every sale',
         body3: 'Sell video courses with templates and resources. Set your own prices and get paid through D17 or Flouci.',
-        creatorPay: 'Creator Payout: 88%',
-        platform: 'Platform + Gateway: 12%',
+        creatorPay: 'Creator payout: 88%',
+        platform: 'Platform and gateway: 12%',
         CreatorEarn: 'Creator earnings',
         ready: 'Ready for local payout',
         connected: 'Connected',
     },
     ar: {
         heroSubtext:
-            'قريبًا Talented. تعلّم مهارات عملية، وشارك خبرتك، واكسب منها.',
+            'قريبًا Talented: دروس فيديو عملية بالدارجة والفرنسية والإنجليزية.',
         headline: 'اكسب من خبرتك.',
         cta: 'شارك في الاستبيان',
 

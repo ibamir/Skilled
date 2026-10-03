@@ -2,7 +2,7 @@ export const features = {
     en: {
         featureHeader: 'Skills for real life and work',
         featureDescription:
-            'Learn practical skills through video courses with templates and resources — then sell what you know, paid in Tunisian dinars.',
+            'Learn practical skills from video courses with templates and resources, then sell what you know and get paid in Tunisian dinars.',
         titleF1: 'Learn practical skills',
         descriptionF1:
             'Video courses with templates and resources you can use immediately.',
@@ -11,7 +11,7 @@ export const features = {
             'Templates, study guides, and practical exercises included with your courses.',
         titleF3: 'Pay with local methods',
         descriptionF3:
-            'Pay in TND through D17 or Flouci — no international card required.',
+            'Pay in TND through D17 or Flouci without an international card.',
         titleF4: 'Earn from what you know',
         descriptionF4:
             'Publish your work and get paid through local payout options.',
@@ -44,13 +44,13 @@ export const features = {
             'Creators can cash out their earnings weekly. Payouts go directly to their D17 or Flouci wallet.',
         fq9: "What's the refund policy?",
         fq9answer:
-            "If a course isn't right for you, you can request a refund within 7 days of purchase. Because content is watermarked and streamed, refunds are reviewed per request — but we'd rather give you your money back than keep an unhappy learner.",
+            "If a course isn't right for you, you can request a refund within 7 days of purchase. Because content is watermarked and streamed, each request is reviewed individually.",
         fq10: 'How are creators and courses vetted?',
         fq10answer:
-            "Every creator's portfolio and course outline are reviewed before publishing. All courses include practical resources and templates, with real Tunisian case studies where applicable, so nothing goes live half-finished.",
+            "We review every creator's portfolio and course outline before publishing. Every course includes practical resources and templates, and real Tunisian case studies where they apply.",
         fq11: 'What happens after I take the survey?',
         fq11answer:
-            "You'll be first in line. We'll email you the moment the platform opens, and early respondents get founding-creator pricing.",
+            "We'll email you when the platform opens, and early respondents get founding-creator pricing.",
     },
     ar: {
         featureHeader: 'مهارات عملية للحياة والعمل',
@@ -94,12 +94,12 @@ export const features = {
             'يمكن لصنّاع المحتوى سحب أرباحهم أسبوعيًا. تُحوّل المستحقات مباشرة إلى محفظة D17 أو Flouci.',
         fq9: 'ما سياسة استرداد الأموال؟',
         fq9answer:
-            'إذا لم تناسبك الدورة، يمكنك طلب استرداد المبلغ خلال 7 أيام من الشراء. وبما أن المحتوى ممهور بعلامة مائية ويُبث عبر المنصة، تُراجع الطلبات كل حالة على حدة، ونفضّل إعادة أموالك على إبقاء متعلم غير راضٍ.',
+            'إذا لم تناسبك الدورة، يمكنك طلب استرداد المبلغ خلال 7 أيام من الشراء. وبما أن المحتوى ممهور بعلامة مائية ويُبث عبر المنصة، تُراجع الطلبات كل حالة على حدة.',
         fq10: 'كيف يتم التحقق من صنّاع المحتوى والدورات؟',
         fq10answer:
-            'نراجع ملف كل صانع محتوى ومخطط دورته قبل النشر. وتضمن جميع الدورات موارد عملية وقوالب، مع دراسات حالة واقعية حيثما كان ذلك مناسبًا، حتى لا يُنشر أي محتوى غير مكتمل.',
+            'نراجع ملف كل صانع محتوى ومخطط دورته قبل النشر. وتضمن جميع الدورات موارد عملية وقوالب، مع دراسات حالة واقعية حيثما كان ذلك مناسبًا.',
         fq11: 'ماذا يحدث بعد المشاركة في الاستبيان؟',
         fq11answer:
-            'ستكون في مقدمة القائمة. سنرسل إليك بريدًا إلكترونيًا فور فتح المنصة، وسيحصل المشاركون الأوائل على أسعار خاصة بصنّاع المحتوى المؤسسين.',
+            'سنرسل إليك بريدًا إلكترونيًا عند فتح المنصة، وسيحصل المشاركون الأوائل على أسعار خاصة بصنّاع المحتوى المؤسسين.',
     },
 }
