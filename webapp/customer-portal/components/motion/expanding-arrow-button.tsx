@@ -165,7 +165,7 @@ export const ExpandingArrowButton = forwardRef<
               }}
               transition={{ duration: reduce ? 0 : 0.12, ease: EASE_OUT }}
               className={cn(
-                  'relative z-0 ml-[76px] mr-5 whitespace-nowrap text-lg font-medium tracking-[-0.02em]',
+                  'relative z-0 ml-[76px] mr-12 whitespace-nowrap text-lg font-bold text-center w-full tracking-[-0.02em]',
                   labelClassName,
               )}
           >

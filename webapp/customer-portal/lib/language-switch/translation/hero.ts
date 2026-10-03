@@ -1,8 +1,9 @@
 export const hero = {
     en: {
-        heroSubtext: 'Take practical video classes, or teach what you know.',
-        headline: 'Learn. Create. Get paid.',
-        cta: 'Shape Talented →',
+        heroSubtext:
+            'For anyone who wants to learn a practical skill, or has one to teach.',
+        headline: 'A new place to learn and teach skills.',
+        cta: 'Take the survey',
 
         // Hero section cards
         title1: 'Figma to Webflow for Freelancers',
@@ -23,9 +24,10 @@ export const hero = {
             'These are early concepts of the creator screens. Help us decide what to build first by taking the 1-minute survey.',
     },
     ar: {
-        heroSubtext: 'التحق بدروس فيديو عملية، أو علّم ما تعرفه.',
-        headline: 'تعلّم. أنشئ. اكسب.',
-        cta: 'ساهم في تشكيل Talented ←',
+        heroSubtext:
+            'لكل من يريد تعلّم مهارة عملية، أو لديه مهارة يرغب في تعليمها.',
+        headline: 'منصة جديدة لتعلّم المهارات وتعليمها.',
+        cta: 'شارك في الاستبيان',
 
         title1: 'من Figma إلى Webflow للمستقلين',
         body1: 'دورة فيديو مع قوالب ودراسات حالة وموارد لإنشاء مواقع جاهزة للعملاء.',

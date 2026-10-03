@@ -487,7 +487,7 @@ export default function HeroSection() {
         <div className="w-full flex flex-col items-center justify-center gap-8 pb-10 space-y-10">
             {/* Header */}
             <motion.h1
-                className="text-7xl md:text-9xl font-black tracking-tighter text-primary max-w-7xl leading-[0.9] mb-10 text-center capitalize"
+                className="text-7xl md:text-9xl font-black tracking-tighter text-primary max-w-7xl leading-[0.9] rtl:leading-[1.1] rtl:**:leading-[1.1] mb-10 text-center capitalize"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: false, amount: 0.6 }}
@@ -518,7 +518,7 @@ export default function HeroSection() {
                 <ExpandingArrowButton
                     labelClassName="text-accent"
                     accentClassName="bg-secondary dark:bg-background"
-                    className="bg-primary capitalize font-extrabold"
+                    className="bg-primary capitalize font-extrabold!"
                     onClick={() =>
                         document
                             .getElementById('help-us')
