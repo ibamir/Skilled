@@ -102,19 +102,17 @@ function FeatureCard({
 
     return (
         <motion.div
-            className={cn(
-                'w-full'
-            )}
+            className={cn('w-full')}
             {...props}
             variants={{
                 hidden: { opacity: 0, y: 24 },
                 visible: { opacity: 1, y: 0, transition: { duration: 0.55 } },
             }}
         >
-            <Card className="bg-background border border-primary w-full h-full rounded-3xl ring-0 transition-all duration-300 hover:shadow-[0_10px_30px_rgba(0,0,0,0.15)] dark:hover:shadow-[0_10px_30px_rgba(0,0,0,0.6)]">
+            <Card className="bg-card border border-primary w-full h-full rounded-4xl ring-0 transition-all duration-300 hover:shadow-[0_10px_30px_rgba(0,0,0,0.15)] dark:hover:shadow-[0_10px_30px_rgba(0,0,0,0.6)]">
                 <CardContent className="p-6">
-                    <div className="bg-muted dark:bg-muted/10 mb-2 size-fit rounded-lg p-px">
-                        <div className="flex h-10 w-10 p-1 text-primary items-center justify-center rounded-lg bg-background shadow-[inset_0_-2px_0.5px_0px_rgba(0,0,0,0),inset_0px_2px_0_2px_rgba(255,255,255,1),0_0px_6px_0_rgba(0,0,0,0.07),0_2px_4px_0_rgba(0,0,0,0.05)] dark:bg-background dark:shadow-[inset_0_-1px_0px_0px_rgba(0,0,0,0.1),inset_0px_1px_0px_0px_rgba(255,255,255,0.05),0_0px_2px_0_rgba(0,0,0,0.2),0_1px_4px_0_rgba(0,0,0,0.05)]">
+                    <div className="bg-background mb-2 size-fit rounded-xl p-px">
+                        <div className="h-12 w-12 flex items-center justify-center rounded-2xl text-primary border bg-muted/30">
                             {feature.icon}
                         </div>
                     </div>

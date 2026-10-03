@@ -24,11 +24,11 @@ export function FigmaWebFlow() {
             viewport={{ once: false, amount: 0.2 }}
             transition={{ duration: 0.55, ease: 'easeOut' }}
         >
-            <Card className="w-full border border-primary shadow-sm rounded-3xl hover:-translate-y-4">
+            <Card className="w-full border border-primary shadow-sm rounded-4xl hover:-translate-y-4">
                 <CardContent className="flex flex-col gap-4">
                     <div className="relative h-48 w-full overflow-hidden rounded-xl">
                         <img
-                            src="/course-figma-to-webflowcover.jpeg"
+                            src="/figmatowebflow.jpg"
                             alt="16:9"
                             width={1000}
                             height={800}
@@ -60,7 +60,7 @@ export function Payment() {
             viewport={{ once: false, amount: 0.2 }}
             transition={{ duration: 0.55, ease: 'easeOut' }}
         >
-            <Card className="w-full border border-primary shadow-sm rounded-3xl hover:-translate-y-4">
+            <Card className="w-full border border-primary shadow-sm rounded-4xl hover:-translate-y-4">
                 <CardContent className="flex flex-col gap-4">
                     <div className="flex flex-col items-center justify-center gap-2 h-full w-full overflow-hidden rounded-xl">
                         <div className="flex flex-col items-center justify-center gap-4 h-fit w-full overflow-hidden rounded-xl p-4">
@@ -149,7 +149,7 @@ export function Features() {
             viewport={{ once: false, amount: 0.2 }}
             transition={{ duration: 0.55, ease: 'easeOut' }}
         >
-            <Card className="w-full border border-primary shadow-sm rounded-3xl hover:-translate-y-4">
+            <Card className="w-full border border-primary shadow-sm rounded-4xl hover:-translate-y-4">
                 <CardContent>
                     <div className="bg-background border border-border p-4 flex flex-col gap-4 rounded-2xl">
                         <CardHeader className="text-md p-0">
@@ -214,7 +214,7 @@ export function CashOut() {
             viewport={{ once: false, amount: 0.2 }}
             transition={{ duration: 0.55, ease: 'easeOut' }}
         >
-            <Card className="w-full border border-primary shadow-sm rounded-3xl hover:-translate-y-4">
+            <Card className="w-full border border-primary shadow-sm rounded-4xl hover:-translate-y-4">
                 <CardContent className="flex flex-col gap-4">
                     <div className="flex flex-col items-center justify-center gap-4 h-full w-full overflow-hidden rounded-xl">
                         <div className="flex flex-col items-center justify-center gap-2 h-fit w-full overflow-hidden p-4">

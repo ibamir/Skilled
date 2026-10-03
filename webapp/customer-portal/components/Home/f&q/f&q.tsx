@@ -170,7 +170,7 @@ export default function FrequentAskedQuestions() {
                                     stiffness: 400,
                                     damping: 20,
                                 }}
-                                className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl border bg-muted/30"
+                                className="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl border bg-muted/30"
                             >
                                 <Icon
                                     className="h-5 w-5 text-primary"

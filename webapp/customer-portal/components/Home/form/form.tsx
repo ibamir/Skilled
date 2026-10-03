@@ -266,7 +266,7 @@ export function InterestForm() {
                         value={selectedAnswer ?? ''}
                         onChange={(event) => selectAnswer(event.target.value)}
                         placeholder={t('enterEmail')}
-                        className="mt-6 h-12 rounded-xl"
+                        className="mt-6 h-12 rounded-2xl"
                         required
                     />
                 ) : (
@@ -286,7 +286,7 @@ export function InterestForm() {
                                     key={option.value}
                                     htmlFor={itemId}
                                     className={cn(
-                                        'flex w-full cursor-pointer items-center gap-3 rounded-xl border p-4 text-left transition-colors',
+                                        'flex w-full cursor-pointer items-center gap-3 rounded-2xl border p-4 text-left transition-colors',
                                         isSelected
                                             ? 'border-primary bg-primary/5'
                                             : 'border-input hover:bg-muted/50',
@@ -351,7 +351,7 @@ export function InterestForm() {
                                         }))
                                     }
                                     placeholder={t('tellUs')}
-                                    className="h-12 rounded-xl"
+                                    className="h-12 rounded-2xl"
                                     required
                                 />
                             )}
@@ -367,7 +367,7 @@ export function InterestForm() {
                 <Button
                     onClick={back}
                     disabled={currentQuestion === 0}
-                    className="h-10! rounded-xl p-2 gap-2"
+                    className="h-10! w-30! rounded-2xl p-2 gap-2"
                     variant="secondary"
                     dir="ltr"
                 >
@@ -380,7 +380,7 @@ export function InterestForm() {
                     onClick={next}
                     disabled={!selectedAnswer}
                     whileTap={{ scale: 0.97 }}
-                    className="h-10! bg-primary text-primary-foreground hover:bg-primary/80 rounded-xl flex items-center justify-center gap-2 p-2"
+                    className="h-10! w-30! bg-primary text-primary-foreground hover:bg-primary/80 rounded-2xl flex items-center justify-center gap-2 p-2"
                     dir="ltr"
                 >
                     {currentQuestion === questions.length - 1

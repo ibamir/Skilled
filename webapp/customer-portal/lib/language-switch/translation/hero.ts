@@ -1,9 +1,8 @@
 export const hero = {
     en: {
-        heroSubtext:
-            'Talented is coming soon: practical video classes in Darija, French, and English.',
-        headline: 'Get paid for what you know.',
-        cta: 'Take the survey',
+        heroSubtext: 'Take practical video classes, or teach what you know.',
+        headline: 'Learn. Create. Get paid.',
+        cta: 'Shape Talented →',
 
         // Hero section cards
         title1: 'Figma to Webflow for Freelancers',
@@ -20,12 +19,13 @@ export const hero = {
         CreatorEarn: 'Creator earnings',
         ready: 'Ready for local payout',
         connected: 'Connected',
+        cardsDescription:
+            'These are early concepts of the creator screens. Help us decide what to build first by taking the 1-minute survey.',
     },
     ar: {
-        heroSubtext:
-            'قريبًا Talented: دروس فيديو عملية بالدارجة والفرنسية والإنجليزية.',
-        headline: 'اكسب من خبرتك.',
-        cta: 'شارك في الاستبيان',
+        heroSubtext: 'التحق بدروس فيديو عملية، أو علّم ما تعرفه.',
+        headline: 'تعلّم. أنشئ. اكسب.',
+        cta: 'ساهم في تشكيل Talented ←',
 
         title1: 'من Figma إلى Webflow للمستقلين',
         body1: 'دورة فيديو مع قوالب ودراسات حالة وموارد لإنشاء مواقع جاهزة للعملاء.',
@@ -41,5 +41,7 @@ export const hero = {
         CreatorEarn: 'أرباح صانع المحتوى',
         ready: 'جاهز للتحويل محليًا',
         connected: 'متصل',
+        cardsDescription:
+            'هذه تصاميم أولية لشاشات صنّاع المحتوى. ساعدنا على تحديد ما سنبنيه أولًا بالمشاركة في استبيان مدته دقيقة واحدة.',
     },
 }

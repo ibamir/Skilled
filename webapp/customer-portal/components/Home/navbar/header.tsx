@@ -37,7 +37,7 @@ export function Header() {
             className={cn(
                 'sticky top-0 z-50 flex items-center justify-center bg-background mx-auto w-full max-w-6xl md:transition-all md:ease-out',
                 {
-                    'top-2 md:max-w-3xl md:shadow rounded-2xl bg-popover/40 backdrop-blur-md border border-border':
+                    'top-2 md:max-w-3xl md:shadow rounded-3xl bg-popover/40 backdrop-blur-md border border-border':
                         scrolled,
                 },
             )}
