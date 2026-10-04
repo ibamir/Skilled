@@ -151,7 +151,7 @@ export function Cards() {
                             }}
                         >
                             <Card
-                                className={`w-full border border-primary rounded-4xl shadow-md transition-transform duration-200 hover:-translate-y-4 ${fan.card}`}
+                                className={`w-full border border-border rounded-4xl shadow-md transition-transform duration-200 hover:-translate-y-4 ${fan.card}`}
                             >
                                 <CardContent className="flex flex-col gap-4 h-full">
                                     <div className="relative h-48 w-full overflow-hidden rounded-xl flex items-center justify-center">
@@ -298,9 +298,6 @@ export function TabletCards() {
     const [active, setActive] = useState(Math.floor(total / 2)) // start with the middle card centered
     const reduceMotion = useReducedMotion()
 
-    // The parent column is narrow, so the stage is stretched to the viewport.
-    // It is placed by measuring where the parent starts (no transforms, no 100vw),
-    // so it ends exactly at the viewport edge and can't create a horizontal scrollbar.
     const rootRef = useRef<HTMLDivElement>(null)
     const [wrapW, setWrapW] = useState(0)
     const [stageLeft, setStageLeft] = useState(0)
@@ -321,17 +318,24 @@ export function TabletCards() {
         }
     }, [])
 
+    const EDGE = 16 // px kept clear on each side, on every screen
+    const MAX_STAGE = 1280 // above this the fan stops growing and is centered
     const SIDE_SCALE = 0.9
-    const cardW = wrapW ? Math.min(320, Math.max(220, wrapW * 0.6)) : 288
-    // Ideal spread keeps ~85% of a side card visible. If the container is too
-    // narrow for that, shrink the spread so the side cards never leave it.
-    const maxSpread = wrapW
-        ? wrapW / 2 - (cardW * SIDE_SCALE) / 2 - 6
-        : cardW * 0.6
-    const spread = Math.max(cardW * 0.3, Math.min(cardW * 0.75, maxSpread))
+    const TILT_PAD = 22 // extra half-width a 6deg tilt adds to a side card (px)
+
+    const available = Math.min(wrapW || 360, MAX_STAGE) - EDGE * 2
+    const cardW = Math.min(320, Math.max(210, available * 0.55))
+    const sideHalf = (cardW * SIDE_SCALE) / 2 + TILT_PAD
+    const spread = Math.max(0, available / 2 - sideHalf)
 
     const slots = {
-        '-1': { x: -spread, y: 24, rotate: -6, scale: SIDE_SCALE, zIndex: 10 },
+        '-1': {
+            x: -spread,
+            y: 24,
+            rotate: -6,
+            scale: SIDE_SCALE,
+            zIndex: 10,
+        },
         '0': { x: 0, y: 0, rotate: 0, scale: 1, zIndex: 30 },
         '1': { x: spread, y: 24, rotate: 6, scale: SIDE_SCALE, zIndex: 10 },
     } as const
@@ -398,7 +402,7 @@ export function TabletCards() {
                                 onClick={() => !isActive && setActive(i)}
                                 aria-hidden={!isActive}
                             >
-                                <Card className="h-full w-full border border-primary rounded-4xl shadow-lg">
+                                <Card className="h-full w-full border border-border rounded-4xl shadow-lg">
                                     {/* Side cards are click targets only, so inner controls can't be hit */}
                                     <CardContent
                                         className={`flex h-full flex-col gap-4 ${
@@ -478,6 +482,7 @@ export function TabletCards() {
             </p>
         </div>
     )
+
 }
 
 export default function HeroSection() {
@@ -517,7 +522,7 @@ export default function HeroSection() {
             >
                 <ExpandingArrowButton
                     labelClassName="text-accent"
-                    accentClassName="bg-secondary dark:bg-background"
+                    accentClassName="bg-background dark:bg-background"
                     className="bg-primary capitalize font-extrabold!"
                     onClick={() =>
                         document

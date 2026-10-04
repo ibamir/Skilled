@@ -24,7 +24,7 @@ export function FigmaWebFlow() {
             viewport={{ once: false, amount: 0.2 }}
             transition={{ duration: 0.55, ease: 'easeOut' }}
         >
-            <Card className="w-full border border-primary shadow-sm rounded-4xl hover:-translate-y-4">
+            <Card className="w-full border border-border shadow-sm rounded-4xl hover:-translate-y-4">
                 <CardContent className="flex flex-col gap-4">
                     <div className="relative h-48 w-full overflow-hidden rounded-xl">
                         <img
@@ -60,7 +60,7 @@ export function Payment() {
             viewport={{ once: false, amount: 0.2 }}
             transition={{ duration: 0.55, ease: 'easeOut' }}
         >
-            <Card className="w-full border border-primary shadow-sm rounded-4xl hover:-translate-y-4">
+            <Card className="w-full border border-border shadow-sm rounded-4xl hover:-translate-y-4">
                 <CardContent className="flex flex-col gap-4">
                     <div className="flex flex-col items-center justify-center gap-2 h-full w-full overflow-hidden rounded-xl">
                         <div className="flex flex-col items-center justify-center gap-4 h-fit w-full overflow-hidden rounded-xl p-4">
@@ -69,10 +69,7 @@ export function Payment() {
                                     <ScanBarcodeIcon size={20} />
                                     {t('expressLocalCheckout')}
                                 </span>
-                                <Badge
-                                    variant="success-light"
-                                    className="p-3 rounded-xl font-bold "
-                                >
+                                <Badge className="p-3 rounded-xl font-bold bg-green-50 text-green-700 dark:bg-green-950 dark:text-green-300 border border-green-700/30">
                                     {t('instantRail')}
                                 </Badge>
                             </span>
@@ -149,52 +146,60 @@ export function Features() {
             viewport={{ once: false, amount: 0.2 }}
             transition={{ duration: 0.55, ease: 'easeOut' }}
         >
-            <Card className="w-full border border-primary shadow-sm rounded-4xl hover:-translate-y-4">
+            <Card className="w-full border border-border shadow-sm rounded-4xl hover:-translate-y-4">
                 <CardContent>
-                    <div className="bg-background border border-border p-4 flex flex-col gap-4 rounded-2xl">
-                        <CardHeader className="text-md p-0">
+                    <div className="bg-card flex flex-col gap-4 rounded-2xl">
+                        <CardHeader className="text-md px-4">
                             <span className="flex items-center justify-between gap-2">
                                 <p className="uppercase font-bold text-primary">
                                     {t('access')}
                                 </p>
-                                <Badge
-                                    variant="success-light"
-                                    className="p-3 capitalize rounded-xl font-bold"
-                                >
+                                <Badge className="p-3 capitalize rounded-xl font-bold bg-green-50 text-green-700 dark:bg-green-950 dark:text-green-300 border border-green-700/30">
                                     {t('activeSeat')}
                                 </Badge>
                             </span>
                         </CardHeader>
-
-                        <div className="flex items-center justify-between p-2 bg-card rounded-2xl border border-border px-4">
-                            <div className="flex items-center justify-center gap-4">
-                                <FolderArchiveIcon size={22} />
-                                <span className="flex flex-col justify-center">
-                                    <p className="text-md font-semibold">
-                                        {t('saas')}
-                                    </p>
-                                    <p className="text-xs text-muted-foreground font-thin">
-                                        {t('includeNextJs')}
-                                    </p>
-                                </span>
-                            </div>
-                            <DownloadIcon size={22} className='md:block hidden'/>
+                        <div className='px-4'>
+                            <Separator className="w-full h-px bg-border" />
                         </div>
-                        <div className="flex md:flex-row flex-col items-center justify-between p-2 bg-card rounded-2xl border border-border px-4 md:gap-0 gap-2">
-                            <div className="flex items-center justify-center gap-4">
-                                <MessageSquareIcon size={22} />
-                                <span className="flex flex-col justify-center">
-                                    <p className="text-md font-semibold">
-                                        {t('private')}
-                                    </p>
-                                    <p className="text-xs text-muted-foreground font-thin">
-                                        {t('members')}
-                                    </p>
-                                </span>
+                        
+                        <div className="flex flex-col gap-2">
+                            <div className="flex items-center justify-between p-2 bg-background rounded-2xl border border-border px-4">
+                                <div className="flex items-center justify-center gap-4">
+                                    <FolderArchiveIcon size={22} />
+                                    <span className="flex flex-col justify-center">
+                                        <p className="text-md font-semibold">
+                                            {t('saas')}
+                                        </p>
+                                        <p className="text-xs text-muted-foreground font-thin">
+                                            {t('includeNextJs')}
+                                        </p>
+                                    </span>
+                                </div>
+                                <DownloadIcon
+                                    size={22}
+                                    className="md:block hidden"
+                                />
                             </div>
-                            <Button className="rounded-xl md:w-fit w-full" variant="secondary">
-                                {t('join')}
-                            </Button>
+                            <div className="flex md:flex-row flex-col items-center justify-between p-2 bg-background rounded-2xl border border-border px-4 md:gap-0 gap-2">
+                                <div className="flex items-center justify-center gap-4">
+                                    <MessageSquareIcon size={22} />
+                                    <span className="flex flex-col justify-center">
+                                        <p className="text-md font-semibold">
+                                            {t('private')}
+                                        </p>
+                                        <p className="text-xs text-muted-foreground font-thin">
+                                            {t('members')}
+                                        </p>
+                                    </span>
+                                </div>
+                                <Button
+                                    className="rounded-xl md:w-fit w-full"
+                                    variant="secondary"
+                                >
+                                    {t('join')}
+                                </Button>
+                            </div>
                         </div>
                     </div>
                 </CardContent>
@@ -214,7 +219,7 @@ export function CashOut() {
             viewport={{ once: false, amount: 0.2 }}
             transition={{ duration: 0.55, ease: 'easeOut' }}
         >
-            <Card className="w-full border border-primary shadow-sm rounded-4xl hover:-translate-y-4">
+            <Card className="w-full border border-border shadow-sm rounded-4xl hover:-translate-y-4">
                 <CardContent className="flex flex-col gap-4">
                     <div className="flex flex-col items-center justify-center gap-4 h-full w-full overflow-hidden rounded-xl">
                         <div className="flex flex-col items-center justify-center gap-2 h-fit w-full overflow-hidden p-4">

@@ -321,7 +321,7 @@ export function InterestForm() {
                                                 ease: 'easeOut',
                                             }}
                                             className={cn(
-                                                'flex size-8 shrink-0 items-center justify-center rounded-md',
+                                                'flex size-8 shrink-0 items-center justify-center rounded-lg',
                                                 isSelected
                                                     ? 'bg-primary/10 text-primary'
                                                     : 'bg-background border border-border text-muted-foreground',

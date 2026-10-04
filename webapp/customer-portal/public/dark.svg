@@ -1,1 +1,16 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg width="100%" height="100%" viewBox="0 0 541 119" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:affinity="https://www.affinity.studio/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><g id="Dark"><g><g transform="matrix(0.835605,0,0,1,0.934023,-0)"><text x="5.682px" y="112.962px" style="font-family:'PlusJakartaSans-ExtraBold', 'Plus Jakarta Sans';font-weight:800;font-size:143.522px;fill:#9690f1;">talented</text></g></g><g><text x="503.588px" y="112.895px" style="font-family:'PlusJakartaSans-ExtraBold', 'Plus Jakarta Sans';font-weight:800;font-size:105.991px;fill:#6ff5c0;">.</text></g></g></svg>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 541 119" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:affinity="https://www.affinity.studio/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g id="Dark" transform="matrix(1,0,0,1,7.4891,-0.000585)">
+        <g transform="matrix(1.091579,0,0,1.306333,-134.371043,-30.999442)">
+            <g transform="matrix(1,0,0,1,121.442,110.203)">
+                <text x="0px" y="0px" style="font-family:'PlusJakartaSans-ExtraBold', 'Plus Jakarta Sans';font-weight:800;font-size:109.866px;fill:rgb(150,144,241);">talented</text>
+            </g>
+        </g>
+        <g transform="matrix(2.119828,0,0,2.119828,350.344622,112.89541)">
+            <g transform="matrix(1,0,0,1,68.757649,0.000276)">
+                <text x="0px" y="0px" style="font-family:'PlusJakartaSans-ExtraBold', 'Plus Jakarta Sans';font-weight:800;font-size:50px;fill:rgb(111,245,192);">.</text>
+            </g>
+        </g>
+    </g>
+</svg>

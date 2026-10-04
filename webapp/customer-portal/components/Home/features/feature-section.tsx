@@ -109,7 +109,7 @@ function FeatureCard({
                 visible: { opacity: 1, y: 0, transition: { duration: 0.55 } },
             }}
         >
-            <Card className="bg-card border border-primary w-full h-full rounded-4xl ring-0 transition-all duration-300 hover:shadow-[0_10px_30px_rgba(0,0,0,0.15)] dark:hover:shadow-[0_10px_30px_rgba(0,0,0,0.6)]">
+            <Card className="bg-card border border-border w-full h-full rounded-4xl ring-0 transition-all duration-300 hover:shadow-[0_10px_30px_rgba(0,0,0,0.15)] dark:hover:shadow-[0_10px_30px_rgba(0,0,0,0.6)]">
                 <CardContent className="p-6">
                     <div className="bg-background mb-2 size-fit rounded-xl p-px">
                         <div className="h-12 w-12 flex items-center justify-center rounded-2xl text-primary border bg-muted/30">
