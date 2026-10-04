@@ -7,7 +7,7 @@ export const nav = {
         theme: 'Theme : ',
         language: 'Language : ',
         prelaunchBanner:
-            "We're building Talented. Tell us what you want to learn in this 1-minute survey →",
+            "We're building Skilled. Tell us what you want to learn in this 1-minute survey →",
     },
     ar: {
         faq: 'الأسئلة الشائعة',
@@ -17,6 +17,6 @@ export const nav = {
         theme: 'السمة :',
         language: 'اللغة :',
         prelaunchBanner:
-            'نعمل على بناء Talented. أخبرنا بما تريد تعلّمه في استبيان مدته دقيقة واحدة ←',
+            'نعمل على بناء Skilled. أخبرنا بما تريد تعلّمه في استبيان مدته دقيقة واحدة ←',
     },
 }

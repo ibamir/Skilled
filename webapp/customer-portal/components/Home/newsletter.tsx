@@ -17,7 +17,7 @@ export interface Newsletter2Props {
 
 const Newsletter: React.FC<Newsletter2Props> = ({
     heading = 'Be first to know when we launch',
-    description = 'Get updates about new courses, creator opportunities, and the Talented beta in your inbox.',
+    description = 'Get updates about new courses, creator opportunities, and the Skilled beta in your inbox.',
     label = 'Get launch updates',
     placeholder = 'Enter your email',
     buttonText = 'Subscribe',
@@ -57,7 +57,7 @@ const Newsletter: React.FC<Newsletter2Props> = ({
                         <Badge className="text-primary backdrop-blur-2xl bg-background/50 dark:bg-background/70 p-3 rounded-xl font-bold">
                             <span className="flex items-center justify-center gap-2">
                                 <div className="size-2 animate-pulse rounded-full bg-primary" />
-                                <p>Talented launch updates</p>
+                                <p>Skilled launch updates</p>
                             </span>
                         </Badge>
                         <h2 className="text-3xl font-bold tracking-tight md:text-4xl lg:text-5xl">

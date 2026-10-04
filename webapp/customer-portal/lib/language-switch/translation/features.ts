@@ -17,17 +17,17 @@ export const features = {
             'Publish your work and get paid through local payout options.',
         frequentAsked: 'Frequently Asked Questions',
         frequentAnswers:
-            'Answers to common questions about learning, sharing, and earning on Talented.',
-        fq1: 'What is Talented?',
+            'Answers to common questions about learning, sharing, and earning on Skilled.',
+        fq1: 'What is Skilled?',
         fq1answer:
-            'Talented is being built as a learning platform where you can find practical skills, learn from creators, and share what you know.',
-        fq2: 'Who can use Talented?',
+            'Skilled is being built as a learning platform where you can find practical skills, learn from creators, and share what you know.',
+        fq2: 'Who can use Skilled?',
         fq2answer:
             'Students can find study resources and build practical digital skills. Creators and top students can earn from what they know.',
         fq3: 'How do I pay without an international card?',
         fq3answer:
             'You can pay in TND through D17 or Flouci, without a foreign card.',
-        fq4: 'Can I really make money on Talented?',
+        fq4: 'Can I really make money on Skilled?',
         fq4answer:
             'Yes. Creators and top students can upload content, set their own prices, and earn on every sale. Withdraw to D17 or Flouci anytime.',
         fq5: 'How do you protect my content?',
@@ -67,17 +67,17 @@ export const features = {
         descriptionF4: 'انشر عملك واحصل على مستحقاتك عبر وسائل دفع محلية.',
         frequentAsked: 'الأسئلة الشائعة',
         frequentAnswers:
-            'إجابات عن الأسئلة الشائعة حول التعلّم والمشاركة والكسب على Talented.',
-        fq1: 'ما هي Talented؟',
+            'إجابات عن الأسئلة الشائعة حول التعلّم والمشاركة والكسب على Skilled.',
+        fq1: 'ما هي Skilled؟',
         fq1answer:
-            'يجري تطوير Talented لتكون منصة تعلّم تساعدك على اكتشاف المهارات العملية والتعلّم من صنّاع المحتوى ومشاركة ما تعرفه.',
-        fq2: 'من يمكنه استخدام Talented؟',
+            'يجري تطوير Skilled لتكون منصة تعلّم تساعدك على اكتشاف المهارات العملية والتعلّم من صنّاع المحتوى ومشاركة ما تعرفه.',
+        fq2: 'من يمكنه استخدام Skilled؟',
         fq2answer:
             'يستطيع الطلاب العثور على موارد دراسية واكتساب مهارات رقمية عملية، كما يستطيع صنّاع المحتوى والطلاب المتفوقون الكسب من خبراتهم.',
         fq3: 'كيف يمكنني الدفع من دون بطاقة دولية؟',
         fq3answer:
             'يمكنك الدفع بالدينار التونسي عبر D17 أو Flouci، دون الحاجة إلى بطاقة أجنبية.',
-        fq4: 'هل يمكنني حقًا كسب المال على Talented؟',
+        fq4: 'هل يمكنني حقًا كسب المال على Skilled؟',
         fq4answer:
             'نعم. يستطيع صنّاع المحتوى والطلاب المتفوقون رفع المحتوى وتحديد أسعارهم والكسب من كل عملية بيع، ثم سحب الأرباح عبر D17 أو Flouci في أي وقت.',
         fq5: 'كيف تحمون المحتوى الخاص بي؟',

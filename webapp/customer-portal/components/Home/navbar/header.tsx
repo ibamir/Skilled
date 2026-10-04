@@ -62,7 +62,7 @@ export function Header() {
                     <span className="flex items-center justify-center min-w-fit gap-0.5">
                         <img
                             src={theme === 'dark' ? '/dark.svg' : '/light.svg'}
-                            alt="Talented"
+                            alt="Skilled"
                             className="w-30 max-h-fit"
                         />
                     </span>

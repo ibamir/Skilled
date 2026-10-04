@@ -37,7 +37,7 @@ export default function Footer() {
                                         ? '/dark.svg'
                                         : '/light.svg'
                                 }
-                                alt="Talented"
+                                alt="Skilled"
                                 className="w-25"
                             />
                         </span>
@@ -66,7 +66,7 @@ export default function Footer() {
             </div>
             <Separator className="w-full h-px bg-border" />
             <p className="text-center">{t('copyright')}</p>
-            <WordmarkFooter brandName="TALENTED" />
+            <WordmarkFooter brandName="SKILLED" />
         </motion.div>
     )
 }

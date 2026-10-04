@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg width="100%" height="100%" viewBox="0 0 1080 1080" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:affinity="https://www.affinity.studio/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
-    <g id="Light" transform="matrix(1.428724,0,0,1.428724,105.64188,87.0698)">
+    <g id="LIght" transform="matrix(1.428724,0,0,1.428724,105.64188,87.0698)">
         <g transform="matrix(0.699925,0,0,0.699925,-73.94143,-60.94236)">
-            <path d="M810,0C959.017,0 1080,120.983 1080,270L1080,810C1080,959.017 959.017,1080 810,1080L270,1080C120.983,1080 0,959.017 0,810L0,270C0,120.983 120.983,0 270,0L810,0Z" style="fill:rgb(249,250,252);"/>
+            <circle cx="540" cy="540" r="540" style="fill:rgb(249,250,252);"/>
         </g>
-        <g transform="matrix(2.148892,0,0,2.148892,-802.137572,-915.080552)">
-            <path d="M536.131,432.387C545.625,417.977 567.313,429.638 559.783,445.276L469.006,629.245C458.16,644.102 435.921,632.689 444.275,615.07L450.91,603.61C453.793,594.61 449.009,587.518 440.355,587.625L386.371,587.625C367.262,585.812 370.843,560.342 385.746,560.504L445.907,560.304C466.931,556.008 481.967,544.674 489.815,524.895L536.131,432.387Z" style="fill:rgb(106,94,201);"/>
-        </g>
-        <g transform="matrix(-2.14886,-0.011676,0.011676,-2.14886,1403.457512,1555.495475)">
-            <path d="M536.131,432.387C545.625,417.977 567.313,429.638 559.783,445.276L469.006,629.245C458.16,644.102 435.921,632.689 444.275,615.07L450.91,603.61C453.793,594.61 449.009,587.518 440.355,587.625L386.371,587.625C367.262,585.812 370.843,560.342 385.746,560.504L445.907,560.304C466.931,556.008 481.967,544.674 489.815,524.895L536.131,432.387Z" style="fill:rgb(106,94,201);"/>
+        <g transform="matrix(8.122516,0,0,8.122516,-3299.438762,-4020.987944)">
+            <text x="413.913px" y="550.747px" style="font-family:'AkayaKanadaka-Regular', 'Akaya Kanadaka';font-size:50px;fill:rgb(106,94,201);">S<tspan x="438.263px " y="550.747px ">k</tspan></text>
+            <text x="463.263px" y="550.747px" style="font-family:'AkayaKanadaka-Regular', 'Akaya Kanadaka';font-size:50px;fill:rgb(111,166,245);">.</text>
         </g>
     </g>
 </svg>
