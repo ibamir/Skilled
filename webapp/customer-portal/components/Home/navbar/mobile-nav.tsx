@@ -11,16 +11,12 @@ import { AnimatePresence, motion } from 'motion/react'
 import { LanguageSwitcher } from '@/lib/language-switch/language-switcher'
 import { Separator } from '@/components/ui/separator' 
 import { useLanguage } from '@/lib/language-switch/LanguageProvider'
+import { useNaveLinks } from './header'
 
 export function MobileNav() {
     const [open, setOpen] = React.useState(false)
     const { t } = useLanguage()
-    const links = [
-        { label: t('features'), href: '#features' },
-        { label: t('howItWorks'), href: '#how-it-works' },
-        { label: t('faq'), href: '#faq' },
-        { label: t('takeTheSurvey'), href: '#help-us' },
-    ]
+    const links = useNaveLinks()
 
     return (
         <div className="md:hidden">

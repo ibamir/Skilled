@@ -11,10 +11,7 @@ import Image from 'next/image'
 import { useLanguage } from '@/lib/language-switch/LanguageProvider'
 import { useEffect, useRef, useState } from 'react'
 import { Button } from '@/components/ui/button'
-import { ChevronLeft, ChevronRight, KeyIcon, Star, TimerIcon } from 'lucide-react'
-import { Badge } from '@/components/reui/badge'
-import { div, span } from 'motion/react-client'
-import { KeyCircleIcon } from '@/components/ui/key-circle'
+import { ChevronLeft, ChevronRight } from 'lucide-react'
 
 const FAN = [
     // first card: left in LTR, right in RTL
@@ -32,11 +29,10 @@ const FAN = [
 ]
 
 
-
-export function Cards() {
+export function useCards() {
     const { t } = useLanguage()
 
-    const cardData = [
+    return [
         {
             id: 1,
             image: '/figmatowebflow.jpg',
@@ -133,6 +129,11 @@ export function Cards() {
             ),
         },
     ]
+}
+
+export function Cards() {
+    const { t } = useLanguage()
+    const cardData = useCards()
 
     return (
         <div className="relative w-full max-w-7xl mx-auto px-2 sm:px-6">
@@ -202,104 +203,7 @@ export function Cards() {
 
 export function TabletCards() {
     const { t } = useLanguage()
-
-        const cardData = [
-        {
-            id: 1,
-            image: '/figmatowebflow.jpg',
-            rotate: 'md:-rotate-5',
-            title: t('title1'),
-            body: t('body1'),
-            footer: (
-                <div className="w-full flex flex-wrap items-center justify-between gap-2">
-                    <span className="flex items-center justify-center gap-2 group">
-                        <WalletIcon
-                            className="group-hover:-translate-y-0.5"
-                            size={20}
-                        />
-                        {t('payWith')}
-                    </span>
-                    <span className="flex items-center gap-1 text-green-600">
-                        {t('instant')} <CircleCheckIcon size={15} />
-                    </span>
-                </div>
-            ),
-        },
-        {
-            id: 2,
-            image: '/nextjs.jpg',
-            rotate: '',
-            title: t('title2'),
-            body: t('body2'),
-            footer: (
-                <div className="w-full flex flex-wrap items-center justify-between gap-2">
-                    <span className="flex items-center justify-center gap-2">
-                        <UserIcon size={16} />
-                        {t('learners')}
-                    </span>
-                    <span className="shrink-0">65 TND</span>
-                </div>
-            ),
-        },
-        {
-            id: 3,
-            rotate: 'md:rotate-5',
-            title: (
-                <>
-                    <CircleCheckIcon size={15} />
-                    {t('title3')}
-                </>
-            ),
-            titleCentered: true,
-            body: t('body3'),
-            footer: (
-                <div className="w-full flex flex-col justify-center gap-2">
-                    <Progress
-                        value={80}
-                        max={100}
-                        min={0}
-                        className="w-full h-fit"
-                    />
-                    <span className="flex items-center justify-between gap-2 text-xs">
-                        <h1>{t('creatorPay')}</h1>
-                        <h1>{t('platform')}</h1>
-                    </span>
-                </div>
-            ),
-            card: (
-                <div className="flex flex-col items-center justify-center gap-2 h-48 w-full overflow-hidden rounded-xl bg-background p-4 border border-border">
-                    <span className="flex items-center justify-between w-full font-bold text-sm">
-                        {t('CreatorEarn')}
-                        <WalletIcon className="text-primary" size={17} />
-                    </span>
-                    <span className="flex flex-col items-center justify-between w-full">
-                        <span className="flex items-center justify-baseline gap-2">
-                            <h1 className="text-3xl font-bold text-primary">
-                                1,480.00
-                            </h1>
-                            <p className="text-sm">TND</p>
-                        </span>
-
-                        <p className="text-xs text-muted-foreground">
-                            {t('ready')}
-                        </p>
-                    </span>
-                    <span className="flex items-center justify-between w-full bg-secondary rounded-xl p-2">
-                        <p>{t('flouci')}</p>
-                        <p className="text-green-600 font-bold">
-                            {t('connected')}
-                        </p>
-                    </span>
-                    <span className="flex items-center justify-between w-full bg-secondary rounded-xl p-2">
-                        <p>{t('poste')}</p>
-                        <p className="text-green-600 font-bold">
-                            {t('connected')}
-                        </p>
-                    </span>
-                </div>
-            ),
-        },
-    ]
+    const cardData = useCards()
 
     const total = cardData.length
     const [active, setActive] = useState(Math.floor(total / 2)) // start with the middle card centered

@@ -10,17 +10,23 @@ import { motion } from 'motion/react'
 import { useTheme } from 'next-themes'
 import { useLanguage } from '@/lib/language-switch/LanguageProvider'
 
-export function Header() {
+export function useNaveLinks() {
     const { t } = useLanguage()
-    const scrolled = useScroll(10)
-    const { theme } = useTheme()
 
-    const links = [
+    return [
         { label: t('features'), href: '#features' },
         { label: t('howItWorks'), href: '#how-it-works' },
         { label: t('faq'), href: '#faq' },
         { label: t('takeTheSurvey'), href: '#help-us' },
     ]
+}
+
+export function Header() {
+    const { t } = useLanguage()
+    const scrolled = useScroll(10)
+    const { theme } = useTheme()
+
+    const links = useNaveLinks()
 
     useEffect(() => {
         const previousRestoration = window.history.scrollRestoration

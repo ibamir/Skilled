@@ -7,17 +7,12 @@ import { scrollToHash } from '@/lib/utils'
 import { useTheme } from 'next-themes'
 import { LanguageSwitcher } from '@/lib/language-switch/language-switcher'
 import { useLanguage } from '@/lib/language-switch/LanguageProvider'
+import { useNaveLinks } from '../navbar/header'
 
 export default function Footer() {
     const { theme } = useTheme()
     const { t } = useLanguage()
-
-    const links = [
-        { label: t('features'), href: '#features' },
-        { label: t('howItWorks'), href: '#how-it-works' },
-        { label: t('faq'), href: '#faq' },
-        { label: t('takeTheSurvey'), href: '#help-us' },
-    ]
+    const links = useNaveLinks()
 
     return (
         <motion.div
