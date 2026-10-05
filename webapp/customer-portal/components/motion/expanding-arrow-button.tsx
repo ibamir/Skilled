@@ -103,7 +103,7 @@ export const ExpandingArrowButton = forwardRef<
           whileTap={reduce || disabled ? undefined : { scale: 0.97 }}
           transition={SPRING_PRESS}
           className={cn(
-              'relative inline-flex h-16 min-w-72 items-center overflow-hidden rounded-[22px] bg-neutral-950 p-1.5 text-white select-none',
+              'relative inline-flex h-17 min-w-15 max-w-58 items-center overflow-hidden rounded-3xl bg-neutral-950 p-1.5 text-white select-none',
               'outline-none focus-visible:ring-2 focus-visible:ring-lime-300 focus-visible:ring-offset-2 focus-visible:ring-offset-background',
               'disabled:pointer-events-none disabled:opacity-50',
               className,
@@ -128,7 +128,7 @@ export const ExpandingArrowButton = forwardRef<
                   transition={{ duration: reduce ? 0 : 0.1, ease: EASE_OUT }}
                   className="absolute inset-0 grid place-items-center"
               >
-                  <DottedChevron className="h-7 w-5 text-primary dark:text-accent-foreground" />
+                  <DottedChevron className="h-7 w-5 text-primary" />
               </motion.span>
 
               <span className="absolute inset-0 flex items-center justify-around px-3">
@@ -151,7 +151,7 @@ export const ExpandingArrowButton = forwardRef<
                           style={{ color: `rgb(10 10 10 / ${opacity})` }}
                           className="inline-grid place-items-center"
                       >
-                          <DottedChevron className="h-7 w-5 text-primary dark:text-accent-foreground" />
+                          <DottedChevron className="h-7 w-5 text-primary" />
                       </motion.span>
                   ))}
               </span>
@@ -165,7 +165,7 @@ export const ExpandingArrowButton = forwardRef<
               }}
               transition={{ duration: reduce ? 0 : 0.12, ease: EASE_OUT }}
               className={cn(
-                  'relative z-0 ml-[76px] mr-12 whitespace-nowrap text-lg font-bold text-center w-full tracking-[-0.02em]',
+                  'relative z-0 mx-18 whitespace-nowrap text-lg font-bold text-center w-full tracking-[-0.02em]',
                   labelClassName,
               )}
           >

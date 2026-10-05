@@ -151,7 +151,7 @@ export function Cards() {
                             }}
                         >
                             <Card
-                                className={`w-full border border-border rounded-4xl shadow-md transition-transform duration-200 hover:-translate-y-4 ${fan.card}`}
+                                className={`w-full border border-border rounded-4xl shadow-lg transition-transform duration-200 hover:-translate-y-4 ${fan.card}`}
                             >
                                 <CardContent className="flex flex-col gap-4 h-full">
                                     <div className="relative h-48 w-full overflow-hidden rounded-xl flex items-center justify-center">
@@ -489,7 +489,7 @@ export default function HeroSection() {
     const { t } = useLanguage()
 
     return (
-        <div className="w-full flex flex-col items-center justify-center gap-8 pb-10 space-y-10">
+        <div className="w-full flex flex-col items-center justify-center gap-6 pb-10 space-y-10">
             {/* Header */}
             <motion.h1
                 className="text-7xl md:text-9xl font-black tracking-tighter text-primary max-w-7xl leading-[0.9] rtl:leading-[1.1] rtl:**:leading-[1.1] mb-10 text-center capitalize"
@@ -503,7 +503,7 @@ export default function HeroSection() {
 
             {/* Sub text */}
             <motion.h2
-                className="text-center text-xl md:text-2xl text-muted-foreground font-bold max-w-3xl mb-12"
+                className="text-center text-xl md:text-2xl text-muted-foreground font-bold max-w-3xl"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: false, amount: 0.6 }}
