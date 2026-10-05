@@ -37,6 +37,11 @@ export const form = {
         label4c: 'Maybe, I want to see more',
         label4d: 'Probably not right now',
         question5: 'Where should we send launch updates?',
+        sending: 'Sending…',
+        formError: 'Something went wrong. Please try again.',
+        errorEmail: 'Please enter a valid email address.',
+        emailPrivacy:
+            'No spam — just one email when Skilled launches. Unsubscribe anytime.',
     },
     ar: {
         thx: 'شكرًا لمشاركتك في الاستبيان.',
@@ -75,5 +80,10 @@ export const form = {
         label4d: 'على الأرجح لا في الوقت الحالي',
         question5: 'إلى أين نرسل إليك أخبار الإطلاق؟',
         back: 'عودة',
+        sending: 'جارٍ الإرسال…',
+        formError: 'حدث خطأ ما. يرجى المحاولة مرة أخرى.',
+        errorEmail: 'يرجى إدخال عنوان بريد إلكتروني صالح.',
+        emailPrivacy:
+            'سنرسل لك رسالة واحدة عند إطلاق Skilled. يمكنك إلغاء الاشتراك في أي وقت.',
     },
 }
