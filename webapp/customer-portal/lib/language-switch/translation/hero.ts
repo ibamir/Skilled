@@ -1,8 +1,8 @@
 export const hero = {
     en: {
         heroSubtext:
-            'For anyone who wants to learn a practical skill, or has one to teach.',
-        headline: 'A new place to learn and teach skills.',
+            'Learn practical skills, discover useful resources, or share what you know with others.',
+        headline: 'Build Skills That Move You Forward.',
         cta: 'Take the survey',
 
         // Hero section cards
@@ -25,8 +25,8 @@ export const hero = {
     },
     ar: {
         heroSubtext:
-            'لكل من يريد تعلّم مهارة عملية، أو لديه مهارة يرغب في تعليمها.',
-        headline: 'منصة جديدة لتعلّم المهارات وتعليمها.',
+            'تعلّم مهارات عملية، واكتشف موارد مفيدة، أو شارك ما تعرفه مع الآخرين.',
+        headline: 'اكتسب مهارات تدفعك إلى الأمام.',
         cta: 'شارك في الاستبيان',
 
         title1: 'من Figma إلى Webflow للمستقلين',

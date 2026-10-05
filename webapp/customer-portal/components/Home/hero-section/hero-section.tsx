@@ -11,7 +11,10 @@ import Image from 'next/image'
 import { useLanguage } from '@/lib/language-switch/LanguageProvider'
 import { useEffect, useRef, useState } from 'react'
 import { Button } from '@/components/ui/button'
-import { ChevronLeft, ChevronRight } from 'lucide-react'
+import { ChevronLeft, ChevronRight, KeyIcon, Star, TimerIcon } from 'lucide-react'
+import { Badge } from '@/components/reui/badge'
+import { div, span } from 'motion/react-client'
+import { KeyCircleIcon } from '@/components/ui/key-circle'
 
 const FAN = [
     // first card: left in LTR, right in RTL
@@ -45,11 +48,13 @@ export function Cards() {
                     <span className="flex items-center justify-center gap-2 group">
                         <WalletIcon
                             className="group-hover:-translate-y-0.5"
-                            size={16}
+                            size={15}
                         />
                         {t('payWith')}
                     </span>
-                    {t('instant')}
+                    <span className="flex items-center gap-1 text-green-600">
+                        {t('instant')} <CircleCheckIcon size={15} />
+                    </span>
                 </div>
             ),
         },
@@ -198,7 +203,7 @@ export function Cards() {
 export function TabletCards() {
     const { t } = useLanguage()
 
-    const cardData = [
+        const cardData = [
         {
             id: 1,
             image: '/figmatowebflow.jpg',
@@ -210,11 +215,13 @@ export function TabletCards() {
                     <span className="flex items-center justify-center gap-2 group">
                         <WalletIcon
                             className="group-hover:-translate-y-0.5"
-                            size={16}
+                            size={20}
                         />
                         {t('payWith')}
                     </span>
-                    {t('instant')}
+                    <span className="flex items-center gap-1 text-green-600">
+                        {t('instant')} <CircleCheckIcon size={15} />
+                    </span>
                 </div>
             ),
         },
@@ -489,10 +496,10 @@ export default function HeroSection() {
     const { t } = useLanguage()
 
     return (
-        <div className="w-full flex flex-col items-center justify-center gap-4 pb-10 space-y-10">
+        <div className="w-full flex flex-col items-center justify-center pb-10 space-y-10">
             {/* Header */}
             <motion.h1
-                className="text-7xl md:text-9xl font-black tracking-tighter text-primary max-w-7xl leading-[0.9] rtl:leading-[1.1] rtl:**:leading-[1.1] mb-10 text-center capitalize"
+                className="text-7xl md:text-9xl font-black tracking-tighter text-primary max-w-7xl leading-[0.9] rtl:leading-[1.3] rtl:**:leading-[1.3] mb-10 text-center capitalize"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: false, amount: 0.6 }}
@@ -503,7 +510,7 @@ export default function HeroSection() {
 
             {/* Sub text */}
             <motion.h2
-                className="text-center text-xl md:text-2xl text-muted-foreground font-bold max-w-3xl leading-[0.1]"
+                className="text-center text-xl md:text-2xl text-muted-foreground font-bold max-w-3xl"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: false, amount: 0.6 }}

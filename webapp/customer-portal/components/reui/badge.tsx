@@ -25,7 +25,7 @@ const badgeVariants = cva(
         "primary-light":
           "border-primary/10 bg-primary/10 text-primary dark:border-primary/25 dark:bg-primary/15 dark:text-primary",
         "warning-light":
-          "border-warning/15 bg-warning/10 text-warning-foreground dark:border-warning/25 dark:bg-warning/15 dark:text-warning",
+          "border-amber-700/15 bg-amber-200 text-amber-700 dark:border-amber-700/15 dark:bg-amber-950 dark:text-amber-600",
         "success-light":
           "border-green-700/15 bg-green-700/10 text-green-700 dark:border-green-700/25 dark:bg-green-700/15 dark:text-text-green-700",
         "info-light":
