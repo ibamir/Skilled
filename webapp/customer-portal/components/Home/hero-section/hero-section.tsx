@@ -489,7 +489,7 @@ export default function HeroSection() {
     const { t } = useLanguage()
 
     return (
-        <div className="w-full flex flex-col items-center justify-center gap-6 pb-10 space-y-10">
+        <div className="w-full flex flex-col items-center justify-center gap-4 pb-10 space-y-10">
             {/* Header */}
             <motion.h1
                 className="text-7xl md:text-9xl font-black tracking-tighter text-primary max-w-7xl leading-[0.9] rtl:leading-[1.1] rtl:**:leading-[1.1] mb-10 text-center capitalize"
@@ -535,7 +535,7 @@ export default function HeroSection() {
             </motion.div>
 
             {/* Hover cards */}
-            <div className="lg:block sm:block md:hidden">
+            <div className="lg:block sm:block md:hidden pt-10">
                 <Cards />
             </div>
             <div className="hidden md:block lg:hidden">
