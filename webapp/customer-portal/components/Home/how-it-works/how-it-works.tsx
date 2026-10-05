@@ -127,7 +127,7 @@ export default function HowItWorks() {
                         <Badge
                             variant="primary-light"
                             key={tag}
-                            className="rounded-xl p-2"
+                            className="rounded-xl p-3"
                         >
                             {tag}
                         </Badge>
@@ -300,7 +300,7 @@ function TimelineStep({
                     <span className="flex items-center gap-4 mt-4 flex-wrap">
                         {step.tags?.map((tag) => (
                             <Badge
-                                className="p-2 rounded-xl"
+                                className="p-3 rounded-xl"
                                 variant="primary-light"
                                 key={tag}
                             >
@@ -350,7 +350,7 @@ function TimelineStep({
 
                             return (
                                 <Badge
-                                    className="p-2 rounded-xl [&_svg:not([class*=size-])]:size-4!"
+                                    className="p-3 rounded-xl [&_svg:not([class*=size-])]:size-4!"
                                     variant="primary-light"
                                     key={tag}
                                 >

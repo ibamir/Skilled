@@ -406,7 +406,7 @@ export function InterestFormSection() {
     return (
         <motion.section
             ref={sectionRef}
-            className="mx-auto w-full max-w-6xl px-8 py-24"
+            className="mx-auto w-full max-w-6xl px-4 py-24"
             initial={{ opacity: 0, y: 32 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 32 }}
             transition={{ duration: 0.7, ease: 'easeOut' }}

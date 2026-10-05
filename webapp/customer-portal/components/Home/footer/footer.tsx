@@ -16,7 +16,7 @@ export default function Footer() {
 
     return (
         <motion.div
-            className="w-full h-fit px-8 space-y-7 bg-background"
+            className="w-full h-fit px-4 space-y-7 bg-background"
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false, amount: 0.2 }}
