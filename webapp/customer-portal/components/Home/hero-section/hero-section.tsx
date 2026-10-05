@@ -503,7 +503,7 @@ export default function HeroSection() {
 
             {/* Sub text */}
             <motion.h2
-                className="text-center text-xl md:text-2xl text-muted-foreground font-bold max-w-3xl"
+                className="text-center text-xl md:text-2xl text-muted-foreground font-bold max-w-3xl leading-[0.1]"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: false, amount: 0.6 }}
