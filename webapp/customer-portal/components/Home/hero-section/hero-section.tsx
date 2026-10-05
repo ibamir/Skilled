@@ -2,16 +2,26 @@
 
 import { motion, useReducedMotion } from 'motion/react'
 import { ExpandingArrowButton } from '@/components/motion/expanding-arrow-button'
-import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card'
 import { CircleCheckIcon } from '@/components/ui/circle-check'
 import { Progress } from '@/components/ui/progress'
 import { UserIcon } from '@/components/ui/user'
 import { WalletIcon } from '@/components/ui/wallet'
-import Image from 'next/image'
 import { useLanguage } from '@/lib/language-switch/LanguageProvider'
 import { useEffect, useRef, useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
+import {
+    CutoutCard,
+    CutoutCardContent,
+    CutoutCardFooter,
+    CutoutCardImage,
+    CutoutCardInsetLabel,
+    CutoutCardMedia,
+    CutoutCardOverlay,
+    CutoutCardPin,
+    CutoutCorner,
+    cutoutCardSurfaceClassName,
+} from '@/components/ui/cutout-card'
 
 const FAN = [
     // first card: left in LTR, right in RTL
@@ -74,10 +84,10 @@ export function useCards() {
             id: 3,
             rotate: 'md:rotate-5',
             title: (
-                <>
+                <span className='flex items-center gap-2'>
                     <CircleCheckIcon size={15} />
                     {t('title3')}
-                </>
+                </span>
             ),
             titleCentered: true,
             body: t('body3'),
@@ -96,7 +106,7 @@ export function useCards() {
                 </div>
             ),
             card: (
-                <div className="flex flex-col items-center justify-center gap-2 h-48 w-full overflow-hidden rounded-xl bg-background p-4 border border-border">
+                <div className="flex flex-col items-center justify-center gap-2 h-56 w-full overflow-hidden rounded-xl bg-background p-4 border border-border">
                     <span className="flex items-center justify-between w-full font-bold text-sm">
                         {t('CreatorEarn')}
                         <WalletIcon className="text-primary" size={17} />
@@ -143,10 +153,10 @@ export function Cards() {
 
                     return (
                         <motion.div
-                            key={i}
-                            className={`w-full max-w-sm mx-auto ${fan.wrapper} ${
-                                i === 2 ? 'sm:col-span-2 lg:col-span-1' : ''
-                            }`}
+                            key={card.id}
+                            className={`w-full max-w-sm mx-auto ${
+                                fan.wrapper
+                            } ${i === 2 ? 'sm:col-span-2 lg:col-span-1' : ''}`}
                             initial={{ opacity: 0, y: 40 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: false, amount: 0.2 }}
@@ -156,43 +166,86 @@ export function Cards() {
                                 ease: 'easeOut',
                             }}
                         >
-                            <Card
-                                className={`w-full border border-border rounded-4xl shadow-lg transition-transform duration-200 hover:-translate-y-4 ${fan.card}`}
+                            <CutoutCard
+                                className={`
+                                    ${cutoutCardSurfaceClassName}
+                                    ${fan.card}
+                                    transition-transform duration-300
+                                    hover:-translate-y-3
+                                    border border-border
+                                `}
                             >
-                                <CardContent className="flex flex-col gap-4 h-full">
-                                    <div className="relative h-48 w-full overflow-hidden rounded-xl flex items-center justify-center">
-                                        {card.card ? (
-                                            card.card
-                                        ) : (
-                                            <Image
-                                                src={card.image}
-                                                alt="course preview"
-                                                fill
-                                                sizes="(max-width: 768px) 100vw, 33vw"
-                                                className="object-cover"
-                                            />
-                                        )}
-                                    </div>
-                                    <CardHeader
-                                        className={`text-xl font-bold p-0 ${
-                                            card.titleCentered
-                                                ? 'flex items-center gap-2'
-                                                : ''
-                                        }`}
-                                    >
-                                        {card.title}
-                                    </CardHeader>
+                                {/* IMAGE / VISUAL */}
+                                <CutoutCardMedia className="h-56">
+                                    {card.card ? (
+                                        card.card
+                                    ) : (
+                                        <CutoutCardImage
+                                            src={card.image}
+                                            alt={
+                                                typeof card.title === 'string'
+                                                    ? card.title
+                                                    : 'Talented'
+                                            }
+                                        />
+                                    )}
 
-                                    <p className="text-muted-foreground text-sm">
+                                    <CutoutCardOverlay />
+
+                                    {/* Small label sitting inside the image */}
+                                    <CutoutCardInsetLabel
+                                        className="
+                                            bottom-0
+                                            left-0
+                                            rounded-tr-[20px]
+                                            bg-background
+                                            px-5  
+                                            py-1
+                                        "
+                                    >
+                                        <span className="text-[11px] font-semibold uppercase tracking-widest text-muted-foreground">
+                                            {card.id === 1
+                                                ? t('payWith')
+                                                : card.id === 2
+                                                  ? t('learners')
+                                                  : t('creatorPay')}
+                                        </span>
+
+                                        <CutoutCorner className="absolute right-[-31px] -bottom-px rotate-90 text-background" />
+
+                                        <CutoutCorner className="absolute top-[-31px] -left-px rotate-90 text-background" />
+                                    </CutoutCardInsetLabel>
+                                </CutoutCardMedia>
+
+                                {/* CONTENT */}
+                                <CutoutCardContent className="px-6 py-5">
+                                    <div
+                                        className={
+                                            card.titleCentered
+                                                ? 'flex items-center justify-center gap-2'
+                                                : ''
+                                        }
+                                    >
+                                        <h3 className="text-xl font-bold tracking-tight">
+                                            {card.title}
+                                        </h3>
+                                    </div>
+
+                                    <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                                         {card.body}
                                     </p>
-                                </CardContent>
-                                <CardFooter>{card.footer}</CardFooter>
-                            </Card>
+                                </CutoutCardContent>
+
+                                {/* FOOTER */}
+                                <CutoutCardFooter className="px-6 pb-6">
+                                    {card.footer}
+                                </CutoutCardFooter>
+                            </CutoutCard>
                         </motion.div>
                     )
                 })}
             </div>
+
             <p className="mt-8 text-center text-xs text-muted-foreground">
                 {t('cardsDescription')}
             </p>
@@ -313,51 +366,88 @@ export function TabletCards() {
                                 onClick={() => !isActive && setActive(i)}
                                 aria-hidden={!isActive}
                             >
-                                <Card className="h-full w-full border border-border rounded-4xl shadow-lg">
-                                    {/* Side cards are click targets only, so inner controls can't be hit */}
-                                    <CardContent
-                                        className={`flex h-full flex-col gap-4 ${
-                                            isActive
-                                                ? ''
-                                                : 'pointer-events-none select-none'
-                                        }`}
-                                    >
-                                        <div className="relative h-48 w-full overflow-hidden rounded-xl flex items-center justify-center">
-                                            {card.card ? (
-                                                card.card
-                                            ) : (
-                                                <Image
-                                                    src={card.image}
-                                                    alt="course preview"
-                                                    fill
-                                                    sizes="320px"
-                                                    className="object-cover"
-                                                />
-                                            )}
-                                        </div>
-                                        <CardHeader
-                                            className={`text-xl font-bold p-0 ${
-                                                card.titleCentered
-                                                    ? 'flex items-center gap-2'
-                                                    : ''
-                                            }`}
+                                <CutoutCard
+                                    className={` 
+                                        ${cutoutCardSurfaceClassName}
+                                        w-full
+                                        border border-border
+                                        transition-transform duration-300
+                                        ${isActive ? 'shadow-lg' : 'shadow-md'}
+                                    `}
+                                >
+                                    {/* IMAGE / VISUAL */}
+                                    <CutoutCardMedia className="h-56">
+                                        {card.card ? (
+                                            card.card
+                                        ) : (
+                                            <CutoutCardImage
+                                                src={card.image}
+                                                alt={
+                                                    typeof card.title ===
+                                                    'string'
+                                                        ? card.title
+                                                        : 'Talented'
+                                                }
+                                            />
+                                        )}
+
+                                        <CutoutCardOverlay />
+
+                                        {/* Cutout label */}
+                                        <CutoutCardInsetLabel
+                                            className="
+                                                bottom-0
+                                                left-0
+                                                rounded-tr-[20px]
+                                                bg-background
+                                                px-5
+                                                py-1
+                                            "
                                         >
-                                            {card.title}
-                                        </CardHeader>
-                                        <p className="text-muted-foreground text-sm">
+                                            <span className="text-[11px] font-semibold uppercase tracking-widest text-muted-foreground">
+                                                {card.id === 1
+                                                    ? t('payWith')
+                                                    : card.id === 2
+                                                      ? t('learners')
+                                                      : t('creatorPay')}
+                                            </span>
+
+                                            <CutoutCorner className="absolute right-[-31px] -bottom-px rotate-90 text-background" />
+
+                                            <CutoutCorner className="absolute top-[-31px] -left-px rotate-90 text-background" />
+                                        </CutoutCardInsetLabel>
+                                    </CutoutCardMedia>
+
+                                    {/* CONTENT */}
+                                    <CutoutCardContent className="px-6 py-5">
+                                        <div
+                                            className={
+                                                card.titleCentered
+                                                    ? 'flex items-center justify-center gap-2'
+                                                    : ''
+                                            }
+                                        >
+                                            <h3 className="text-xl font-bold tracking-tight">
+                                                {card.title}
+                                            </h3>
+                                        </div>
+
+                                        <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                                             {card.body}
                                         </p>
-                                    </CardContent>
-                                    <CardFooter
-                                        className={
+                                    </CutoutCardContent>
+
+                                    {/* FOOTER */}
+                                    <CutoutCardFooter
+                                        className={`px-6 pb-6 ${
                                             isActive
                                                 ? ''
                                                 : 'pointer-events-none'
-                                        }
+                                        }`}
                                     >
                                         {card.footer}
-                                    </CardFooter>
-                                </Card>
+                                    </CutoutCardFooter>
+                                </CutoutCard>
                             </motion.div>
                         )
                     })}
@@ -393,7 +483,6 @@ export function TabletCards() {
             </p>
         </div>
     )
-
 }
 
 export default function HeroSection() {

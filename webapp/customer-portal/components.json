@@ -26,6 +26,7 @@
     "@reui": "https://reui.io/r/{style}/{name}.json",
     "@efferd": "https://efferd.com/r/{name}.json",
     "@aceternity": "https://ui.aceternity.com/registry/{name}.json",
-    "@uiarc": "https://uiarc.dev/r/{name}.json"
+    "@uiarc": "https://uiarc.dev/r/{name}.json",
+    "@cult-ui": "https://cult-ui.com/r/{name}.json"
   }
 }
