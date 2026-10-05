@@ -42,6 +42,9 @@ export const form = {
         errorEmail: 'Please enter a valid email address.',
         emailPrivacy:
             'No spam — just one email when Skilled launches. Unsubscribe anytime.',
+        toastSuccessTitle: 'Survey submitted',
+        toastSuccessDesc:
+            "Thanks for helping us shape Skilled. We'll email you when it launches.",
     },
     ar: {
         thx: 'شكرًا لمشاركتك في الاستبيان.',
@@ -85,5 +88,8 @@ export const form = {
         errorEmail: 'يرجى إدخال عنوان بريد إلكتروني صالح.',
         emailPrivacy:
             'سنرسل لك رسالة واحدة عند إطلاق Skilled. يمكنك إلغاء الاشتراك في أي وقت.',
+        toastSuccessTitle: 'Survey submitted',
+        toastSuccessDesc:
+            "Thanks for helping us shape Skilled. We'll email you when it launches.",
     },
 }
