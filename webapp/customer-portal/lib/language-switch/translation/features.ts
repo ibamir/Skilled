@@ -51,6 +51,22 @@ export const features = {
         fq11: 'What happens after I take the survey?',
         fq11answer:
             "We'll email you when the platform opens, and early respondents get founding-creator pricing.",
+        faqAll: 'All',
+        faqCatGettingStarted: 'Getting started',
+        faqCatLearning: 'Learning',
+        faqCatTeaching: 'Teaching and earning',
+        faqCatPayments: 'Payments',
+        faqStillHaveQuestions: 'Still have questions?',
+        faqStillHaveQuestionsDesc:
+            "Can't find your answer? We usually reply within one business day.",
+        faqContactSupport: 'Contact support',
+        faqTakeSurvey: 'Take the survey',
+        fq12: 'Is it free to sign up?',
+        fq12answer:
+            'Yes. You only pay when you enroll in a paid course, and creators set their own prices.',
+        fq13: 'How do I become a creator?',
+        fq13answer:
+            'Apply from your profile after signing up. Tell us what you want to teach, and once approved you can start publishing.',
     },
     ar: {
         featureHeader: 'مهارات عملية للحياة والعمل',
@@ -59,7 +75,8 @@ export const features = {
         titleF1: 'تعلّم مهارات عملية',
         descriptionF1: 'دورات فيديو مع قوالب وموارد يمكنك استخدامها فورًا.',
         titleF2: 'قوالب وموارد تعليمية',
-        descriptionF2: 'احصل على أدلة دراسية، قوالب، وتمارين عملية مرافقة لدوراتك.',
+        descriptionF2:
+            'احصل على أدلة دراسية، قوالب، وتمارين عملية مرافقة لدوراتك.',
         titleF3: 'ادفع بوسائل محلية',
         descriptionF3:
             'ادفع بالدينار التونسي عبر D17 أو Flouci، من دون الحاجة إلى بطاقة دولية.',
@@ -101,5 +118,21 @@ export const features = {
         fq11: 'ماذا يحدث بعد المشاركة في الاستبيان؟',
         fq11answer:
             'سنرسل إليك بريدًا إلكترونيًا عند فتح المنصة، وسيحصل المشاركون الأوائل على أسعار خاصة بصنّاع المحتوى المؤسسين.',
+        faqAll: 'الكل',
+        faqCatGettingStarted: 'البداية',
+        faqCatLearning: 'التعلّم',
+        faqCatTeaching: 'التعليم والكسب',
+        faqCatPayments: 'المدفوعات',
+        faqStillHaveQuestions: 'لا تزال لديك أسئلة؟',
+        faqStillHaveQuestionsDesc:
+            'لم تجد إجابتك؟ نردّ عادةً خلال يوم عمل واحد.',
+        faqContactSupport: 'تواصل مع الدعم',
+        faqTakeSurvey: 'شارك في الاستبيان',
+        fq12: 'هل التسجيل مجاني؟',
+        fq12answer:
+            'نعم. لا تدفع إلا عند الاشتراك في دورة مدفوعة، ويحدد صنّاع المحتوى أسعارهم بأنفسهم.',
+        fq13: 'كيف أصبح صانع محتوى؟',
+        fq13answer:
+            'قدّم طلبك من ملفك الشخصي بعد التسجيل. أخبرنا بما تريد تعليمه، وبعد الموافقة يمكنك البدء بالنشر.',
     },
 }
