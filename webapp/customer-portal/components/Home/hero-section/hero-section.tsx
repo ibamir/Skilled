@@ -46,7 +46,6 @@ export function useCards() {
         {
             id: 1,
             image: '/figmatowebflow.jpg',
-            rotate: 'md:-rotate-5',
             title: t('title1'),
             body: t('body1'),
             footer: (
@@ -67,7 +66,6 @@ export function useCards() {
         {
             id: 2,
             image: '/nextjs.jpg',
-            rotate: '',
             title: t('title2'),
             body: t('body2'),
             footer: (
@@ -82,14 +80,12 @@ export function useCards() {
         },
         {
             id: 3,
-            rotate: 'md:rotate-5',
             title: (
                 <span className='flex items-center gap-2'>
                     <CircleCheckIcon size={15} />
                     {t('title3')}
                 </span>
             ),
-            titleCentered: true,
             body: t('body3'),
             footer: (
                 <div className="w-full flex flex-col justify-center gap-2">
@@ -219,13 +215,7 @@ export function Cards() {
 
                                 {/* CONTENT */}
                                 <CutoutCardContent className="px-6 py-5">
-                                    <div
-                                        className={
-                                            card.titleCentered
-                                                ? 'flex items-center justify-center gap-2'
-                                                : ''
-                                        }
-                                    >
+                                    <div>
                                         <h3 className="text-xl font-bold tracking-tight">
                                             {card.title}
                                         </h3>
@@ -420,13 +410,7 @@ export function TabletCards() {
 
                                     {/* CONTENT */}
                                     <CutoutCardContent className="px-6 py-5">
-                                        <div
-                                            className={
-                                                card.titleCentered
-                                                    ? 'flex items-center justify-center gap-2'
-                                                    : ''
-                                            }
-                                        >
+                                        <div>
                                             <h3 className="text-xl font-bold tracking-tight">
                                                 {card.title}
                                             </h3>
