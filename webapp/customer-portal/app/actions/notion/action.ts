@@ -67,7 +67,10 @@ export async function saveToNotion(answers: Record<string, string>) {
                     rich_text: [
                         {
                             text: {
-                                content: answers.contentOther || 'N/A',
+                                content: (answers.contentOther || 'N/A').slice(
+                                    0,
+                                    1900,
+                                ),
                             },
                         },
                     ],
