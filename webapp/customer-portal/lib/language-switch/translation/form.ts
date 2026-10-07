@@ -88,8 +88,8 @@ export const form = {
         errorEmail: 'يرجى إدخال عنوان بريد إلكتروني صالح.',
         emailPrivacy:
             'سنرسل لك رسالة واحدة عند إطلاق Skilled. يمكنك إلغاء الاشتراك في أي وقت.',
-        toastSuccessTitle: 'Survey submitted',
+        toastSuccessTitle: 'تم إرسال الاستبيان',
         toastSuccessDesc:
-            "Thanks for helping us shape Skilled. We'll email you when it launches.",
+            'شكرًا لمساهمتك في تشكيل Skilled. سنراسلك عبر البريد الإلكتروني عند الإطلاق.',
     },
 }
