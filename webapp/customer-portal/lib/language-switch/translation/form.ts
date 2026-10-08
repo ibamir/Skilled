@@ -5,7 +5,7 @@ export const form = {
             'Your answers help us decide which courses, resources, and creator tools to build.',
         question: 'Question',
         from: 'of',
-        answer: 'Answer a few questions about what you want to learn, create, and access, and help us prioritize what comes next.',
+        answer: 'Tell us what you want to learn or teach, and help us decide what to build first.',
         help: 'Help shape Skilled.',
         quick: 'Quick survey',
         finish: 'Finish',
@@ -18,7 +18,7 @@ export const form = {
 
         // Questions
         question1: 'What best describes you?',
-        label1a: 'Creator or knowledge seller',
+        label1a: 'Creator or teacher',
         label1b: 'Working professional or freelancer',
         label1c: 'Student',
         question2: 'What would you use Skilled for?',
@@ -41,7 +41,7 @@ export const form = {
         formError: 'Something went wrong. Please try again.',
         errorEmail: 'Please enter a valid email address.',
         emailPrivacy:
-            'No spam — just one email when Skilled launches. Unsubscribe anytime.',
+            "We'll send one email when Skilled launches. You can unsubscribe anytime.",
         toastSuccessTitle: 'Survey submitted',
         toastSuccessDesc:
             "Thanks for helping us shape Skilled. We'll email you when it launches.",
@@ -52,7 +52,7 @@ export const form = {
             'تساعدنا إجاباتك على تحديد الدورات والموارد وأدوات صنّاع المحتوى التي سنطوّرها.',
         question: 'السؤال',
         from: 'من',
-        answer: 'أجب عن بعض الأسئلة حول ما ترغب في تعلّمه وإنشائه والاستفادة منه، وساعدنا على تحديد أولويات المرحلة القادمة.',
+        answer: 'أخبرنا بما تريد تعلّمه أو تعليمه، وساعدنا على تحديد ما سنبنيه أولًا.',
         help: 'ساهم في تشكيل Skilled.',
         quick: 'استبيان سريع',
         finish: 'إنهاء',
@@ -63,7 +63,7 @@ export const form = {
         choose: 'اختر إجابة واحدة للمتابعة.',
 
         question1: 'ما الوصف الأقرب إليك؟',
-        label1a: 'صانع محتوى أو بائع معرفة',
+        label1a: 'صانع محتوى أو معلّم',
         label1b: 'موظف أو مستقل',
         label1c: 'طالب',
         question2: 'فيمَ ستستخدم Skilled؟',

@@ -81,7 +81,7 @@ export default function HowItWorks() {
         >
             {/* Header */}
             <motion.div
-                className="mx-auto mb-24 max-w-2xl text-center"
+                className="mx-auto mb-24 max-w-3xl text-center"
                 initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: false, amount: 0.25 }}
@@ -102,7 +102,7 @@ export default function HowItWorks() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: false }}
                     transition={{ duration: 0.6, delay: 0.1 }}
-                    className="text-4xl font-bold tracking-tight sm:text-5xl"
+                    className="text-4xl font-bold tracking-tight sm:text-5xl text-center"
                 >
                     {t('HHeader')}
                 </motion.h2>

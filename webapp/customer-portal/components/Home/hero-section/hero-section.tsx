@@ -143,6 +143,9 @@ export function Cards() {
 
     return (
         <div className="relative w-full max-w-7xl mx-auto px-2 sm:px-6">
+            <p className="mb-8 text-center text-sm text-muted-foreground text-balance">
+                {t('cardsDescription')}
+            </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 items-start justify-center gap-6 lg:gap-12">
                 {cardData.map((card, i) => {
                     const fan = FAN[i] ?? FAN[1]
@@ -235,10 +238,6 @@ export function Cards() {
                     )
                 })}
             </div>
-
-            <p className="mt-8 text-center text-xs text-muted-foreground">
-                {t('cardsDescription')}
-            </p>
         </div>
     )
 }
@@ -315,6 +314,9 @@ export function TabletCards() {
                 if (e.key === 'ArrowRight') next()
             }}
         >
+            <p className="mb-8 text-center text-sm text-muted-foreground text-balance">
+                {t('cardsDescription')}
+            </p>
             {/* Viewport-wide stage. Clips only on the x axis. */}
             <div
                 className="overflow-x-clip"
@@ -461,16 +463,15 @@ export function TabletCards() {
                     <ChevronRight className="size-5" />
                 </Button>
             </div>
-
-            <p className="mt-6 px-2 text-center text-xs text-muted-foreground sm:px-6">
-                {t('cardsDescription')}
-            </p>
         </div>
     )
 }
 
 export default function HeroSection() {
     const { t } = useLanguage()
+
+    const part1: string = t('headline').slice(0, 16) // "build skills"
+    const part2: string = t('headline').slice(16,35) // "that move "
 
     return (
         <div className="w-full flex flex-col items-center justify-center pb-10 space-y-10">
@@ -482,12 +483,13 @@ export default function HeroSection() {
                 viewport={{ once: false, amount: 0.6 }}
                 transition={{ duration: 0.5, ease: 'easeOut' }}
             >
-                {t('headline')}
+                <span className="block text-primary">{part1}</span>
+                <span className="block text-foreground/90">{part2}</span>
             </motion.h1>
 
             {/* Sub text */}
             <motion.h2
-                className="text-center text-xl md:text-2xl text-muted-foreground font-bold max-w-3xl"
+                className="text-center text-balance text-xl md:text-2xl text-muted-foreground font-bold max-w-4xl"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: false, amount: 0.6 }}
@@ -507,7 +509,7 @@ export default function HeroSection() {
                 <ExpandingArrowButton
                     labelClassName="text-accent"
                     accentClassName="bg-background dark:bg-background"
-                    className="bg-primary capitalize font-extrabold!"
+                    className="bg-primary font-extrabold!"
                     onClick={() =>
                         document
                             .getElementById('help-us')

@@ -1,35 +1,35 @@
 export const features = {
     en: {
-        featureHeader: 'Skills for real life and work',
+        featureHeader: 'One account to learn and teach',
         featureDescription:
-            'Learn practical skills from video courses with templates and resources, then sell what you know and get paid in Tunisian dinars.',
-        titleF1: 'Learn practical skills',
+            'Take courses on any skill, or publish your own, without switching accounts. Pay and get paid in Tunisian dinars.',
+        titleF1: 'Learn any skill',
         descriptionF1:
-            'Video courses with templates and resources you can use immediately.',
-        titleF2: 'Access creator resources',
+            'Courses on design, coding, languages, business, and more.',
+        titleF2: 'Teach any skill',
         descriptionF2:
-            'Templates, study guides, and practical exercises included with your courses.',
+            'Share what you know in a course and set your own price.',
         titleF3: 'Pay with local methods',
         descriptionF3:
             'Pay in TND through D17 or Flouci without an international card.',
         titleF4: 'Earn from what you know',
         descriptionF4:
-            'Publish your work and get paid through local payout options.',
+            'Keep 88% of each sale and cash out to D17 or Flouci.',
         frequentAsked: 'Frequently Asked Questions',
         frequentAnswers:
             'Answers to common questions about learning, sharing, and earning on Skilled.',
         fq1: 'What is Skilled?',
         fq1answer:
-            'Skilled is being built as a learning platform where you can find practical skills, learn from creators, and share what you know.',
+            'Skilled is being built as a platform where anyone can learn or teach any skill. One account lets you take courses and publish your own.',
         fq2: 'Who can use Skilled?',
         fq2answer:
-            'Students can find study resources and build practical digital skills. Creators and top students can earn from what they know.',
+            'Anyone. Take courses on any skill, or publish your own from the same account.',
         fq3: 'How do I pay without an international card?',
         fq3answer:
             'You can pay in TND through D17 or Flouci, without a foreign card.',
         fq4: 'Can I really make money on Skilled?',
         fq4answer:
-            'Yes. Creators and top students can upload content, set their own prices, and earn on every sale. Withdraw to D17 or Flouci anytime.',
+            'Yes. Creators can publish a course, set their own price, and keep 88% of each sale.',
         fq5: 'How do you protect my content?',
         fq5answer:
             'Premium content is streamed securely, with copying and printing restricted and unique watermarks on every page that discourage unauthorized sharing.',
@@ -47,7 +47,7 @@ export const features = {
             "If a course isn't right for you, you can request a refund within 7 days of purchase. Because content is watermarked and streamed, each request is reviewed individually.",
         fq10: 'How are creators and courses vetted?',
         fq10answer:
-            "We review every creator's portfolio and course outline before publishing. Every course includes practical resources and templates, and real Tunisian case studies where they apply.",
+            "We review every creator's profile and course outline before publishing.",
         fq11: 'What happens after I take the survey?',
         fq11answer:
             "We'll email you when the platform opens, and early respondents get founding-creator pricing.",
@@ -66,37 +66,37 @@ export const features = {
             'Yes. You only pay when you enroll in a paid course, and creators set their own prices.',
         fq13: 'How do I become a creator?',
         fq13answer:
-            'Apply from your profile after signing up. Tell us what you want to teach, and once approved you can start publishing.',
+            'Use the same account you learn with. Apply from your profile, tell us what you want to teach, and once approved you can start publishing.',
     },
     ar: {
-        featureHeader: 'مهارات عملية للحياة والعمل',
+        featureHeader: 'حساب واحد للتعلّم والتعليم',
         featureDescription:
-            'اكتسب مهارات عملية عبر الدروس والقوالب والتمارين، ثم بع ما تعرفه واحصل على مستحقاتك بالعملة المحلية.',
-        titleF1: 'تعلّم مهارات عملية',
-        descriptionF1: 'دورات فيديو مع قوالب وموارد يمكنك استخدامها فورًا.',
-        titleF2: 'قوالب وموارد تعليمية',
+            'التحق بدورات في أي مهارة، أو انشر دورتك الخاصة دون الحاجة إلى حسابين. ادفع واستلم أرباحك بالدينار التونسي.',
+        titleF1: 'تعلّم أي مهارة',
+        descriptionF1: 'دورات في التصميم والبرمجة واللغات والأعمال وغيرها.',
+        titleF2: 'علّم أي مهارة',
         descriptionF2:
-            'احصل على أدلة دراسية، قوالب، وتمارين عملية مرافقة لدوراتك.',
+            'شارك ما تعرفه في دورة وحدد سعرها بنفسك.',
         titleF3: 'ادفع بوسائل محلية',
         descriptionF3:
             'ادفع بالدينار التونسي عبر D17 أو Flouci، من دون الحاجة إلى بطاقة دولية.',
         titleF4: 'اكسب من خبرتك',
-        descriptionF4: 'انشر عملك واحصل على مستحقاتك عبر وسائل دفع محلية.',
+        descriptionF4: 'احتفظ بـ 88٪ من كل عملية بيع واسحب أرباحك إلى D17 أو Flouci.',
         frequentAsked: 'الأسئلة الشائعة',
         frequentAnswers:
             'إجابات عن الأسئلة الشائعة حول التعلّم والمشاركة والكسب على Skilled.',
         fq1: 'ما هي Skilled؟',
         fq1answer:
-            'يجري تطوير Skilled لتكون منصة تعلّم تساعدك على اكتشاف المهارات العملية والتعلّم من صنّاع المحتوى ومشاركة ما تعرفه.',
+            'يجري تطوير Skilled لتكون منصة يمكن لأي شخص من خلالها تعلّم أي مهارة أو تعليمها. بحساب واحد يمكنك الالتحاق بدورات ونشر دوراتك الخاصة.',
         fq2: 'من يمكنه استخدام Skilled؟',
         fq2answer:
-            'يستطيع الطلاب العثور على موارد دراسية واكتساب مهارات رقمية عملية، كما يستطيع صنّاع المحتوى والطلاب المتفوقون الكسب من خبراتهم.',
+            'الجميع. التحق بدورات في أي مهارة، أو انشر دوراتك الخاصة من الحساب نفسه.',
         fq3: 'كيف يمكنني الدفع من دون بطاقة دولية؟',
         fq3answer:
             'يمكنك الدفع بالدينار التونسي عبر D17 أو Flouci، دون الحاجة إلى بطاقة أجنبية.',
         fq4: 'هل يمكنني حقًا كسب المال على Skilled؟',
         fq4answer:
-            'نعم. يستطيع صنّاع المحتوى والطلاب المتفوقون رفع المحتوى وتحديد أسعارهم والكسب من كل عملية بيع، ثم سحب الأرباح عبر D17 أو Flouci في أي وقت.',
+            'نعم. يستطيع صنّاع المحتوى نشر دورة وتحديد سعرها والاحتفاظ بـ 88٪ من كل عملية بيع.',
         fq5: 'كيف تحمون المحتوى الخاص بي؟',
         fq5answer:
             'يُبث المحتوى المميز بأمان، مع تقييد النسخ والطباعة وإضافة علامات مائية فريدة إلى كل صفحة للحد من المشاركة غير المصرح بها.',
@@ -114,7 +114,7 @@ export const features = {
             'إذا لم تناسبك الدورة، يمكنك طلب استرداد المبلغ خلال 7 أيام من الشراء. وبما أن المحتوى ممهور بعلامة مائية ويُبث عبر المنصة، تُراجع الطلبات كل حالة على حدة.',
         fq10: 'كيف يتم التحقق من صنّاع المحتوى والدورات؟',
         fq10answer:
-            'نراجع ملف كل صانع محتوى ومخطط دورته قبل النشر. وتضمن جميع الدورات موارد عملية وقوالب، مع دراسات حالة واقعية حيثما كان ذلك مناسبًا.',
+            'نراجع ملف كل صانع محتوى ومخطط دورته قبل النشر.',
         fq11: 'ماذا يحدث بعد المشاركة في الاستبيان؟',
         fq11answer:
             'سنرسل إليك بريدًا إلكترونيًا عند فتح المنصة، وسيحصل المشاركون الأوائل على أسعار خاصة بصنّاع المحتوى المؤسسين.',
@@ -133,6 +133,6 @@ export const features = {
             'نعم. لا تدفع إلا عند الاشتراك في دورة مدفوعة، ويحدد صنّاع المحتوى أسعارهم بأنفسهم.',
         fq13: 'كيف أصبح صانع محتوى؟',
         fq13answer:
-            'قدّم طلبك من ملفك الشخصي بعد التسجيل. أخبرنا بما تريد تعليمه، وبعد الموافقة يمكنك البدء بالنشر.',
+            'استخدم الحساب نفسه الذي تتعلّم به. قدّم طلبك من ملفك الشخصي وأخبرنا بما تريد تعليمه، وبعد الموافقة يمكنك البدء بالنشر.',
     },
 }
