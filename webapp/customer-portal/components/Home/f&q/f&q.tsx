@@ -4,16 +4,12 @@ import { useState } from 'react'
 import { motion, type Variants } from 'motion/react'
 import {
     GraduationCap,
-    Users,
     CreditCard,
     WalletCards,
-    ShieldCheck,
     Rocket,
-    BookOpen,
     Banknote,
     RotateCcw,
     BadgeCheck,
-    MailCheck,
     MessageCircle,
     CircleCheck,
     Presentation,
@@ -86,8 +82,6 @@ function CategoryPill({
 export default function FrequentAskedQuestions() {
     const { t } = useLanguage()
 
-    /* ⚠️ Category placement guessed from your icons — move
-       questions between categories to match their real content. */
     const faqCategories: FaqCategory[] = [
         {
             id: 'getting-started',
@@ -99,45 +93,12 @@ export default function FrequentAskedQuestions() {
                     question: t('fq1'),
                     answer: t('fq1answer'),
                 },
-                { icon: Users, question: t('fq2'), answer: t('fq2answer') },
                 { icon: Rocket, question: t('fq6'), answer: t('fq6answer') },
                 {
                     icon: CircleCheck,
                     question: t('fq12'),
                     answer: t('fq12answer'),
-                }, // NEW
-                {
-                    icon: MailCheck,
-                    question: t('fq11'),
-                    answer: t('fq11answer'),
                 },
-            ],
-        },
-        {
-            id: 'learning',
-            label: t('faqCatLearning'),
-            icon: BookOpen,
-            faqs: [
-                { icon: BookOpen, question: t('fq7'), answer: t('fq7answer') },
-                { icon: RotateCcw, question: t('fq9'), answer: t('fq9answer') },
-            ],
-        },
-        {
-            id: 'teaching',
-            label: t('faqCatTeaching'),
-            icon: Users,
-            faqs: [
-                { icon: Banknote, question: t('fq8'), answer: t('fq8answer') },
-                {
-                    icon: BadgeCheck,
-                    question: t('fq10'),
-                    answer: t('fq10answer'),
-                },
-                {
-                    icon: Presentation,
-                    question: t('fq13'),
-                    answer: t('fq13answer'),
-                }, // NEW
             ],
         },
         {
@@ -150,15 +111,29 @@ export default function FrequentAskedQuestions() {
                     question: t('fq3'),
                     answer: t('fq3answer'),
                 },
+                { icon: Banknote, question: t('fq7'), answer: t('fq7answer') },
+                { icon: RotateCcw, question: t('fq9'), answer: t('fq9answer') },
+            ],
+        },
+        {
+            id: 'teaching',
+            label: t('faqCatTeaching'),
+            icon: Presentation,
+            faqs: [
+                {
+                    icon: Presentation,
+                    question: t('fq13'),
+                    answer: t('fq13answer'),
+                },
+                {
+                    icon: BadgeCheck,
+                    question: t('fq10'),
+                    answer: t('fq10answer'),
+                },
                 {
                     icon: WalletCards,
                     question: t('fq4'),
                     answer: t('fq4answer'),
-                },
-                {
-                    icon: ShieldCheck,
-                    question: t('fq5'),
-                    answer: t('fq5answer'),
                 },
             ],
         },

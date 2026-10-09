@@ -17,7 +17,7 @@ export const features = {
             'Keep 88% of each sale and cash out to D17 or Flouci.',
         frequentAsked: 'Frequently Asked Questions',
         frequentAnswers:
-            'Answers to common questions about learning, sharing, and earning on Skilled.',
+            'Answers to common questions about learning, teaching, and earning on Skilled.',
         fq1: 'What is Skilled?',
         fq1answer:
             'Skilled is being built as a platform where anyone can learn or teach any skill. One account lets you take courses and publish your own.',
@@ -29,13 +29,13 @@ export const features = {
             'You can pay in TND through D17 or Flouci, without a foreign card.',
         fq4: 'Can I really make money on Skilled?',
         fq4answer:
-            'Yes. Creators can publish a course, set their own price, and keep 88% of each sale.',
+            'Yes. Creators set their own price and keep 88% of each sale. Earnings can be cashed out weekly to a D17 or Flouci wallet.',
         fq5: 'How do you protect my content?',
         fq5answer:
             'Premium content is streamed securely, with copying and printing restricted and unique watermarks on every page that discourage unauthorized sharing.',
         fq6: 'When is the official launch?',
         fq6answer:
-            "We're onboarding our first creators ahead of launch. Take the survey and we'll notify you when the platform opens.",
+            "We're onboarding our first creators ahead of launch. Take the survey and we'll email you when the platform opens. Early respondents get founding-creator pricing.",
         fq7: 'How much do courses cost?',
         fq7answer:
             'Creators set their own prices. You always see the final price in dinars before you pay.',
@@ -44,7 +44,7 @@ export const features = {
             'Creators can cash out their earnings weekly. Payouts go directly to their D17 or Flouci wallet.',
         fq9: "What's the refund policy?",
         fq9answer:
-            "If a course isn't right for you, you can request a refund within 7 days of purchase. Because content is watermarked and streamed, each request is reviewed individually.",
+            "If a course isn't right for you, you can request a refund within 7 days of purchase. Each request is reviewed individually.",
         fq10: 'How are creators and courses vetted?',
         fq10answer:
             "We review every creator's profile and course outline before publishing.",
@@ -84,7 +84,7 @@ export const features = {
         descriptionF4: 'احتفظ بـ 88٪ من كل عملية بيع واسحب أرباحك إلى D17 أو Flouci.',
         frequentAsked: 'الأسئلة الشائعة',
         frequentAnswers:
-            'إجابات عن الأسئلة الشائعة حول التعلّم والمشاركة والكسب على Skilled.',
+            'إجابات عن الأسئلة الشائعة حول التعلّم والتعليم والكسب على Skilled.',
         fq1: 'ما هي Skilled؟',
         fq1answer:
             'يجري تطوير Skilled لتكون منصة يمكن لأي شخص من خلالها تعلّم أي مهارة أو تعليمها. بحساب واحد يمكنك الالتحاق بدورات ونشر دوراتك الخاصة.',
@@ -96,13 +96,13 @@ export const features = {
             'يمكنك الدفع بالدينار التونسي عبر D17 أو Flouci، دون الحاجة إلى بطاقة أجنبية.',
         fq4: 'هل يمكنني حقًا كسب المال على Skilled؟',
         fq4answer:
-            'نعم. يستطيع صنّاع المحتوى نشر دورة وتحديد سعرها والاحتفاظ بـ 88٪ من كل عملية بيع.',
+            'نعم. يحدد صنّاع المحتوى سعر دوراتهم بأنفسهم ويحتفظون بـ 88٪ من كل عملية بيع. ويمكن سحب الأرباح أسبوعيًا إلى محفظة D17 أو Flouci.',
         fq5: 'كيف تحمون المحتوى الخاص بي؟',
         fq5answer:
             'يُبث المحتوى المميز بأمان، مع تقييد النسخ والطباعة وإضافة علامات مائية فريدة إلى كل صفحة للحد من المشاركة غير المصرح بها.',
         fq6: 'متى سيكون الإطلاق الرسمي؟',
         fq6answer:
-            'نعمل على ضم أول مجموعة من صنّاع المحتوى قبل الإطلاق. أجب عن الاستبيان وسنخطرك عند فتح المنصة.',
+            'نعمل على ضم أول مجموعة من صنّاع المحتوى قبل الإطلاق. أجب عن الاستبيان وسنراسلك عند فتح المنصة، وسيحصل المشاركون الأوائل على أسعار خاصة بصنّاع المحتوى المؤسسين.',
         fq7: 'كم تبلغ تكلفة الدورات؟',
         fq7answer:
             'يحدد صنّاع المحتوى أسعارهم، وسترى السعر النهائي بالدينار قبل الدفع.',
@@ -111,7 +111,7 @@ export const features = {
             'يمكن لصنّاع المحتوى سحب أرباحهم أسبوعيًا. تُحوّل المستحقات مباشرة إلى محفظة D17 أو Flouci.',
         fq9: 'ما سياسة استرداد الأموال؟',
         fq9answer:
-            'إذا لم تناسبك الدورة، يمكنك طلب استرداد المبلغ خلال 7 أيام من الشراء. وبما أن المحتوى ممهور بعلامة مائية ويُبث عبر المنصة، تُراجع الطلبات كل حالة على حدة.',
+            'إذا لم تناسبك الدورة، يمكنك طلب استرداد المبلغ خلال 7 أيام من الشراء. تُراجع الطلبات كل حالة على حدة.',
         fq10: 'كيف يتم التحقق من صنّاع المحتوى والدورات؟',
         fq10answer:
             'نراجع ملف كل صانع محتوى ومخطط دورته قبل النشر.',

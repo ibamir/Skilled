@@ -5,21 +5,21 @@ import { AnimatePresence, motion, useInView, type Variants } from 'motion/react'
 import {
     BookOpen,
     BriefcaseBusiness,
+    Code,
     Frown,
     GraduationCap,
     Heart,
+    Languages,
     Layers,
-    LayoutTemplate,
-    Library,
     Loader2,
     Mail,
     Meh,
-    MonitorPlay,
+    Palette,
     PenLine,
+    Presentation,
     Store,
     ThumbsUp,
-    Video,
-    Zap,
+    TrendingUp,
 } from 'lucide-react'
 import { CheckIcon } from '@/components/ui/check'
 import { ArrowRightIcon } from '@/components/ui/arrow-right'
@@ -74,13 +74,13 @@ export function InterestForm() {
             id: 'role',
             question: t('question1'),
             options: [
-                { value: 'student', label: t('label1a'), icon: GraduationCap },
+                { value: 'student', label: t('label1c'), icon: GraduationCap },
                 {
                     value: 'professional',
                     label: t('label1b'),
                     icon: BriefcaseBusiness,
                 },
-                { value: 'creator', label: t('label1c'), icon: Video },
+                { value: 'creator', label: t('label1a'), icon: Presentation },
             ],
         },
         {
@@ -98,14 +98,10 @@ export function InterestForm() {
             question: t('question3'),
             layout: 'grid',
             options: [
-                {
-                    value: 'templates',
-                    label: t('label3a'),
-                    icon: LayoutTemplate,
-                },
-                { value: 'courses', label: t('label3b'), icon: MonitorPlay },
-                { value: 'resources', label: t('label3c'), icon: Library },
-                { value: 'skills', label: t('label3d'), icon: Zap },
+                { value: 'design', label: t('label3a'), icon: Palette },
+                { value: 'tech', label: t('label3b'), icon: Code },
+                { value: 'business', label: t('label3c'), icon: TrendingUp },
+                { value: 'languages', label: t('label3d'), icon: Languages },
                 { value: 'other', label: t('label3e'), icon: PenLine },
             ],
         },
