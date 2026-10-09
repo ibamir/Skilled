@@ -1,13 +1,13 @@
 'use client'
 
-import { motion, useReducedMotion } from 'motion/react'
+import { motion, useMotionTemplate, useMotionValue, useReducedMotion } from 'motion/react'
 import { ExpandingArrowButton } from '@/components/motion/expanding-arrow-button'
 import { CircleCheckIcon } from '@/components/ui/circle-check'
 import { Progress } from '@/components/ui/progress'
 import { UserIcon } from '@/components/ui/user'
 import { WalletIcon } from '@/components/ui/wallet'
 import { useLanguage } from '@/lib/language-switch/LanguageProvider'
-import { useEffect, useRef, useState } from 'react'
+import { MouseEvent, useEffect, useRef, useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import {
@@ -18,7 +18,6 @@ import {
     CutoutCardInsetLabel,
     CutoutCardMedia,
     CutoutCardOverlay,
-    CutoutCardPin,
     CutoutCorner,
     cutoutCardSurfaceClassName,
 } from '@/components/ui/cutout-card'
@@ -141,6 +140,17 @@ export function Cards() {
     const { t } = useLanguage()
     const cardData = useCards()
 
+    // Mouse-following spotlight
+    const mouseX = useMotionValue(-400)
+    const mouseY = useMotionValue(-400)
+    const spotlight = useMotionTemplate`radial-gradient(220px circle at ${mouseX}px ${mouseY}px, color-mix(in oklab, var(--primary) 10%, transparent), transparent 72%)`
+
+    const handleMouseMove = (event: MouseEvent<HTMLDivElement>) => {
+        const bounds = event.currentTarget.getBoundingClientRect()
+        mouseX.set(event.clientX - bounds.left)
+        mouseY.set(event.clientY - bounds.top)
+    }
+
     return (
         <div className="relative w-full max-w-7xl mx-auto px-2 sm:px-6">
             <p className="mb-8 text-center text-sm text-muted-foreground text-balance">
@@ -164,6 +174,8 @@ export function Cards() {
                                 delay: i * 0.4,
                                 ease: 'easeOut',
                             }}
+                            whileHover="hover"
+                            onMouseMove={handleMouseMove}
                         >
                             <CutoutCard
                                 className={`
@@ -172,8 +184,17 @@ export function Cards() {
                                     transition-transform duration-300
                                     hover:-translate-y-3
                                     border border-border
+                                    relative
+                                    group
+                                    overflow-hidden
                                 `}
                             >
+                                {/* Spotlight layer */}
+                                <motion.div
+                                    aria-hidden
+                                    className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+                                    style={{ background: spotlight }}
+                                />
                                 {/* IMAGE / VISUAL */}
                                 <CutoutCardMedia className="h-56">
                                     {card.card ? (
@@ -484,7 +505,7 @@ export default function HeroSection() {
                 transition={{ duration: 0.5, ease: 'easeOut' }}
             >
                 <span className="block text-primary">{part1}</span>
-                <span className="block text-foreground/90">{part2}</span>
+                <span className="block text-foreground">{part2}</span>
             </motion.h1>
 
             {/* Sub text */}

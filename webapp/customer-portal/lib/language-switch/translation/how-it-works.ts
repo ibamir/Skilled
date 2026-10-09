@@ -33,9 +33,9 @@ export const howItWorks = {
         title03: 'Learn with practical resources',
         description03:
             'Work through the lessons, download the resources, and practice with exercises as you go.',
-        title04: 'Share your knowledge and earn',
+        title04: 'Get paid',
         description04:
-            'Publish a course on what you know, set your own price, and cash out weekly to D17 or Flouci.',
+            'Keep 88% of each sale and cash out weekly to D17 or Flouci.',
         tags: [
             '01 Discovery',
             '02 Local checkout',
@@ -55,8 +55,36 @@ export const howItWorks = {
         tags04: ['Same-week payouts', 'Automatic tax invoice PDF'],
         HHeader: 'One account, two ways to use it.',
         HSubtext:
-            "Find a course, pay locally, and learn. When you're ready, publish your own and start earning.",
+            'Learn from courses on any skill, or teach what you know. Both use the same account.',
         productPreview: 'Product preview: illustrative data.',
+        // Two tracks
+        trackLearn: 'If you want to learn',
+        trackTeach: 'If you want to teach',
+        stageT1: 'Same account',
+        stageT2: 'You set the price',
+        titleT1: 'Apply from your profile',
+        descriptionT1:
+            'Use the same account you learn with. Tell us what you want to teach, and once approved you can start publishing.',
+        titleT2: 'Publish your course',
+        descriptionT2:
+            'Upload your lessons and resources and set your own price.',
+        applyHeader: 'Creator application',
+        applyStatus: 'Under review',
+        applyField: 'What do you want to teach?',
+        applySample: 'Spoken French for Work',
+        applyOutline: 'Course outline',
+        applyOutlineNote: 'Lessons you plan to teach',
+        applyButton: 'Submit application',
+        publishHeader: 'New course',
+        publishDraft: 'Draft',
+        publishTitleLabel: 'Course title',
+        publishTitle: 'Spoken French for Work',
+        publishLessonsLabel: 'Lessons',
+        publishLessons: '12 uploaded',
+        publishPriceLabel: 'Your price',
+        publishPrice: '45.000',
+        publishResources: 'Workbook and exercises included',
+        publishButton: 'Publish course',
     },
     ar: {
         figmaCardHeader: 'إتقان الانتقال من Figma إلى Webflow',
@@ -90,9 +118,9 @@ export const howItWorks = {
         title03: 'تعلّم باستخدام موارد عملية',
         description03:
             'تابع الدروس، ونزّل الموارد، وتدرّب على التمارين أثناء التعلّم.',
-        title04: 'شارك معرفتك واكسب منها',
+        title04: 'احصل على أرباحك',
         description04:
-            'انشر دورة عن خبرتك، وحدد سعرها بنفسك، واسحب أرباحك أسبوعيًا إلى D17 أو Flouci.',
+            'احتفظ بـ 88٪ من كل عملية بيع واسحب أرباحك أسبوعيًا إلى D17 أو Flouci.',
         tags: [
             '01 اكتشاف',
             '02 دفع محلي',
@@ -115,7 +143,34 @@ export const howItWorks = {
         ],
         HHeader: 'حساب واحد، وطريقتان لاستخدامه.',
         HSubtext:
-            'اعثر على دورة، وادفع محليًا، وتعلّم. وعندما تكون مستعدًا، انشر دورتك الخاصة وابدأ في الكسب.',
+            'تعلّم من دورات في أي مهارة، أو علّم ما تعرفه. كلاهما من الحساب نفسه.',
         productPreview: 'معاينة المنتج: بيانات توضيحية.',
+        // Two tracks
+        trackLearn: 'إذا كنت تريد التعلّم',
+        trackTeach: 'إذا كنت تريد التعليم',
+        stageT1: 'حساب واحد',
+        stageT2: 'أنت تحدد السعر',
+        titleT1: 'قدّم طلبك من ملفك الشخصي',
+        descriptionT1:
+            'استخدم الحساب نفسه الذي تتعلّم به. أخبرنا بما تريد تعليمه، وبعد الموافقة يمكنك البدء بالنشر.',
+        titleT2: 'انشر دورتك',
+        descriptionT2: 'ارفع دروسك وموارد دورتك وحدد سعرها بنفسك.',
+        applyHeader: 'طلب الانضمام كصانع محتوى',
+        applyStatus: 'قيد المراجعة',
+        applyField: 'ما الذي تريد تعليمه؟',
+        applySample: 'الفرنسية المحكية للعمل',
+        applyOutline: 'مخطط الدورة',
+        applyOutlineNote: 'الدروس التي تخطط لتقديمها',
+        applyButton: 'إرسال الطلب',
+        publishHeader: 'دورة جديدة',
+        publishDraft: 'مسودة',
+        publishTitleLabel: 'عنوان الدورة',
+        publishTitle: 'الفرنسية المحكية للعمل',
+        publishLessonsLabel: 'الدروس',
+        publishLessons: '12 درسًا مرفوعًا',
+        publishPriceLabel: 'سعرك',
+        publishPrice: '45.000',
+        publishResources: 'يتضمن دفتر تمارين وموارد',
+        publishButton: 'نشر الدورة',
     },
 }

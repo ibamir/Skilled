@@ -1,12 +1,10 @@
 'use client'
 
-import { motion, useScroll, useTransform, useSpring } from 'motion/react'
+import { motion, useScroll, useSpring, useTransform } from 'motion/react'
 import React, { useRef } from 'react'
-import { FigmaWebFlow, Payment, Features, CashOut } from './cards'
+import { FigmaWebFlow, Payment, Features, CashOut, Apply, Publish } from './cards'
 import { Badge } from '@/components/reui/badge'
 import { LockKeyholeIcon } from '@/components/ui/lock-keyhole'
-import { CircleCheckIcon } from '@/components/ui/circle-check'
-import { MessageSquareIcon } from '@/components/ui/message-square'
 import { ReceiptTextIcon } from '@/components/ui/receipt-text'
 import CreditCard from '@/components/ui/credit-card'
 import { CompassIcon } from '@/components/ui/compass'
@@ -15,438 +13,198 @@ import { Landmark } from 'lucide-react'
 import { useLanguage } from '@/lib/language-switch/LanguageProvider'
 
 type Step = {
-    number: string
     title: string
     description: string
+    stage: string
+    icon: React.ReactNode
     card: React.ReactNode
     tags?: string[]
 }
-function useSteps(): Step[] {
+
+function useTracks() {
     const { t } = useLanguage()
-    return [
+    const list = (key: Parameters<typeof t>[0]) => t(key) as unknown as string[]
+
+    const learn: Step[] = [
         {
-            number: '01',
             title: t('title01'),
             description: t('description01'),
+            stage: t('stage01'),
+            icon: <CompassIcon size={15} />,
             card: <FigmaWebFlow />,
-            tags: t('tags01') as unknown as string[],
+            tags: list('tags01'),
         },
         {
-            number: '02',
             title: t('title02'),
             description: t('description02'),
+            stage: t('stage02'),
+            icon: <CreditCard size={15} />,
             card: <Payment />,
-            tags: t('tags02') as unknown as string[],
+            tags: list('tags02'),
         },
         {
-            number: '03',
             title: t('title03'),
             description: t('description03'),
+            stage: t('stage03'),
+            icon: <UsersRoundIcon size={15} />,
             card: <Features />,
-            tags: t('tags03') as unknown as string[],
-        },
-        {
-            number: '04',
-            title: t('title04'),
-            description: t('description04'),
-            card: <CashOut />,
-            tags: t('tags04') as unknown as string[],
+            tags: list('tags03'),
         },
     ]
+
+    const teach: Step[] = [
+        {
+            title: t('titleT1'),
+            description: t('descriptionT1'),
+            stage: t('stageT1'),
+            icon: <LockKeyholeIcon size={15} />,
+            card: <Apply />,
+        },
+        {
+            title: t('titleT2'),
+            description: t('descriptionT2'),
+            stage: t('stageT2'),
+            icon: <ReceiptTextIcon size={15} />,
+            card: <Publish />,
+        },
+        {
+            title: t('title04'),
+            description: t('description04'),
+            stage: t('stage04'),
+            icon: <Landmark size={13} />,
+            card: <CashOut />,
+            tags: list('tags04'),
+        },
+    ]
+
+    return { learn, teach }
 }
 
 export default function HowItWorks() {
-    const containerRef = useRef<HTMLDivElement>(null)
-    const { scrollYProgress } = useScroll({
-        target: containerRef,
-        offset: ['start 75%', 'end 25%'],
-    })
-
-    const smoothProgress = useSpring(scrollYProgress, {
-        stiffness: 100,
-        damping: 30,
-        mass: 0.2,
-    })
-
-    const lineHeight = useTransform(smoothProgress, [0, 1], ['0%', '100%'])
     const { t } = useLanguage()
-    const steps = useSteps()
-    const tags = t('tags') as unknown as string[]
+    const { learn, teach } = useTracks()
 
     return (
         <section
-            ref={containerRef}
             className="relative mx-auto max-w-6xl w-full px-4 py-24 overflow-x-hidden"
             id="how-it-works"
         >
             {/* Header */}
             <motion.div
-                className="mx-auto mb-24 max-w-3xl text-center"
+                className="mx-auto mb-16 max-w-3xl text-center"
                 initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: false, amount: 0.25 }}
                 transition={{ duration: 0.7, ease: 'easeOut' }}
             >
-                <motion.span
-                    initial={{ opacity: 0, y: 10 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: false }}
-                    transition={{ duration: 0.5 }}
-                    className="mb-4 inline-block text-sm font-medium uppercase tracking-widest text-muted-foreground"
-                >
+                <span className="mb-4 inline-block text-sm font-medium uppercase tracking-widest text-muted-foreground">
                     {t('howItWorks')}
-                </motion.span>
+                </span>
 
-                <motion.h2
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: false }}
-                    transition={{ duration: 0.6, delay: 0.1 }}
-                    className="text-4xl font-bold tracking-tight sm:text-5xl text-center"
-                >
+                <h2 className="text-4xl font-bold tracking-tight sm:text-5xl text-center">
                     {t('HHeader')}
-                </motion.h2>
+                </h2>
 
-                <motion.p
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: false }}
-                    transition={{ duration: 0.6, delay: 0.2 }}
-                    className="mt-5 text-lg text-muted-foreground"
-                >
+                <p className="mt-5 text-lg text-muted-foreground text-balance">
                     {t('HSubtext')}
-                </motion.p>
-                <motion.span
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: false }}
-                    transition={{ duration: 0.6, delay: 0.2 }}
-                    className="mt-5 flex flex-wrap items-center justify-center gap-2 text-lg text-muted-foreground"
-                >
-                    {tags.map((tag) => (
-                        <Badge
-                            variant="primary-light"
-                            key={tag}
-                            className="rounded-xl p-3"
-                        >
-                            {tag}
-                        </Badge>
-                    ))}
-                </motion.span>
+                </p>
             </motion.div>
 
-            <p className="mb-8 text-center text-xs text-muted-foreground">
+            <p className="mb-12 text-center text-xs text-muted-foreground">
                 {t('productPreview')}
             </p>
 
-            {/* Timeline */}
-            <div className="relative">
-                {/* Background line */}
-                <div className="absolute left-1/2 top-0 hidden h-full w-px -translate-x-1/2 bg-border lg:block" />
-
-                {/* Progress line */}
-                <motion.div
-                    style={{ height: lineHeight }}
-                    className="absolute left-1/2 top-0 hidden w-px -translate-x-1/2 bg-foreground lg:block"
-                />
-
-                <div className="space-y-24 lg:space-y-32">
-                    {steps.map((step, index) => (
-                        <TimelineStep
-                            key={step.number}
-                            step={step}
-                            index={index}
-                            progress={smoothProgress}
-                            total={steps.length}
-                        />
-                    ))}
-                </div>
+            {/* Two tracks: columns on desktop, stacked on mobile.
+                In right-to-left languages the grid order flips by itself. */}
+            <div className="grid gap-20 lg:grid-cols-2 md:justify-center lg:gap-16">
+                <Track label={t('trackLearn')} steps={learn} />
+                <Track label={t('trackTeach')} steps={teach} />
             </div>
         </section>
     )
 }
 
-function TimelineStep({
-    step,
-    index,
-    progress,
-    total,
-}: {
-    step: Step
-    index: number
-    progress: ReturnType<typeof useSpring>
-    total: number
-}) {
-    /**
-     * Each node gets a section of the global scroll progress.
-     *
-     * Example with 4 steps:
-     *
-     * Step 1 → 0.00 - 0.25
-     * Step 2 → 0.25 - 0.50
-     * Step 3 → 0.50 - 0.75
-     * Step 4 → 0.75 - 1.00
-     */
-    const start = index / total
-    const end = (index + 1) / total
-
-    const scale = useTransform(
-        progress,
-        [start, start + 0.03, end],
-        [1, 1.35, 1],
-    )
-
-    const opacity = useTransform(
-        progress,
-        [start - 0.02, start, end],
-        [0.5, 1, 0.65],
-    )
-
-    const ringScale = useTransform(
-        progress,
-        [start, start + 0.03, start + 0.08],
-        [0.8, 1.8, 1],
-    )
-
-    const ringOpacity = useTransform(
-        progress,
-        [start, start + 0.03, start + 0.1],
-        [0, 0.5, 0],
-    )
-
-    const imageScale = useTransform(
-        progress,
-        [start - 0.03, start, start + 0.08],
-        [0.96, 1.02, 1],
-    )
-
-    const { t } = useLanguage()
-    const stage = [
-        {
-            id: '1',
-            stage: t('stage01'),
-            icon: <CompassIcon size={15} />,
-        },
-        {
-            id: '2',
-            stage: t('stage02'),
-            icon: <CreditCard size={15} />,
-        },
-        {
-            id: '3',
-            stage: t('stage03'),
-            icon: <UsersRoundIcon size={15} />,
-        },
-        {
-            id: '4',
-            stage: t('stage04'),
-            icon: <Landmark size={13} className="hover:animate-bounce" />,
-        },
-    ]
+function Track({ label, steps }: { label: string; steps: Step[] }) {
+    const ref = useRef<HTMLDivElement>(null)
+    const { scrollYProgress } = useScroll({
+        target: ref,
+        offset: ['start 75%', 'end 25%'],
+    })
+    const progress = useSpring(scrollYProgress, {
+        stiffness: 100,
+        damping: 30,
+        mass: 0.2,
+    })
+    const lineHeight = useTransform(progress, [0, 1], ['0%', '100%'])
 
     return (
-        <div className="relative grid items-center gap-10 lg:grid-cols-2 lg:gap-20">
-            {/* Content */}
-            <motion.div
-                initial={{
-                    opacity: 0,
-                    x: index % 2 === 0 ? -30 : 30,
-                }}
-                whileInView={{
-                    opacity: 1,
-                    x: 0,
-                }}
-                viewport={{
-                    once: false,
-                    amount: 0.35,
-                }}
-                transition={{
-                    duration: 0.7,
-                    ease: 'easeOut',
-                }}
-                className={`${
-                    index % 2 === 0 ? 'lg:pr-12' : 'lg:order-2 lg:pl-12'
-                }`}
-            >
-                <div className="mb-4 flex items-center gap-3">
-                    <span className="font-mono text-sm text-muted-foreground">
-                        {step.number}
-                    </span>
+        <div ref={ref}>
+            <h3 className="mb-10 text-2xl font-bold tracking-tight sm:text-3xl">
+                {label}
+            </h3>
 
-                    <div className="h-px w-8 bg-border" />
-
-                    <span className="font-mono text-sm text-muted-foreground">
-                        {stage.map((s) => (
-                            <span key={s.id}>
-                                {step.number.toLowerCase().includes(s.id) && (
-                                    <span className="flex items-center justify-center gap-2">
-                                        <span>{s.icon}</span>
-                                        <span>{s.stage}</span>
-                                    </span>
-                                )}
-                            </span>
-                        ))}
-                    </span>
+            <div className="relative ps-10">
+                {/* Line: logical properties so it sits on the correct side in Arabic */}
+                <div className="absolute inset-s-3 top-0 h-full w-px bg-border" />
+                <motion.div
+                    style={{ height: lineHeight }}
+                    className="absolute inset-s-3 top-0 w-px bg-foreground"
+                />
+                <div className="space-y-16">
+                    {steps.map((step, index) => (
+                        <TrackStep
+                            key={step.title}
+                            step={step}
+                            number={String(index + 1).padStart(2, '0')}
+                        />
+                    ))}
                 </div>
-
-                <h3 className="text-2xl font-semibold tracking-tight sm:text-3xl">
-                    {step.title}
-                </h3>
-
-                <p className="mt-4 max-w-md text-base leading-7 text-muted-foreground">
-                    {step.description}
-                </p>
-                {step.number === '01' && (
-                    <span className="flex items-center gap-4 mt-4 flex-wrap">
-                        {step.tags?.map((tag) => (
-                            <Badge
-                                className="p-3 rounded-xl"
-                                variant="primary-light"
-                                key={tag}
-                            >
-                                {tag}
-                            </Badge>
-                        ))}
-                    </span>
-                )}
-
-                {step.number === '02' && (
-                    <div className="flex items-center gap-4 mt-4 flex-wrap">
-                        {step.tags?.map((tag) => {
-                            const cleanedTag = tag.trim().toLowerCase()
-                            // Check for either string explicitly
-                            const hasNoSurcharge =
-                                cleanedTag.includes('0% currency surcharge') ||
-                                cleanedTag.includes('رسوم تحويل عملة 0٪')
-
-                            return hasNoSurcharge ? (
-                                <span
-                                    className="flex items-center justify-center gap-2 text-green-600"
-                                    key={tag}
-                                >
-                                    <CircleCheckIcon size={17} />
-                                    <p>{tag}</p>
-                                </span>
-                            ) : (
-                                <span
-                                    className="flex items-center justify-center gap-2"
-                                    key={tag}
-                                >
-                                    <LockKeyholeIcon size={17} />
-                                    <p>{tag}</p>
-                                </span>
-                            )
-                        })}
-                    </div>
-                )}
-                {step.number === '03' && (
-                    <div className="flex items-center flex-wrap gap-4 mt-4">
-                        {step.tags?.map((tag) => {
-                            const cleanedTag = tag.trim().toLowerCase()
-                            // Check both English and Arabic strings explicitly
-                            const isInstantDownload =
-                                cleanedTag.includes('instant asset download') ||
-                                cleanedTag.includes('تنزيل فوري للموارد')
-
-                            return (
-                                <Badge
-                                    className="p-3 rounded-xl [&_svg:not([class*=size-])]:size-4!"
-                                    variant="primary-light"
-                                    key={tag}
-                                >
-                                    {isInstantDownload ? (
-                                        <span className="flex items-center justify-center gap-2 h-full">
-                                            <CircleCheckIcon size={25} />
-                                            {tag}
-                                        </span>
-                                    ) : (
-                                        <span className="flex items-center justify-center gap-2">
-                                            <MessageSquareIcon size={25} />
-                                            {tag}
-                                        </span>
-                                    )}
-                                </Badge>
-                            )
-                        })}
-                    </div>
-                )}
-
-                {step.number === '04' && (
-                    <div className="flex items-center gap-4 mt-4 flex-wrap">
-                        {step.tags?.map((tag) => {
-                            const cleanedTag = tag.trim().toLowerCase()
-                            // Check both English and Arabic variants separately
-                            const isSameWeekPayout =
-                                cleanedTag.includes('same-week payouts') ||
-                                cleanedTag.includes(
-                                    'تحويل الأرباح خلال الأسبوع نفسه',
-                                )
-
-                            return (
-                                <span key={tag}>
-                                    {isSameWeekPayout ? (
-                                        <span className="flex items-center justify-center gap-2 h-full">
-                                            <CreditCard size={17} />
-                                            {tag}
-                                        </span>
-                                    ) : (
-                                        <span className="flex items-center justify-center gap-2">
-                                            <ReceiptTextIcon size={17} />
-                                            {tag}
-                                        </span>
-                                    )}
-                                </span>
-                            )
-                        })}
-                    </div>
-                )}
-            </motion.div>
-
-            {/* Image */}
-            <motion.div
-                initial={{
-                    opacity: 0,
-                    x: index % 2 === 0 ? 30 : -30,
-                }}
-                style={{ scale: imageScale }}
-                whileInView={{
-                    opacity: 1,
-                    x: 0,
-                }}
-                viewport={{
-                    once: false,
-                    amount: 0.35,
-                }}
-                transition={{
-                    duration: 0.7,
-                    delay: 0.1,
-                    ease: 'easeOut',
-                }}
-                className={`${index % 2 === 0 ? 'lg:order-2' : 'lg:order-1'}`}
-            >
-                {step.card}
-            </motion.div>
-
-            {/* Timeline node */}
-            <div className="absolute left-1/2 top-1/2 hidden -translate-x-1/2 -translate-y-1/2 lg:block">
-                {/* Pulse ring */}
-                <motion.div
-                    style={{
-                        scale: ringScale,
-                        opacity: ringOpacity,
-                    }}
-                    className="absolute inset-0 rounded-full bg-foreground"
-                />
-
-                {/* Node */}
-                <motion.div
-                    style={{
-                        scale,
-                        opacity,
-                    }}
-                    className="relative flex h-5 w-5 items-center justify-center rounded-full border-4 border-background bg-foreground shadow-md"
-                />
             </div>
         </div>
+    )
+}
+
+function TrackStep({ step, number }: { step: Step; number: string }) {
+    return (
+        <motion.div
+            className="relative"
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false, amount: 0.25 }}
+            transition={{ duration: 0.6, ease: 'easeOut' }}
+        >
+            {/* Node on the line */}
+            <span className="absolute -inset-s-10 top-0 flex size-6 items-center justify-center rounded-full border border-border bg-background font-mono text-[11px] text-muted-foreground shadow-sm">
+                {number}
+            </span>
+
+            <div className="mb-3 flex items-center gap-2 font-mono text-sm text-muted-foreground">
+                {step.icon}
+                <span>{step.stage}</span>
+            </div>
+
+            <h4 className="text-xl font-semibold tracking-tight sm:text-2xl">
+                {step.title}
+            </h4>
+
+            <p className="mt-2 max-w-md text-base leading-7 text-muted-foreground">
+                {step.description}
+            </p>
+
+            {step.tags && step.tags.length > 0 && (
+                <div className="mt-4 flex flex-wrap gap-2">
+                    {step.tags.map((tag) => (
+                        <Badge
+                            key={tag}
+                            variant="primary-light"
+                            className="rounded-xl p-3"
+                        >
+                            {tag}
+                        </Badge>
+                    ))}
+                </div>
+            )}
+            <div className="mt-6 max-w-md">{step.card}</div>
+        </motion.div>
     )
 }

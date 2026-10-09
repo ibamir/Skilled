@@ -10,23 +10,32 @@ import QrcodeIcon from '@/components/ui/qrcode-icon'
 import ScanBarcodeIcon from '@/components/ui/scan-barcode-icon'
 import { Separator } from '@base-ui/react'
 import Image from 'next/image'
-import { motion } from 'motion/react'
+import { motion, useMotionTemplate, useMotionValue } from 'motion/react'
 import { useLanguage } from '@/lib/language-switch/LanguageProvider'
 import {
     CutoutCard,
     CutoutCardContent,
-    CutoutCardFooter,
     CutoutCardImage,
     CutoutCardInsetLabel,
     CutoutCardMedia,
     CutoutCardOverlay,
-    CutoutCardPin,
     CutoutCorner,
-    cutoutCardSurfaceClassName,
 } from '@/components/ui/cutout-card'
+import { MouseEvent } from 'react'
 
 export function FigmaWebFlow() {
     const { t } = useLanguage()
+
+    // Mouse-following spotlight
+    const mouseX = useMotionValue(-400)
+    const mouseY = useMotionValue(-400)
+    const spotlight = useMotionTemplate`radial-gradient(220px circle at ${mouseX}px ${mouseY}px, color-mix(in oklab, var(--primary) 10%, transparent), transparent 72%)`
+
+    const handleMouseMove = (event: MouseEvent<HTMLDivElement>) => {
+        const bounds = event.currentTarget.getBoundingClientRect()
+        mouseX.set(event.clientX - bounds.left)
+        mouseY.set(event.clientY - bounds.top)
+    }
 
     return (
         <motion.div
@@ -35,6 +44,8 @@ export function FigmaWebFlow() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false, amount: 0.2 }}
             transition={{ duration: 0.55, ease: 'easeOut' }}
+            whileHover="hover"
+            onMouseMove={handleMouseMove}
         >
             <CutoutCard
                 className="
@@ -45,8 +56,18 @@ export function FigmaWebFlow() {
                     hover:-translate-y-4
                     rounded-3xl
                     bg-card
+                    relative
+                    group
+                    overflow-hidden
                 "
             >
+                {/* Spotlight layer */}
+                <motion.div
+                    aria-hidden
+                    className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+                    style={{ background: spotlight }}
+                />
+
                 {/* IMAGE */}
                 <CutoutCardMedia className="h-56">
                     <CutoutCardImage
@@ -96,6 +117,17 @@ export function FigmaWebFlow() {
 export function Payment() {
     const { t } = useLanguage()
 
+    // Mouse-following spotlight
+    const mouseX = useMotionValue(-400)
+    const mouseY = useMotionValue(-400)
+    const spotlight = useMotionTemplate`radial-gradient(220px circle at ${mouseX}px ${mouseY}px, color-mix(in oklab, var(--primary) 10%, transparent), transparent 72%)`
+
+    const handleMouseMove = (event: MouseEvent<HTMLDivElement>) => {
+        const bounds = event.currentTarget.getBoundingClientRect()
+        mouseX.set(event.clientX - bounds.left)
+        mouseY.set(event.clientY - bounds.top)
+    }
+
     return (
         <motion.div
             className="h-full w-full"
@@ -103,8 +135,19 @@ export function Payment() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false, amount: 0.2 }}
             transition={{ duration: 0.55, ease: 'easeOut' }}
+            whileHover="hover"
+            onMouseMove={handleMouseMove}
         >
-            <Card className="w-full shadow-sm rounded-4xl hover:-translate-y-4">
+            <Card
+                className="w-full shadow-sm rounded-4xl hover:-translate-y-4 relative group overflow-hidden"
+            >
+                {/* Spotlight layer */}
+                <motion.div
+                    aria-hidden
+                    className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+                    style={{ background: spotlight }}
+                />
+
                 <CardContent className="flex flex-col gap-4">
                     <div className="flex flex-col items-center justify-center gap-4 h-fit w-full overflow-hidden rounded-xl p-2">
                         <div className="flex items-center justify-between w-full">
@@ -180,6 +223,17 @@ export function Payment() {
 export function Features() {
     const { t } = useLanguage()
 
+    // Mouse-following spotlight
+    const mouseX = useMotionValue(-400)
+    const mouseY = useMotionValue(-400)
+    const spotlight = useMotionTemplate`radial-gradient(220px circle at ${mouseX}px ${mouseY}px, color-mix(in oklab, var(--primary) 10%, transparent), transparent 72%)`
+
+    const handleMouseMove = (event: MouseEvent<HTMLDivElement>) => {
+        const bounds = event.currentTarget.getBoundingClientRect()
+        mouseX.set(event.clientX - bounds.left)
+        mouseY.set(event.clientY - bounds.top)
+    }
+
     return (
         <motion.div
             className="h-full w-full"
@@ -187,8 +241,18 @@ export function Features() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false, amount: 0.2 }}
             transition={{ duration: 0.55, ease: 'easeOut' }}
+            whileHover="hover"
+            onMouseMove={handleMouseMove}
         >
-            <Card className="w-full shadow-sm rounded-4xl hover:-translate-y-4">
+            <Card
+                className="w-full shadow-sm rounded-4xl hover:-translate-y-4 relative group overflow-hidden"
+            >
+                {/* Spotlight layer */}
+                <motion.div
+                    aria-hidden
+                    className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+                    style={{ background: spotlight }}
+                />
                 <CardContent>
                     <div className="bg-card flex flex-col gap-4 rounded-2xl">
                         <CardHeader className="text-md">
@@ -253,6 +317,17 @@ export function Features() {
 export function CashOut() {
     const { t } = useLanguage()
 
+    // Mouse-following spotlight
+    const mouseX = useMotionValue(-400)
+    const mouseY = useMotionValue(-400)
+    const spotlight = useMotionTemplate`radial-gradient(220px circle at ${mouseX}px ${mouseY}px, color-mix(in oklab, var(--primary) 10%, transparent), transparent 72%)`
+
+    const handleMouseMove = (event: MouseEvent<HTMLDivElement>) => {
+        const bounds = event.currentTarget.getBoundingClientRect()
+        mouseX.set(event.clientX - bounds.left)
+        mouseY.set(event.clientY - bounds.top)
+    }
+
     return (
         <motion.div
             className="h-full w-full"
@@ -260,8 +335,16 @@ export function CashOut() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false, amount: 0.2 }}
             transition={{ duration: 0.55, ease: 'easeOut' }}
+            whileHover="hover"
+            onMouseMove={handleMouseMove}
         >
-            <Card className="w-full shadow-sm rounded-4xl hover:-translate-y-4">
+            <Card className="w-full shadow-sm rounded-4xl hover:-translate-y-4 relative group overflow-hidden">
+                {/* Spotlight layer */}
+                <motion.div
+                    aria-hidden
+                    className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+                    style={{ background: spotlight }}
+                />
                 <CardContent className="flex flex-col gap-4">
                     <div className="flex flex-col items-center justify-center gap-2 h-fit w-full overflow-hidden p-1">
                         <span className="flex items-center text-primary justify-between w-full font-bold text-md">
@@ -307,6 +390,162 @@ export function CashOut() {
                             className="w-full h-fit **:data-[slot=progress-indicator]:bg-green-600!"
                         />
                     </div>
+                </CardContent>
+            </Card>
+        </motion.div>
+    )
+}
+
+export function Apply() {
+    const { t } = useLanguage()
+
+    // Mouse-following spotlight
+    const mouseX = useMotionValue(-400)
+    const mouseY = useMotionValue(-400)
+    const spotlight = useMotionTemplate`radial-gradient(220px circle at ${mouseX}px ${mouseY}px, color-mix(in oklab, var(--primary) 10%, transparent), transparent 72%)`
+
+    const handleMouseMove = (event: MouseEvent<HTMLDivElement>) => {
+        const bounds = event.currentTarget.getBoundingClientRect()
+        mouseX.set(event.clientX - bounds.left)
+        mouseY.set(event.clientY - bounds.top)
+    }
+
+    return (
+        <motion.div
+            className="h-full w-full"
+            initial={{ opacity: 0, y: 18 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false, amount: 0.2 }}
+            transition={{ duration: 0.55, ease: 'easeOut' }}
+            whileHover="hover"
+            onMouseMove={handleMouseMove}
+        >
+            <Card
+                className="w-full shadow-sm rounded-4xl hover:-translate-y-4 relative group overflow-hidden"
+            >
+                {/* Spotlight layer */}
+                <motion.div
+                    aria-hidden
+                    className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+                    style={{ background: spotlight }}
+                />
+                <CardContent className="flex flex-col gap-4">
+                    <div className="flex items-center justify-between w-full">
+                        <span className="font-bold text-lg text-primary">
+                            {t('applyHeader')}
+                        </span>
+                        <Badge className="p-3 rounded-xl font-bold bg-amber-50 text-amber-700 dark:bg-amber-950 dark:text-amber-300 border border-amber-700/30">
+                            {t('applyStatus')}
+                        </Badge>
+                    </div>
+                    <Separator className="w-full h-px bg-border" />
+                    <div className="flex flex-col gap-1 rounded-xl border border-border bg-background p-3">
+                        <p className="text-xs text-muted-foreground">
+                            {t('applyField')}
+                        </p>
+                        <p className="text-md font-semibold">
+                            {t('applySample')}
+                        </p>
+                    </div>
+                    <div className="flex items-center gap-4 rounded-xl border border-border bg-background p-2 px-4">
+                        <FolderArchiveIcon size={22} />
+                        <span className="flex flex-col justify-center">
+                            <p className="text-md font-semibold">
+                                {t('applyOutline')}
+                            </p>
+                            <p className="text-xs text-muted-foreground font-thin">
+                                {t('applyOutlineNote')}
+                            </p>
+                        </span>
+                    </div>
+                    <Button className="rounded-xl" variant="secondary">
+                        {t('applyButton')}
+                    </Button>
+                </CardContent>
+            </Card>
+        </motion.div>
+    )
+}
+
+export function Publish() {
+    const { t } = useLanguage()
+
+    // Mouse-following spotlight
+    const mouseX = useMotionValue(-400)
+    const mouseY = useMotionValue(-400)
+    const spotlight = useMotionTemplate`radial-gradient(220px circle at ${mouseX}px ${mouseY}px, color-mix(in oklab, var(--primary) 10%, transparent), transparent 72%)`
+
+    const handleMouseMove = (event: MouseEvent<HTMLDivElement>) => {
+        const bounds = event.currentTarget.getBoundingClientRect()
+        mouseX.set(event.clientX - bounds.left)
+        mouseY.set(event.clientY - bounds.top)
+    }
+
+    return (
+        <motion.div
+            className="h-full w-full"
+            initial={{ opacity: 0, y: 18 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false, amount: 0.2 }}
+            transition={{ duration: 0.55, ease: 'easeOut' }}
+            whileHover="hover"
+            onMouseMove={handleMouseMove}
+        >
+            <Card className="w-full shadow-sm rounded-4xl hover:-translate-y-4 relative group overflow-hidden">
+                {/* Spotlight layer */}
+                <motion.div
+                    aria-hidden
+                    className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+                    style={{ background: spotlight }}
+                />
+                <CardContent className="flex flex-col gap-4">
+                    <div className="flex items-center justify-between w-full">
+                        <span className="font-bold text-lg text-primary">
+                            {t('publishHeader')}
+                        </span>
+                        <Badge className="p-3 rounded-xl font-bold bg-muted text-muted-foreground border border-border">
+                            {t('publishDraft')}
+                        </Badge>
+                    </div>
+                    <Separator className="w-full h-px bg-border" />
+                    <div className="flex flex-col gap-1 rounded-xl border border-border bg-background p-3">
+                        <p className="text-xs text-muted-foreground">
+                            {t('publishTitleLabel')}
+                        </p>
+                        <p className="text-md font-semibold">
+                            {t('publishTitle')}
+                        </p>
+                    </div>
+                    <div className="grid grid-cols-2 gap-4">
+                        <div className="flex flex-col gap-1 rounded-xl border border-border bg-background p-3">
+                            <p className="text-xs text-muted-foreground">
+                                {t('publishLessonsLabel')}
+                            </p>
+                            <p className="text-md font-semibold">
+                                {t('publishLessons')}
+                            </p>
+                        </div>
+                        <div className="flex flex-col gap-1 rounded-xl border border-border bg-background p-3">
+                            <p className="text-xs text-muted-foreground">
+                                {t('publishPriceLabel')}
+                            </p>
+                            <span className="flex items-baseline gap-2">
+                                <p className="font-bold text-xl text-primary">
+                                    {t('publishPrice')}
+                                </p>
+                                <p className="text-xs text-muted-foreground">
+                                    TND
+                                </p>
+                            </span>
+                        </div>
+                    </div>
+                    <div className="flex items-center gap-4 rounded-xl border border-border bg-background p-2 px-4">
+                        <FolderArchiveIcon size={22} />
+                        <p className="text-sm font-semibold">
+                            {t('publishResources')}
+                        </p>
+                    </div>
+                    <Button className="rounded-xl">{t('publishButton')}</Button>
                 </CardContent>
             </Card>
         </motion.div>
