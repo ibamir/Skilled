@@ -14,7 +14,7 @@ export function useNaveLinks() {
     const { t } = useLanguage()
 
     return [
-        { label: t('features'), href: '#features' },
+        // { label: t('features'), href: '#features' },
         { label: t('howItWorks'), href: '#how-it-works' },
         { label: t('faq'), href: '#faq' },
         { label: t('takeTheSurvey'), href: '#help-us' },

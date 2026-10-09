@@ -95,8 +95,8 @@ export function useCards() {
                         className="w-full h-fit"
                     />
                     <span className="flex items-center justify-between gap-2 text-xs">
-                        <h1>{t('creatorPay')}</h1>
-                        <h1>{t('platform')}</h1>
+                        <span>{t('creatorPay')}</span>
+                        <span>{t('platform')}</span>
                     </span>
                 </div>
             ),
@@ -108,9 +108,9 @@ export function useCards() {
                     </span>
                     <span className="flex flex-col items-center justify-between w-full">
                         <span className="flex items-center justify-baseline gap-2">
-                            <h1 className="text-3xl font-bold text-primary">
+                            <p className="text-3xl font-bold text-primary">
                                 1,480.00
-                            </h1>
+                            </p>
                             <p className="text-sm">TND</p>
                         </span>
 
@@ -205,7 +205,7 @@ export function Cards() {
                                             alt={
                                                 typeof card.title === 'string'
                                                     ? card.title
-                                                    : 'Talented'
+                                                    : 'Skilled'
                                             }
                                         />
                                     )}
@@ -399,7 +399,7 @@ export function TabletCards() {
                                                     typeof card.title ===
                                                     'string'
                                                         ? card.title
-                                                        : 'Talented'
+                                                        : 'Skilled'
                                                 }
                                             />
                                         )}
@@ -491,8 +491,11 @@ export function TabletCards() {
 export default function HeroSection() {
     const { t } = useLanguage()
 
-    const part1: string = t('headline').slice(0, 16) // "build skills"
-    const part2: string = t('headline').slice(16,35) // "that move "
+    // Split the headline after its first sentence, whatever the language or length
+    const headline: string = t('headline')
+    const cut = headline.indexOf('. ') + 1
+    const part1 = cut > 0 ? headline.slice(0, cut) : headline
+    const part2 = cut > 0 ? headline.slice(cut).trim() : ''
 
     return (
         <div className="w-full flex flex-col items-center justify-center pb-10 space-y-10">
@@ -509,7 +512,7 @@ export default function HeroSection() {
             </motion.h1>
 
             {/* Sub text */}
-            <motion.h2
+            <motion.p
                 className="text-center text-balance text-xl md:text-2xl text-muted-foreground font-bold max-w-4xl"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -517,7 +520,7 @@ export default function HeroSection() {
                 transition={{ duration: 0.5, delay: 0.1, ease: 'easeOut' }}
             >
                 {t('heroSubtext')}
-            </motion.h2>
+            </motion.p>
 
             {/* Call to action */}
             <motion.div

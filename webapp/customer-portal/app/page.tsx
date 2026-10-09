@@ -17,7 +17,7 @@ export default function Home() {
             <Header />
             <PrelaunchBanner />
             <HeroSection />
-            <Features />
+            {/* <Features /> */}
             <HowItWorks />
             <FrequentAskedQuestions />
             <InterestFormSection />
