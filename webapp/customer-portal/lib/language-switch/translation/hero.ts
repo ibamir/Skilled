@@ -1,7 +1,7 @@
 export const hero = {
     en: {
         heroSubtext:
-            'Take courses on any topic, or publish your own, all from one account.',
+            'One account to take courses on any topic or publish your own.',
         headline: 'Learn any skill. Teach any skill.',
         cta: 'Take the survey',
 
@@ -21,11 +21,11 @@ export const hero = {
         ready: 'Ready for local payout',
         connected: 'Connected',
         cardsDescription:
-            'Early concepts of how Skilled could look. The courses, names, and numbers shown are examples.',
+            'Early concepts. The courses, names, and numbers shown are examples.',
     },
     ar: {
         heroSubtext:
-            'التحق بدورات في أي مجال، أو انشر دورتك الخاصة، كل ذلك من حساب واحد.',
+            'حساب واحد للالتحاق بدورات في أي مجال أو نشر دورتك الخاصة.',
         headline: 'تعلّم أي مهارة. علّم أي مهارة.',
         cta: 'شارك في الاستبيان',
 
@@ -44,6 +44,6 @@ export const hero = {
         ready: 'جاهز للتحويل محليًا',
         connected: 'متصل',
         cardsDescription:
-            'هذه تصاميم أولية لما قد تبدو عليه Skilled. الدورات والأسماء والأرقام المعروضة أمثلة توضيحية.',
+            'تصاميم أولية. الدورات والأسماء والأرقام المعروضة أمثلة توضيحية.',
     },
 }

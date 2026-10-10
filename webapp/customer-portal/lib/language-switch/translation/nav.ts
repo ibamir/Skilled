@@ -7,7 +7,7 @@ export const nav = {
         theme: 'Theme : ',
         language: 'Language : ',
         prelaunchBanner:
-            "We're building Skilled with you. Tell us what you'd like to learn or teach in our 1-minute survey.",
+            'Skilled isn’t live yet. Tell us what you’d like to learn or teach.',
     },
     ar: {
         faq: 'الأسئلة الشائعة',
@@ -17,6 +17,6 @@ export const nav = {
         theme: 'السمة :',
         language: 'اللغة :',
         prelaunchBanner:
-            'نبني Skilled معك. أخبرنا بما تودّ تعلّمه أو تعليمه في استبياننا الذي يستغرق دقيقة واحدة.',
+            'نبني Skilled معك. شارك في الاستبيان الذي يستغرق دقيقة واحدة.',
     },
 }

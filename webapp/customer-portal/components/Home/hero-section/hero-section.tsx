@@ -80,7 +80,7 @@ export function useCards() {
         {
             id: 3,
             title: (
-                <span className='flex items-center gap-2'>
+                <span className="flex items-center gap-2">
                     <CircleCheckIcon size={15} />
                     {t('title3')}
                 </span>
